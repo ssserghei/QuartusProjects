@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sss_step_mot">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_step_mot|LPM_ADD_SUB:inst175" CBX_FILE_NAME="add_sub_rdb.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_step_mot|LPM_CONSTANT:inst173" CBX_FILE_NAME="lpm_constant_bd4.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_step_mot|LPM_CONSTANT:inst174" CBX_FILE_NAME="lpm_constant_ie4.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

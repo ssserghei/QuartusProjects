@@ -1,0 +1,349 @@
+Classic Timing Analyzer report for sss_16key
+Fri Jul 29 19:40:24 2016
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: '16key_clk'
+  6. Clock Hold: '16key_clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                ;
++------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------+------------------------------+------------------+-----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                         ; To                           ; From Clock       ; To Clock  ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------+------------------------------+------------------+-----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 2.900 ns                         ; 16key_load_shift             ; inst147                      ; --               ; 16key_clk ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 14.000 ns                        ; lpm_shiftreg:inst119|dffs[1] ; 16key_but1                   ; 16key_load_shift ; --        ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 11.100 ns                        ; 16key_in                     ; lpm_shiftreg:inst106|dffs[0] ; --               ; 16key_clk ; 0            ;
+; Clock Setup: '16key_clk'     ; N/A                                      ; None          ; 92.59 MHz ( period = 10.800 ns ) ; lpm_shiftreg:inst106|dffs[8] ; lpm_shiftreg:inst106|dffs[9] ; 16key_clk        ; 16key_clk ; 0            ;
+; Clock Hold: '16key_clk'      ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; lpm_shiftreg:inst106|dffs[0] ; lpm_shiftreg:inst106|dffs[1] ; 16key_clk        ; 16key_clk ; 15           ;
+; Total number of failed paths ;                                          ;               ;                                  ;                              ;                              ;                  ;           ; 15           ;
++------------------------------+------------------------------------------+---------------+----------------------------------+------------------------------+------------------------------+------------------+-----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPF10K10LC84-4     ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                              ;
++------------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name  ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++------------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; 16key_load_shift ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; 16key_clk        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++------------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: '16key_clk'                                                                                                                                                                                                            ;
++-------+------------------------------------------------+-------------------------------+-------------------------------+------------+-----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                          ; To                            ; From Clock ; To Clock  ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------+-------------------------------+------------+-----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 92.59 MHz ( period = 10.800 ns )               ; lpm_shiftreg:inst106|dffs[3]  ; lpm_shiftreg:inst106|dffs[4]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 3.500 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )               ; lpm_shiftreg:inst106|dffs[8]  ; lpm_shiftreg:inst106|dffs[9]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 3.500 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[0]  ; lpm_shiftreg:inst106|dffs[1]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[1]  ; lpm_shiftreg:inst106|dffs[2]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[2]  ; lpm_shiftreg:inst106|dffs[3]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[4]  ; lpm_shiftreg:inst106|dffs[5]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[5]  ; lpm_shiftreg:inst106|dffs[6]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[6]  ; lpm_shiftreg:inst106|dffs[7]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[7]  ; lpm_shiftreg:inst106|dffs[8]  ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[9]  ; lpm_shiftreg:inst106|dffs[10] ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[10] ; lpm_shiftreg:inst106|dffs[11] ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[11] ; lpm_shiftreg:inst106|dffs[12] ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[12] ; lpm_shiftreg:inst106|dffs[13] ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[13] ; lpm_shiftreg:inst106|dffs[14] ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; 109.89 MHz ( period = 9.100 ns )               ; lpm_shiftreg:inst106|dffs[14] ; lpm_shiftreg:inst106|dffs[15] ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst135                       ; inst136                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 3.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst129                       ; inst130                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 3.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst104                       ; inst107                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 3.400 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst147                       ; inst61                        ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 2.300 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst142                       ; inst61                        ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst136                       ; inst137                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst147                       ; inst142                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst134                       ; inst135                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst133                       ; inst134                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst132                       ; inst133                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst131                       ; inst132                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst130                       ; inst131                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst128                       ; inst129                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst124                       ; inst128                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst123                       ; inst124                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst118                       ; inst123                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst107                       ; inst118                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
+; N/A   ; Restricted to 125.00 MHz ( period = 8.000 ns ) ; inst61                        ; inst104                       ; 16key_clk  ; 16key_clk ; None                        ; None                      ; 1.800 ns                ;
++-------+------------------------------------------------+-------------------------------+-------------------------------+------------+-----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: '16key_clk'                                                                                                                                                                                                ;
++------------------------------------------+-------------------------------+-------------------------------+------------+-----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                          ; To                            ; From Clock ; To Clock  ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+-------------------------------+-------------------------------+------------+-----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[0]  ; lpm_shiftreg:inst106|dffs[1]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[1]  ; lpm_shiftreg:inst106|dffs[2]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[2]  ; lpm_shiftreg:inst106|dffs[3]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[4]  ; lpm_shiftreg:inst106|dffs[5]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[5]  ; lpm_shiftreg:inst106|dffs[6]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[6]  ; lpm_shiftreg:inst106|dffs[7]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[7]  ; lpm_shiftreg:inst106|dffs[8]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[9]  ; lpm_shiftreg:inst106|dffs[10] ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[10] ; lpm_shiftreg:inst106|dffs[11] ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[11] ; lpm_shiftreg:inst106|dffs[12] ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[12] ; lpm_shiftreg:inst106|dffs[13] ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[13] ; lpm_shiftreg:inst106|dffs[14] ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[14] ; lpm_shiftreg:inst106|dffs[15] ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 1.800 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[3]  ; lpm_shiftreg:inst106|dffs[4]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 3.500 ns                 ;
+; Not operational: Clock Skew > Data Delay ; lpm_shiftreg:inst106|dffs[8]  ; lpm_shiftreg:inst106|dffs[9]  ; 16key_clk  ; 16key_clk ; None                       ; None                       ; 3.500 ns                 ;
++------------------------------------------+-------------------------------+-------------------------------+------------+-----------+----------------------------+----------------------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; tsu                                                                                              ;
++-------+--------------+------------+------------------+-------------------------------+-----------+
+; Slack ; Required tsu ; Actual tsu ; From             ; To                            ; To Clock  ;
++-------+--------------+------------+------------------+-------------------------------+-----------+
+; N/A   ; None         ; 2.900 ns   ; 16key_load_shift ; inst147                       ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[4]  ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[5]  ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[6]  ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[7]  ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[8]  ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[9]  ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[10] ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[11] ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[12] ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[13] ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[14] ; 16key_clk ;
+; N/A   ; None         ; 0.900 ns   ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[15] ; 16key_clk ;
+; N/A   ; None         ; -0.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[0]  ; 16key_clk ;
+; N/A   ; None         ; -0.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[1]  ; 16key_clk ;
+; N/A   ; None         ; -0.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[2]  ; 16key_clk ;
+; N/A   ; None         ; -0.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[3]  ; 16key_clk ;
+; N/A   ; None         ; -3.300 ns  ; 16key_in         ; lpm_shiftreg:inst106|dffs[0]  ; 16key_clk ;
++-------+--------------+------------+------------------+-------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; tco                                                                                                   ;
++-------+--------------+------------+-------------------------------+----------------+------------------+
+; Slack ; Required tco ; Actual tco ; From                          ; To             ; From Clock       ;
++-------+--------------+------------+-------------------------------+----------------+------------------+
+; N/A   ; None         ; 14.000 ns  ; lpm_shiftreg:inst119|dffs[3]  ; 16key_but3     ; 16key_load_shift ;
+; N/A   ; None         ; 14.000 ns  ; lpm_shiftreg:inst119|dffs[2]  ; 16key_but2     ; 16key_load_shift ;
+; N/A   ; None         ; 14.000 ns  ; lpm_shiftreg:inst119|dffs[1]  ; 16key_but1     ; 16key_load_shift ;
+; N/A   ; None         ; 13.900 ns  ; lpm_shiftreg:inst119|dffs[8]  ; 16key_but8     ; 16key_load_shift ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst119|dffs[15] ; 16key_butVBeta ; 16key_load_shift ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst119|dffs[14] ; 16key_butVAlfa ; 16key_load_shift ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst119|dffs[13] ; 16key_butBeta  ; 16key_load_shift ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst119|dffs[12] ; 16key_butAlfa  ; 16key_load_shift ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst119|dffs[11] ; 16key_butAbort ; 16key_load_shift ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst119|dffs[10] ; 16key_butPusk  ; 16key_load_shift ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst119|dffs[7]  ; 16key_but7     ; 16key_load_shift ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst119|dffs[5]  ; 16key_but5     ; 16key_load_shift ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst119|dffs[6]  ; 16key_but6     ; 16key_load_shift ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst119|dffs[4]  ; 16key_but4     ; 16key_load_shift ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst119|dffs[0]  ; 16key_but0     ; 16key_load_shift ;
+; N/A   ; None         ; 12.400 ns  ; lpm_shiftreg:inst119|dffs[9]  ; 16key_but9     ; 16key_load_shift ;
++-------+--------------+------------+-------------------------------+----------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; th                                                                                                     ;
++---------------+-------------+-----------+------------------+-------------------------------+-----------+
+; Minimum Slack ; Required th ; Actual th ; From             ; To                            ; To Clock  ;
++---------------+-------------+-----------+------------------+-------------------------------+-----------+
+; N/A           ; None        ; 11.100 ns ; 16key_in         ; lpm_shiftreg:inst106|dffs[0]  ; 16key_clk ;
+; N/A           ; None        ; 8.700 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[0]  ; 16key_clk ;
+; N/A           ; None        ; 8.700 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[1]  ; 16key_clk ;
+; N/A           ; None        ; 8.700 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[2]  ; 16key_clk ;
+; N/A           ; None        ; 8.700 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[3]  ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[4]  ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[5]  ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[6]  ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[7]  ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[8]  ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[9]  ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[10] ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[11] ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[12] ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[13] ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[14] ; 16key_clk ;
+; N/A           ; None        ; 6.900 ns  ; 16key_load_shift ; lpm_shiftreg:inst106|dffs[15] ; 16key_clk ;
+; N/A           ; None        ; 1.200 ns  ; 16key_load_shift ; inst147                       ; 16key_clk ;
++---------------+-------------+-----------+------------------+-------------------------------+-----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Fri Jul 29 19:40:23 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off sss_16key -c sss_16key
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "16key_load_shift" is an undefined clock
+    Info: Assuming node "16key_clk" is an undefined clock
+Warning: Found 3 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "inst61" as buffer
+    Info: Detected ripple clock "inst126" as buffer
+    Info: Detected gated clock "inst122" as buffer
+Info: No valid register-to-register data paths exist for clock "16key_load_shift"
+Info: Clock "16key_clk" has Internal fmax of 92.59 MHz between source register "lpm_shiftreg:inst106|dffs[3]" and destination register "lpm_shiftreg:inst106|dffs[4]" (period= 10.8 ns)
+    Info: + Longest register to register delay is 3.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_A8; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[3]'
+        Info: 2: + IC(2.300 ns) + CELL(1.200 ns) = 3.500 ns; Loc. = LC2_A9; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[4]'
+        Info: Total cell delay = 1.200 ns ( 34.29 % )
+        Info: Total interconnect delay = 2.300 ns ( 65.71 % )
+    Info: - Smallest clock skew is -3.700 ns
+        Info: + Shortest clock path from clock "16key_clk" to destination register is 11.400 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 19; CLK Node = '16key_clk'
+            Info: 2: + IC(1.700 ns) + CELL(2.300 ns) = 6.800 ns; Loc. = LC1_C14; Fanout = 16; COMB Node = 'inst122'
+            Info: 3: + IC(4.600 ns) + CELL(0.000 ns) = 11.400 ns; Loc. = LC2_A9; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[4]'
+            Info: Total cell delay = 5.100 ns ( 44.74 % )
+            Info: Total interconnect delay = 6.300 ns ( 55.26 % )
+        Info: - Longest clock path from clock "16key_clk" to source register is 15.100 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 19; CLK Node = '16key_clk'
+            Info: 2: + IC(2.500 ns) + CELL(1.100 ns) = 6.400 ns; Loc. = LC4_C14; Fanout = 2; REG Node = 'inst61'
+            Info: 3: + IC(0.600 ns) + CELL(1.100 ns) = 8.100 ns; Loc. = LC2_C14; Fanout = 1; REG Node = 'inst126'
+            Info: 4: + IC(0.600 ns) + CELL(1.800 ns) = 10.500 ns; Loc. = LC1_C14; Fanout = 16; COMB Node = 'inst122'
+            Info: 5: + IC(4.600 ns) + CELL(0.000 ns) = 15.100 ns; Loc. = LC1_A8; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[3]'
+            Info: Total cell delay = 6.800 ns ( 45.03 % )
+            Info: Total interconnect delay = 8.300 ns ( 54.97 % )
+    Info: + Micro clock to output delay of source is 1.100 ns
+    Info: + Micro setup delay of destination is 2.500 ns
+Warning: Circuit may not operate. Detected 15 non-operational path(s) clocked by clock "16key_clk" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "lpm_shiftreg:inst106|dffs[0]" and destination pin or register "lpm_shiftreg:inst106|dffs[1]" for clock "16key_clk" (Hold time is 2.4 ns)
+    Info: + Largest clock skew is 3.700 ns
+        Info: + Longest clock path from clock "16key_clk" to destination register is 15.100 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 19; CLK Node = '16key_clk'
+            Info: 2: + IC(2.500 ns) + CELL(1.100 ns) = 6.400 ns; Loc. = LC4_C14; Fanout = 2; REG Node = 'inst61'
+            Info: 3: + IC(0.600 ns) + CELL(1.100 ns) = 8.100 ns; Loc. = LC2_C14; Fanout = 1; REG Node = 'inst126'
+            Info: 4: + IC(0.600 ns) + CELL(1.800 ns) = 10.500 ns; Loc. = LC1_C14; Fanout = 16; COMB Node = 'inst122'
+            Info: 5: + IC(4.600 ns) + CELL(0.000 ns) = 15.100 ns; Loc. = LC4_A8; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[1]'
+            Info: Total cell delay = 6.800 ns ( 45.03 % )
+            Info: Total interconnect delay = 8.300 ns ( 54.97 % )
+        Info: - Shortest clock path from clock "16key_clk" to source register is 11.400 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 19; CLK Node = '16key_clk'
+            Info: 2: + IC(1.700 ns) + CELL(2.300 ns) = 6.800 ns; Loc. = LC1_C14; Fanout = 16; COMB Node = 'inst122'
+            Info: 3: + IC(4.600 ns) + CELL(0.000 ns) = 11.400 ns; Loc. = LC3_A8; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[0]'
+            Info: Total cell delay = 5.100 ns ( 44.74 % )
+            Info: Total interconnect delay = 6.300 ns ( 55.26 % )
+    Info: - Micro clock to output delay of source is 1.100 ns
+    Info: - Shortest register to register delay is 1.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC3_A8; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[0]'
+        Info: 2: + IC(0.600 ns) + CELL(1.200 ns) = 1.800 ns; Loc. = LC4_A8; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[1]'
+        Info: Total cell delay = 1.200 ns ( 66.67 % )
+        Info: Total interconnect delay = 0.600 ns ( 33.33 % )
+    Info: + Micro hold delay of destination is 1.600 ns
+Info: tsu for register "inst147" (data pin = "16key_load_shift", clock pin = "16key_clk") is 2.900 ns
+    Info: + Longest pin to register delay is 5.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_1; Fanout = 18; CLK Node = '16key_load_shift'
+        Info: 2: + IC(1.700 ns) + CELL(1.200 ns) = 5.700 ns; Loc. = LC7_C14; Fanout = 2; REG Node = 'inst147'
+        Info: Total cell delay = 4.000 ns ( 70.18 % )
+        Info: Total interconnect delay = 1.700 ns ( 29.82 % )
+    Info: + Micro setup delay of destination is 2.500 ns
+    Info: - Shortest clock path from clock "16key_clk" to destination register is 5.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 19; CLK Node = '16key_clk'
+        Info: 2: + IC(2.500 ns) + CELL(0.000 ns) = 5.300 ns; Loc. = LC7_C14; Fanout = 2; REG Node = 'inst147'
+        Info: Total cell delay = 2.800 ns ( 52.83 % )
+        Info: Total interconnect delay = 2.500 ns ( 47.17 % )
+Info: tco from clock "16key_load_shift" to destination pin "16key_but3" through register "lpm_shiftreg:inst119|dffs[3]" is 14.000 ns
+    Info: + Longest clock path from clock "16key_load_shift" to source register is 5.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_1; Fanout = 18; CLK Node = '16key_load_shift'
+        Info: 2: + IC(2.500 ns) + CELL(0.000 ns) = 5.300 ns; Loc. = LC1_A4; Fanout = 1; REG Node = 'lpm_shiftreg:inst119|dffs[3]'
+        Info: Total cell delay = 2.800 ns ( 52.83 % )
+        Info: Total interconnect delay = 2.500 ns ( 47.17 % )
+    Info: + Micro clock to output delay of source is 1.100 ns
+    Info: + Longest register to pin delay is 7.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC1_A4; Fanout = 1; REG Node = 'lpm_shiftreg:inst119|dffs[3]'
+        Info: 2: + IC(2.500 ns) + CELL(5.100 ns) = 7.600 ns; Loc. = PIN_73; Fanout = 0; PIN Node = '16key_but3'
+        Info: Total cell delay = 5.100 ns ( 67.11 % )
+        Info: Total interconnect delay = 2.500 ns ( 32.89 % )
+Info: th for register "lpm_shiftreg:inst106|dffs[0]" (data pin = "16key_in", clock pin = "16key_clk") is 11.100 ns
+    Info: + Longest clock path from clock "16key_clk" to destination register is 15.100 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 19; CLK Node = '16key_clk'
+        Info: 2: + IC(2.500 ns) + CELL(1.100 ns) = 6.400 ns; Loc. = LC4_C14; Fanout = 2; REG Node = 'inst61'
+        Info: 3: + IC(0.600 ns) + CELL(1.100 ns) = 8.100 ns; Loc. = LC2_C14; Fanout = 1; REG Node = 'inst126'
+        Info: 4: + IC(0.600 ns) + CELL(1.800 ns) = 10.500 ns; Loc. = LC1_C14; Fanout = 16; COMB Node = 'inst122'
+        Info: 5: + IC(4.600 ns) + CELL(0.000 ns) = 15.100 ns; Loc. = LC3_A8; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[0]'
+        Info: Total cell delay = 6.800 ns ( 45.03 % )
+        Info: Total interconnect delay = 8.300 ns ( 54.97 % )
+    Info: + Micro hold delay of destination is 1.600 ns
+    Info: - Shortest pin to register delay is 5.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_2; Fanout = 1; PIN Node = '16key_in'
+        Info: 2: + IC(1.600 ns) + CELL(1.200 ns) = 5.600 ns; Loc. = LC3_A8; Fanout = 2; REG Node = 'lpm_shiftreg:inst106|dffs[0]'
+        Info: Total cell delay = 4.000 ns ( 71.43 % )
+        Info: Total interconnect delay = 1.600 ns ( 28.57 % )
+Info: Parallel compilation was enabled but no parallel operations were performed
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 160 megabytes
+    Info: Processing ended: Fri Jul 29 19:40:25 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

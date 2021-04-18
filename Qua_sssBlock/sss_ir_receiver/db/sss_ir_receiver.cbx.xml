@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sss_ir_receiver">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_COMPARE:inst235" CBX_FILE_NAME="cmpr_hpf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_CONSTANT:inst236" CBX_FILE_NAME="lpm_constant_lo4.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_MUX:inst177" CBX_FILE_NAME="mux_sbc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_COMPARE:inst209" CBX_FILE_NAME="cmpr_hpf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_COMPARE:inst227" CBX_FILE_NAME="cmpr_hpf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_CONSTANT:inst" CBX_FILE_NAME="lpm_constant_im4.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_CONSTANT:inst4" CBX_FILE_NAME="lpm_constant_mo4.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_CONSTANT:inst6" CBX_FILE_NAME="lpm_constant_sp4.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018" CBX_FILE_NAME="cmpr_q0g.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_COMPARE:inst211" CBX_FILE_NAME="cmpr_hpf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_CONSTANT:inst157" CBX_FILE_NAME="lpm_constant_r84.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_CONSTANT:$00016" CBX_FILE_NAME="lpm_constant_6d4.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

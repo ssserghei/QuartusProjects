@@ -1,0 +1,12 @@
+Fitter Status : Successful - Fri Sep 16 12:33:22 2016
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : sss_spi16_termo
+Top-level Entity Name : sss_spi16_termo
+Family : Cyclone
+Device : EP1C6T144I7
+Timing Models : Final
+Total logic elements : 79 / 5,980 ( 1 % )
+Total pins : 49 / 98 ( 50 % )
+Total virtual pins : 0
+Total memory bits : 0 / 92,160 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

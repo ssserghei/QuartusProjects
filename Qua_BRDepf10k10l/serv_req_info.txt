@@ -1,0 +1,16 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>PGMIO</sub_system>
+	<file>/quartus/pgm/pgmio/pgmio_f2p.cpp</file>
+	<line>6350</line>
+	<callstack>
+	0x083e2f58: pgm_pgmio + 0x42f58 (?compress_bitstream@PGMIO_F2P@@SIXAA_NAAV?$deque@PAVPGMIO_BIT_VECTOR@@V?$MEM_STL_ALLOCATOR@PAVPGMIO_BIT_VECTOR@@@@@_Dinkum_std@@PBVPGM_DEVICE@@W4PGMIO_PASSIVE_PROGRAMMING_MODE@@@Z + 0x158)
+	0x0705f7bb:
+	</callstack>
+	<error>device don&apos;t support compression</error>
+	<date>Mon Oct 03 18:47:56 2016</date>
+	<version>Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version</version>
+	<full_error>device don&apos;t support compression
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version </full_error>
+</internal_error>
+

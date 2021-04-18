@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sss_FTDI_UM245R">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_FTDI_UM245R|LPM_COUNTER:inst" CBX_FILE_NAME="cntr_anf.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

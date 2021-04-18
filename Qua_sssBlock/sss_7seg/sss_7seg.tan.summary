@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 19.000 ns
+From           : lpm_counter:inst28|alt_counter_f10ke:wysi_counter|q[2]
+To             : 7seg_sel_dig[0]
+From Clock     : 7seg_dinam_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: '7seg_data_runspeed'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 76.34 MHz ( period = 13.100 ns )
+From           : lpm_rom0:inst1|altsyncram:altsyncram_component|altrom:rom|q[6]~reg_ra4
+To             : lpm_rom0:inst1|altsyncram:altsyncram_component|altrom:rom|q[6]
+From Clock     : 7seg_data_runspeed
+To Clock       : 7seg_data_runspeed
+Failed Paths   : 0
+
+Type           : Clock Setup: '7seg_dinam_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 120.48 MHz ( period = 8.300 ns )
+From           : lpm_counter:inst28|alt_counter_f10ke:wysi_counter|q[1]
+To             : lpm_counter:inst28|alt_counter_f10ke:wysi_counter|q[1]
+From Clock     : 7seg_dinam_clk
+To Clock       : 7seg_dinam_clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

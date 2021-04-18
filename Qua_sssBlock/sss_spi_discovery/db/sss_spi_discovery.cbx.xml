@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sss_spi_discovery">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_spi_discovery|LPM_CONSTANT:inst46" CBX_FILE_NAME="lpm_constant_kq3.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_spi_discovery|LPM_COUNTER:inst1" CBX_FILE_NAME="cntr_anf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_spi_discovery|LPM_COUNTER:inst8" CBX_FILE_NAME="cntr_c1h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_spi_discovery|LPM_DECODE:inst7" CBX_FILE_NAME="decode_p0f.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

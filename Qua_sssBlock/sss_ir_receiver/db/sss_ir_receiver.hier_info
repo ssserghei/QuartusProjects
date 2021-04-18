@@ -1,0 +1,3219 @@
+|sss_ir_receiver
+ir_but_start/stop <= inst207.DB_MAX_OUTPUT_PORT_TYPE
+ir_save_data[0] <= LPM_SHIFTREG:inst27.q[0]
+ir_save_data[1] <= LPM_SHIFTREG:inst27.q[1]
+ir_save_data[2] <= LPM_SHIFTREG:inst27.q[2]
+ir_save_data[3] <= LPM_SHIFTREG:inst27.q[3]
+ir_save_data[4] <= LPM_SHIFTREG:inst27.q[4]
+ir_save_data[5] <= LPM_SHIFTREG:inst27.q[5]
+ir_save_data[6] <= LPM_SHIFTREG:inst27.q[6]
+ir_save_data[7] <= LPM_SHIFTREG:inst27.q[7]
+ir_save_data[8] <= LPM_SHIFTREG:inst27.q[8]
+ir_save_data[9] <= LPM_SHIFTREG:inst27.q[9]
+ir_save_data[10] <= LPM_SHIFTREG:inst27.q[10]
+ir_save_data[11] <= LPM_SHIFTREG:inst27.q[11]
+ir_save_data[12] <= LPM_SHIFTREG:inst27.q[12]
+ir_save_data[13] <= LPM_SHIFTREG:inst27.q[13]
+ir_save_data[14] <= LPM_SHIFTREG:inst27.q[14]
+ir_save_data[15] <= LPM_SHIFTREG:inst27.q[15]
+ir_save_data[16] <= LPM_SHIFTREG:inst27.q[16]
+ir_save_data[17] <= LPM_SHIFTREG:inst27.q[17]
+ir_save_data[18] <= LPM_SHIFTREG:inst27.q[18]
+ir_save_data[19] <= LPM_SHIFTREG:inst27.q[19]
+ir_save_data[20] <= LPM_SHIFTREG:inst27.q[20]
+ir_save_data[21] <= LPM_SHIFTREG:inst27.q[21]
+ir_save_data[22] <= LPM_SHIFTREG:inst27.q[22]
+ir_save_data[23] <= LPM_SHIFTREG:inst27.q[23]
+ir_save_data[24] <= LPM_SHIFTREG:inst27.q[24]
+ir_save_data[25] <= LPM_SHIFTREG:inst27.q[25]
+ir_save_data[26] <= LPM_SHIFTREG:inst27.q[26]
+ir_save_data[27] <= LPM_SHIFTREG:inst27.q[27]
+ir_save_data[28] <= LPM_SHIFTREG:inst27.q[28]
+ir_save_data[29] <= LPM_SHIFTREG:inst27.q[29]
+ir_save_data[30] <= LPM_SHIFTREG:inst27.q[30]
+ir_save_data[31] <= LPM_SHIFTREG:inst27.q[31]
+ir_clk => LPM_SHIFTREG:inst27.clock
+ir_clk => LPM_COUNTER:inst155.clock
+ir_clk => inst158.CLK
+ir_clk => inst139.CLK
+ir_clk => LPM_SHIFTREG:inst162.clock
+ir_clk => inst210.CLK
+ir_clk => inst226.CLK
+ir_input => inst158.DATAIN
+ir_but_mute <= inst210.DB_MAX_OUTPUT_PORT_TYPE
+ir_but_1 <= inst226.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+dataa[4] => comptree:comparator.dataa[4]
+dataa[5] => comptree:comparator.dataa[5]
+dataa[6] => comptree:comparator.dataa[6]
+dataa[7] => comptree:comparator.dataa[7]
+dataa[8] => comptree:comparator.dataa[8]
+dataa[9] => comptree:comparator.dataa[9]
+dataa[10] => comptree:comparator.dataa[10]
+dataa[11] => comptree:comparator.dataa[11]
+dataa[12] => comptree:comparator.dataa[12]
+dataa[13] => comptree:comparator.dataa[13]
+dataa[14] => comptree:comparator.dataa[14]
+dataa[15] => comptree:comparator.dataa[15]
+dataa[16] => comptree:comparator.dataa[16]
+dataa[17] => comptree:comparator.dataa[17]
+dataa[18] => comptree:comparator.dataa[18]
+dataa[19] => comptree:comparator.dataa[19]
+dataa[20] => comptree:comparator.dataa[20]
+dataa[21] => comptree:comparator.dataa[21]
+dataa[22] => comptree:comparator.dataa[22]
+dataa[23] => comptree:comparator.dataa[23]
+dataa[24] => comptree:comparator.dataa[24]
+dataa[25] => comptree:comparator.dataa[25]
+dataa[26] => comptree:comparator.dataa[26]
+dataa[27] => comptree:comparator.dataa[27]
+dataa[28] => comptree:comparator.dataa[28]
+dataa[29] => comptree:comparator.dataa[29]
+dataa[30] => comptree:comparator.dataa[30]
+dataa[31] => comptree:comparator.dataa[31]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+datab[4] => comptree:comparator.datab[4]
+datab[5] => comptree:comparator.datab[5]
+datab[6] => comptree:comparator.datab[6]
+datab[7] => comptree:comparator.datab[7]
+datab[8] => comptree:comparator.datab[8]
+datab[9] => comptree:comparator.datab[9]
+datab[10] => comptree:comparator.datab[10]
+datab[11] => comptree:comparator.datab[11]
+datab[12] => comptree:comparator.datab[12]
+datab[13] => comptree:comparator.datab[13]
+datab[14] => comptree:comparator.datab[14]
+datab[15] => comptree:comparator.datab[15]
+datab[16] => comptree:comparator.datab[16]
+datab[17] => comptree:comparator.datab[17]
+datab[18] => comptree:comparator.datab[18]
+datab[19] => comptree:comparator.datab[19]
+datab[20] => comptree:comparator.datab[20]
+datab[21] => comptree:comparator.datab[21]
+datab[22] => comptree:comparator.datab[22]
+datab[23] => comptree:comparator.datab[23]
+datab[24] => comptree:comparator.datab[24]
+datab[25] => comptree:comparator.datab[25]
+datab[26] => comptree:comparator.datab[26]
+datab[27] => comptree:comparator.datab[27]
+datab[28] => comptree:comparator.datab[28]
+datab[29] => comptree:comparator.datab[29]
+datab[30] => comptree:comparator.datab[30]
+datab[31] => comptree:comparator.datab[31]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= alb~1.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb~1.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb~1.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+dataa[4] => cmpchain:cmp_end.dataa[4]
+dataa[5] => cmpchain:cmp_end.dataa[5]
+dataa[6] => cmpchain:cmp_end.dataa[6]
+dataa[7] => cmpchain:cmp_end.dataa[7]
+dataa[8] => cmpchain:cmp_end.dataa[8]
+dataa[9] => cmpchain:cmp_end.dataa[9]
+dataa[10] => cmpchain:cmp_end.dataa[10]
+dataa[11] => cmpchain:cmp_end.dataa[11]
+dataa[12] => cmpchain:cmp_end.dataa[12]
+dataa[13] => cmpchain:cmp_end.dataa[13]
+dataa[14] => cmpchain:cmp_end.dataa[14]
+dataa[15] => cmpchain:cmp_end.dataa[15]
+dataa[16] => cmpchain:cmp_end.dataa[16]
+dataa[17] => cmpchain:cmp_end.dataa[17]
+dataa[18] => cmpchain:cmp_end.dataa[18]
+dataa[19] => cmpchain:cmp_end.dataa[19]
+dataa[20] => cmpchain:cmp_end.dataa[20]
+dataa[21] => cmpchain:cmp_end.dataa[21]
+dataa[22] => cmpchain:cmp_end.dataa[22]
+dataa[23] => cmpchain:cmp_end.dataa[23]
+dataa[24] => cmpchain:cmp_end.dataa[24]
+dataa[25] => cmpchain:cmp_end.dataa[25]
+dataa[26] => cmpchain:cmp_end.dataa[26]
+dataa[27] => cmpchain:cmp_end.dataa[27]
+dataa[28] => cmpchain:cmp_end.dataa[28]
+dataa[29] => cmpchain:cmp_end.dataa[29]
+dataa[30] => cmpchain:cmp_end.dataa[30]
+dataa[31] => cmpchain:cmp_end.dataa[31]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+datab[4] => cmpchain:cmp_end.datab[4]
+datab[5] => cmpchain:cmp_end.datab[5]
+datab[6] => cmpchain:cmp_end.datab[6]
+datab[7] => cmpchain:cmp_end.datab[7]
+datab[8] => cmpchain:cmp_end.datab[8]
+datab[9] => cmpchain:cmp_end.datab[9]
+datab[10] => cmpchain:cmp_end.datab[10]
+datab[11] => cmpchain:cmp_end.datab[11]
+datab[12] => cmpchain:cmp_end.datab[12]
+datab[13] => cmpchain:cmp_end.datab[13]
+datab[14] => cmpchain:cmp_end.datab[14]
+datab[15] => cmpchain:cmp_end.datab[15]
+datab[16] => cmpchain:cmp_end.datab[16]
+datab[17] => cmpchain:cmp_end.datab[17]
+datab[18] => cmpchain:cmp_end.datab[18]
+datab[19] => cmpchain:cmp_end.datab[19]
+datab[20] => cmpchain:cmp_end.datab[20]
+datab[21] => cmpchain:cmp_end.datab[21]
+datab[22] => cmpchain:cmp_end.datab[22]
+datab[23] => cmpchain:cmp_end.datab[23]
+datab[24] => cmpchain:cmp_end.datab[24]
+datab[25] => cmpchain:cmp_end.datab[25]
+datab[26] => cmpchain:cmp_end.datab[26]
+datab[27] => cmpchain:cmp_end.datab[27]
+datab[28] => cmpchain:cmp_end.datab[28]
+datab[29] => cmpchain:cmp_end.datab[29]
+datab[30] => cmpchain:cmp_end.datab[30]
+datab[31] => cmpchain:cmp_end.datab[31]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end
+dataa[0] => comptree:comp.dataa[0]
+dataa[1] => comptree:comp.dataa[1]
+dataa[2] => comptree:comp.dataa[2]
+dataa[3] => comptree:comp.dataa[3]
+dataa[4] => comptree:comp.dataa[4]
+dataa[5] => comptree:comp.dataa[5]
+dataa[6] => comptree:comp.dataa[6]
+dataa[7] => comptree:comp.dataa[7]
+dataa[8] => comptree:comp.dataa[8]
+dataa[9] => comptree:comp.dataa[9]
+dataa[10] => comptree:comp.dataa[10]
+dataa[11] => comptree:comp.dataa[11]
+dataa[12] => comptree:comp.dataa[12]
+dataa[13] => comptree:comp.dataa[13]
+dataa[14] => comptree:comp.dataa[14]
+dataa[15] => comptree:comp.dataa[15]
+dataa[16] => comptree:comp.dataa[16]
+dataa[17] => comptree:comp.dataa[17]
+dataa[18] => comptree:comp.dataa[18]
+dataa[19] => comptree:comp.dataa[19]
+dataa[20] => comptree:comp.dataa[20]
+dataa[21] => comptree:comp.dataa[21]
+dataa[22] => comptree:comp.dataa[22]
+dataa[23] => comptree:comp.dataa[23]
+dataa[24] => comptree:comp.dataa[24]
+dataa[25] => comptree:comp.dataa[25]
+dataa[26] => comptree:comp.dataa[26]
+dataa[27] => comptree:comp.dataa[27]
+dataa[28] => comptree:comp.dataa[28]
+dataa[29] => comptree:comp.dataa[29]
+dataa[30] => comptree:comp.dataa[30]
+dataa[31] => comptree:comp.dataa[31]
+datab[0] => comptree:comp.datab[0]
+datab[1] => comptree:comp.datab[1]
+datab[2] => comptree:comp.datab[2]
+datab[3] => comptree:comp.datab[3]
+datab[4] => comptree:comp.datab[4]
+datab[5] => comptree:comp.datab[5]
+datab[6] => comptree:comp.datab[6]
+datab[7] => comptree:comp.datab[7]
+datab[8] => comptree:comp.datab[8]
+datab[9] => comptree:comp.datab[9]
+datab[10] => comptree:comp.datab[10]
+datab[11] => comptree:comp.datab[11]
+datab[12] => comptree:comp.datab[12]
+datab[13] => comptree:comp.datab[13]
+datab[14] => comptree:comp.datab[14]
+datab[15] => comptree:comp.datab[15]
+datab[16] => comptree:comp.datab[16]
+datab[17] => comptree:comp.datab[17]
+datab[18] => comptree:comp.datab[18]
+datab[19] => comptree:comp.datab[19]
+datab[20] => comptree:comp.datab[20]
+datab[21] => comptree:comp.datab[21]
+datab[22] => comptree:comp.datab[22]
+datab[23] => comptree:comp.datab[23]
+datab[24] => comptree:comp.datab[24]
+datab[25] => comptree:comp.datab[25]
+datab[26] => comptree:comp.datab[26]
+datab[27] => comptree:comp.datab[27]
+datab[28] => comptree:comp.datab[28]
+datab[29] => comptree:comp.datab[29]
+datab[30] => comptree:comp.datab[30]
+datab[31] => comptree:comp.datab[31]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+dataa[8] => cmpchain:cmp[2].dataa[0]
+dataa[9] => cmpchain:cmp[2].dataa[1]
+dataa[10] => cmpchain:cmp[2].dataa[2]
+dataa[11] => cmpchain:cmp[2].dataa[3]
+dataa[12] => cmpchain:cmp[3].dataa[0]
+dataa[13] => cmpchain:cmp[3].dataa[1]
+dataa[14] => cmpchain:cmp[3].dataa[2]
+dataa[15] => cmpchain:cmp[3].dataa[3]
+dataa[16] => cmpchain:cmp[4].dataa[0]
+dataa[17] => cmpchain:cmp[4].dataa[1]
+dataa[18] => cmpchain:cmp[4].dataa[2]
+dataa[19] => cmpchain:cmp[4].dataa[3]
+dataa[20] => cmpchain:cmp[5].dataa[0]
+dataa[21] => cmpchain:cmp[5].dataa[1]
+dataa[22] => cmpchain:cmp[5].dataa[2]
+dataa[23] => cmpchain:cmp[5].dataa[3]
+dataa[24] => cmpchain:cmp[6].dataa[0]
+dataa[25] => cmpchain:cmp[6].dataa[1]
+dataa[26] => cmpchain:cmp[6].dataa[2]
+dataa[27] => cmpchain:cmp[6].dataa[3]
+dataa[28] => cmpchain:cmp[7].dataa[0]
+dataa[29] => cmpchain:cmp[7].dataa[1]
+dataa[30] => cmpchain:cmp[7].dataa[2]
+dataa[31] => cmpchain:cmp[7].dataa[3]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+datab[8] => cmpchain:cmp[2].datab[0]
+datab[9] => cmpchain:cmp[2].datab[1]
+datab[10] => cmpchain:cmp[2].datab[2]
+datab[11] => cmpchain:cmp[2].datab[3]
+datab[12] => cmpchain:cmp[3].datab[0]
+datab[13] => cmpchain:cmp[3].datab[1]
+datab[14] => cmpchain:cmp[3].datab[2]
+datab[15] => cmpchain:cmp[3].datab[3]
+datab[16] => cmpchain:cmp[4].datab[0]
+datab[17] => cmpchain:cmp[4].datab[1]
+datab[18] => cmpchain:cmp[4].datab[2]
+datab[19] => cmpchain:cmp[4].datab[3]
+datab[20] => cmpchain:cmp[5].datab[0]
+datab[21] => cmpchain:cmp[5].datab[1]
+datab[22] => cmpchain:cmp[5].datab[2]
+datab[23] => cmpchain:cmp[5].datab[3]
+datab[24] => cmpchain:cmp[6].datab[0]
+datab[25] => cmpchain:cmp[6].datab[1]
+datab[26] => cmpchain:cmp[6].datab[2]
+datab[27] => cmpchain:cmp[6].datab[3]
+datab[28] => cmpchain:cmp[7].datab[0]
+datab[29] => cmpchain:cmp[7].datab[1]
+datab[30] => cmpchain:cmp[7].datab[2]
+datab[31] => cmpchain:cmp[7].datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst209|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst
+result[0] <= lpm_constant_im4:ag.result[0]
+result[1] <= lpm_constant_im4:ag.result[1]
+result[2] <= lpm_constant_im4:ag.result[2]
+result[3] <= lpm_constant_im4:ag.result[3]
+result[4] <= lpm_constant_im4:ag.result[4]
+result[5] <= lpm_constant_im4:ag.result[5]
+result[6] <= lpm_constant_im4:ag.result[6]
+result[7] <= lpm_constant_im4:ag.result[7]
+result[8] <= lpm_constant_im4:ag.result[8]
+result[9] <= lpm_constant_im4:ag.result[9]
+result[10] <= lpm_constant_im4:ag.result[10]
+result[11] <= lpm_constant_im4:ag.result[11]
+result[12] <= lpm_constant_im4:ag.result[12]
+result[13] <= lpm_constant_im4:ag.result[13]
+result[14] <= lpm_constant_im4:ag.result[14]
+result[15] <= lpm_constant_im4:ag.result[15]
+result[16] <= lpm_constant_im4:ag.result[16]
+result[17] <= lpm_constant_im4:ag.result[17]
+result[18] <= lpm_constant_im4:ag.result[18]
+result[19] <= lpm_constant_im4:ag.result[19]
+result[20] <= lpm_constant_im4:ag.result[20]
+result[21] <= lpm_constant_im4:ag.result[21]
+result[22] <= lpm_constant_im4:ag.result[22]
+result[23] <= lpm_constant_im4:ag.result[23]
+result[24] <= lpm_constant_im4:ag.result[24]
+result[25] <= lpm_constant_im4:ag.result[25]
+result[26] <= lpm_constant_im4:ag.result[26]
+result[27] <= lpm_constant_im4:ag.result[27]
+result[28] <= lpm_constant_im4:ag.result[28]
+result[29] <= lpm_constant_im4:ag.result[29]
+result[30] <= lpm_constant_im4:ag.result[30]
+result[31] <= lpm_constant_im4:ag.result[31]
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst|lpm_constant_im4:ag
+result[0] <= <VCC>
+result[1] <= <GND>
+result[2] <= <VCC>
+result[3] <= <VCC>
+result[4] <= <GND>
+result[5] <= <VCC>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <VCC>
+result[9] <= <VCC>
+result[10] <= <GND>
+result[11] <= <GND>
+result[12] <= <VCC>
+result[13] <= <VCC>
+result[14] <= <GND>
+result[15] <= <GND>
+result[16] <= <GND>
+result[17] <= <GND>
+result[18] <= <GND>
+result[19] <= <GND>
+result[20] <= <VCC>
+result[21] <= <GND>
+result[22] <= <GND>
+result[23] <= <GND>
+result[24] <= <GND>
+result[25] <= <VCC>
+result[26] <= <VCC>
+result[27] <= <VCC>
+result[28] <= <GND>
+result[29] <= <GND>
+result[30] <= <GND>
+result[31] <= <GND>
+
+
+|sss_ir_receiver|LPM_SHIFTREG:inst27
+clock => dffs[31].CLK
+clock => dffs[30].CLK
+clock => dffs[29].CLK
+clock => dffs[28].CLK
+clock => dffs[27].CLK
+clock => dffs[26].CLK
+clock => dffs[25].CLK
+clock => dffs[24].CLK
+clock => dffs[23].CLK
+clock => dffs[22].CLK
+clock => dffs[21].CLK
+clock => dffs[20].CLK
+clock => dffs[19].CLK
+clock => dffs[18].CLK
+clock => dffs[17].CLK
+clock => dffs[16].CLK
+clock => dffs[15].CLK
+clock => dffs[14].CLK
+clock => dffs[13].CLK
+clock => dffs[12].CLK
+clock => dffs[11].CLK
+clock => dffs[10].CLK
+clock => dffs[9].CLK
+clock => dffs[8].CLK
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[31].ENA
+enable => dffs[30].ENA
+enable => dffs[29].ENA
+enable => dffs[28].ENA
+enable => dffs[27].ENA
+enable => dffs[26].ENA
+enable => dffs[25].ENA
+enable => dffs[24].ENA
+enable => dffs[23].ENA
+enable => dffs[22].ENA
+enable => dffs[21].ENA
+enable => dffs[20].ENA
+enable => dffs[19].ENA
+enable => dffs[18].ENA
+enable => dffs[17].ENA
+enable => dffs[16].ENA
+enable => dffs[15].ENA
+enable => dffs[14].ENA
+enable => dffs[13].ENA
+enable => dffs[12].ENA
+enable => dffs[11].ENA
+enable => dffs[10].ENA
+enable => dffs[9].ENA
+enable => dffs[8].ENA
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
+q[16] <= dffs[16].DB_MAX_OUTPUT_PORT_TYPE
+q[17] <= dffs[17].DB_MAX_OUTPUT_PORT_TYPE
+q[18] <= dffs[18].DB_MAX_OUTPUT_PORT_TYPE
+q[19] <= dffs[19].DB_MAX_OUTPUT_PORT_TYPE
+q[20] <= dffs[20].DB_MAX_OUTPUT_PORT_TYPE
+q[21] <= dffs[21].DB_MAX_OUTPUT_PORT_TYPE
+q[22] <= dffs[22].DB_MAX_OUTPUT_PORT_TYPE
+q[23] <= dffs[23].DB_MAX_OUTPUT_PORT_TYPE
+q[24] <= dffs[24].DB_MAX_OUTPUT_PORT_TYPE
+q[25] <= dffs[25].DB_MAX_OUTPUT_PORT_TYPE
+q[26] <= dffs[26].DB_MAX_OUTPUT_PORT_TYPE
+q[27] <= dffs[27].DB_MAX_OUTPUT_PORT_TYPE
+q[28] <= dffs[28].DB_MAX_OUTPUT_PORT_TYPE
+q[29] <= dffs[29].DB_MAX_OUTPUT_PORT_TYPE
+q[30] <= dffs[30].DB_MAX_OUTPUT_PORT_TYPE
+q[31] <= dffs[31].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_SHIFTREG:inst162
+clock => dffs[31].CLK
+clock => dffs[30].CLK
+clock => dffs[29].CLK
+clock => dffs[28].CLK
+clock => dffs[27].CLK
+clock => dffs[26].CLK
+clock => dffs[25].CLK
+clock => dffs[24].CLK
+clock => dffs[23].CLK
+clock => dffs[22].CLK
+clock => dffs[21].CLK
+clock => dffs[20].CLK
+clock => dffs[19].CLK
+clock => dffs[18].CLK
+clock => dffs[17].CLK
+clock => dffs[16].CLK
+clock => dffs[15].CLK
+clock => dffs[14].CLK
+clock => dffs[13].CLK
+clock => dffs[12].CLK
+clock => dffs[11].CLK
+clock => dffs[10].CLK
+clock => dffs[9].CLK
+clock => dffs[8].CLK
+clock => dffs[7].CLK
+clock => dffs[6].CLK
+clock => dffs[5].CLK
+clock => dffs[4].CLK
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[31].ENA
+enable => dffs[30].ENA
+enable => dffs[29].ENA
+enable => dffs[28].ENA
+enable => dffs[27].ENA
+enable => dffs[26].ENA
+enable => dffs[25].ENA
+enable => dffs[24].ENA
+enable => dffs[23].ENA
+enable => dffs[22].ENA
+enable => dffs[21].ENA
+enable => dffs[20].ENA
+enable => dffs[19].ENA
+enable => dffs[18].ENA
+enable => dffs[17].ENA
+enable => dffs[16].ENA
+enable => dffs[15].ENA
+enable => dffs[14].ENA
+enable => dffs[13].ENA
+enable => dffs[12].ENA
+enable => dffs[11].ENA
+enable => dffs[10].ENA
+enable => dffs[9].ENA
+enable => dffs[8].ENA
+enable => dffs[7].ENA
+enable => dffs[6].ENA
+enable => dffs[5].ENA
+enable => dffs[4].ENA
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= dffs[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= dffs[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= dffs[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= dffs[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= dffs[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= dffs[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= dffs[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= dffs[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= dffs[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= dffs[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
+q[16] <= dffs[16].DB_MAX_OUTPUT_PORT_TYPE
+q[17] <= dffs[17].DB_MAX_OUTPUT_PORT_TYPE
+q[18] <= dffs[18].DB_MAX_OUTPUT_PORT_TYPE
+q[19] <= dffs[19].DB_MAX_OUTPUT_PORT_TYPE
+q[20] <= dffs[20].DB_MAX_OUTPUT_PORT_TYPE
+q[21] <= dffs[21].DB_MAX_OUTPUT_PORT_TYPE
+q[22] <= dffs[22].DB_MAX_OUTPUT_PORT_TYPE
+q[23] <= dffs[23].DB_MAX_OUTPUT_PORT_TYPE
+q[24] <= dffs[24].DB_MAX_OUTPUT_PORT_TYPE
+q[25] <= dffs[25].DB_MAX_OUTPUT_PORT_TYPE
+q[26] <= dffs[26].DB_MAX_OUTPUT_PORT_TYPE
+q[27] <= dffs[27].DB_MAX_OUTPUT_PORT_TYPE
+q[28] <= dffs[28].DB_MAX_OUTPUT_PORT_TYPE
+q[29] <= dffs[29].DB_MAX_OUTPUT_PORT_TYPE
+q[30] <= dffs[30].DB_MAX_OUTPUT_PORT_TYPE
+q[31] <= dffs[31].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst156
+dataa[0] => comptree:comparator.datab[0]
+dataa[1] => comptree:comparator.datab[1]
+dataa[2] => comptree:comparator.datab[2]
+dataa[3] => comptree:comparator.datab[3]
+dataa[4] => comptree:comparator.datab[4]
+dataa[5] => comptree:comparator.datab[5]
+dataa[6] => comptree:comparator.datab[6]
+dataa[7] => comptree:comparator.datab[7]
+datab[0] => comptree:comparator.dataa[0]
+datab[1] => comptree:comparator.dataa[1]
+datab[2] => comptree:comparator.dataa[2]
+datab[3] => comptree:comparator.dataa[3]
+datab[4] => comptree:comparator.dataa[4]
+datab[5] => comptree:comparator.dataa[5]
+datab[6] => comptree:comparator.dataa[6]
+datab[7] => comptree:comparator.dataa[7]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= agb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~1.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb~1.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb~1.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst156|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+dataa[4] => cmpchain:cmp_end.dataa[4]
+dataa[5] => cmpchain:cmp_end.dataa[5]
+dataa[6] => cmpchain:cmp_end.dataa[6]
+dataa[7] => cmpchain:cmp_end.dataa[7]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+datab[4] => cmpchain:cmp_end.datab[4]
+datab[5] => cmpchain:cmp_end.datab[5]
+datab[6] => cmpchain:cmp_end.datab[6]
+datab[7] => cmpchain:cmp_end.datab[7]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= cmpchain:cmp_end.agb
+
+
+|sss_ir_receiver|LPM_COMPARE:inst156|comptree:comparator|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst156|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst156|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst157
+result[0] <= <GND>
+result[1] <= <VCC>
+result[2] <= <VCC>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <VCC>
+result[6] <= <GND>
+result[7] <= <GND>
+
+
+|sss_ir_receiver|LPM_COUNTER:inst155
+clock => alt_counter_f10ke:wysi_counter.clock
+clk_en => ~NO_FANOUT~
+cnt_en => alt_counter_f10ke:wysi_counter.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => alt_counter_f10ke:wysi_counter.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= alt_counter_f10ke:wysi_counter.q[0]
+q[1] <= alt_counter_f10ke:wysi_counter.q[1]
+q[2] <= alt_counter_f10ke:wysi_counter.q[2]
+q[3] <= alt_counter_f10ke:wysi_counter.q[3]
+q[4] <= alt_counter_f10ke:wysi_counter.q[4]
+q[5] <= alt_counter_f10ke:wysi_counter.q[5]
+q[6] <= alt_counter_f10ke:wysi_counter.q[6]
+q[7] <= alt_counter_f10ke:wysi_counter.q[7]
+cout <= alt_counter_f10ke:wysi_counter.cout
+eq[0] <= eq[0]~15.DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= eq[1]~14.DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= eq[2]~13.DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= eq[3]~12.DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= eq[4]~11.DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= eq[5]~10.DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= eq[6]~9.DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= eq[7]~8.DB_MAX_OUTPUT_PORT_TYPE
+eq[8] <= eq[8]~7.DB_MAX_OUTPUT_PORT_TYPE
+eq[9] <= eq[9]~6.DB_MAX_OUTPUT_PORT_TYPE
+eq[10] <= eq[10]~5.DB_MAX_OUTPUT_PORT_TYPE
+eq[11] <= eq[11]~4.DB_MAX_OUTPUT_PORT_TYPE
+eq[12] <= eq[12]~3.DB_MAX_OUTPUT_PORT_TYPE
+eq[13] <= eq[13]~2.DB_MAX_OUTPUT_PORT_TYPE
+eq[14] <= eq[14]~1.DB_MAX_OUTPUT_PORT_TYPE
+eq[15] <= eq[15]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst155|alt_counter_f10ke:wysi_counter
+data[0] => counter_cell[0].DATAC
+data[1] => counter_cell[1].DATAC
+data[2] => counter_cell[2].DATAC
+data[3] => counter_cell[3].DATAC
+data[4] => counter_cell[4].DATAC
+data[5] => counter_cell[5].DATAC
+data[6] => counter_cell[6].DATAC
+data[7] => counter_cell[7].DATAC
+clock => counter_cell[7].CLK
+clock => counter_cell[6].CLK
+clock => counter_cell[5].CLK
+clock => counter_cell[4].CLK
+clock => counter_cell[3].CLK
+clock => counter_cell[2].CLK
+clock => counter_cell[1].CLK
+clock => counter_cell[0].CLK
+updown => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+q[0] <= counter_cell[0].REGOUT
+q[1] <= counter_cell[1].REGOUT
+q[2] <= counter_cell[2].REGOUT
+q[3] <= counter_cell[3].REGOUT
+q[4] <= counter_cell[4].REGOUT
+q[5] <= counter_cell[5].REGOUT
+q[6] <= counter_cell[6].REGOUT
+q[7] <= counter_cell[7].REGOUT
+cout <= cout_bit.COMBOUT
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+dataa[4] => comptree:comparator.dataa[4]
+dataa[5] => comptree:comparator.dataa[5]
+dataa[6] => comptree:comparator.dataa[6]
+dataa[7] => comptree:comparator.dataa[7]
+dataa[8] => comptree:comparator.dataa[8]
+dataa[9] => comptree:comparator.dataa[9]
+dataa[10] => comptree:comparator.dataa[10]
+dataa[11] => comptree:comparator.dataa[11]
+dataa[12] => comptree:comparator.dataa[12]
+dataa[13] => comptree:comparator.dataa[13]
+dataa[14] => comptree:comparator.dataa[14]
+dataa[15] => comptree:comparator.dataa[15]
+dataa[16] => comptree:comparator.dataa[16]
+dataa[17] => comptree:comparator.dataa[17]
+dataa[18] => comptree:comparator.dataa[18]
+dataa[19] => comptree:comparator.dataa[19]
+dataa[20] => comptree:comparator.dataa[20]
+dataa[21] => comptree:comparator.dataa[21]
+dataa[22] => comptree:comparator.dataa[22]
+dataa[23] => comptree:comparator.dataa[23]
+dataa[24] => comptree:comparator.dataa[24]
+dataa[25] => comptree:comparator.dataa[25]
+dataa[26] => comptree:comparator.dataa[26]
+dataa[27] => comptree:comparator.dataa[27]
+dataa[28] => comptree:comparator.dataa[28]
+dataa[29] => comptree:comparator.dataa[29]
+dataa[30] => comptree:comparator.dataa[30]
+dataa[31] => comptree:comparator.dataa[31]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+datab[4] => comptree:comparator.datab[4]
+datab[5] => comptree:comparator.datab[5]
+datab[6] => comptree:comparator.datab[6]
+datab[7] => comptree:comparator.datab[7]
+datab[8] => comptree:comparator.datab[8]
+datab[9] => comptree:comparator.datab[9]
+datab[10] => comptree:comparator.datab[10]
+datab[11] => comptree:comparator.datab[11]
+datab[12] => comptree:comparator.datab[12]
+datab[13] => comptree:comparator.datab[13]
+datab[14] => comptree:comparator.datab[14]
+datab[15] => comptree:comparator.datab[15]
+datab[16] => comptree:comparator.datab[16]
+datab[17] => comptree:comparator.datab[17]
+datab[18] => comptree:comparator.datab[18]
+datab[19] => comptree:comparator.datab[19]
+datab[20] => comptree:comparator.datab[20]
+datab[21] => comptree:comparator.datab[21]
+datab[22] => comptree:comparator.datab[22]
+datab[23] => comptree:comparator.datab[23]
+datab[24] => comptree:comparator.datab[24]
+datab[25] => comptree:comparator.datab[25]
+datab[26] => comptree:comparator.datab[26]
+datab[27] => comptree:comparator.datab[27]
+datab[28] => comptree:comparator.datab[28]
+datab[29] => comptree:comparator.datab[29]
+datab[30] => comptree:comparator.datab[30]
+datab[31] => comptree:comparator.datab[31]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= alb~1.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb~1.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb~1.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+dataa[4] => cmpchain:cmp_end.dataa[4]
+dataa[5] => cmpchain:cmp_end.dataa[5]
+dataa[6] => cmpchain:cmp_end.dataa[6]
+dataa[7] => cmpchain:cmp_end.dataa[7]
+dataa[8] => cmpchain:cmp_end.dataa[8]
+dataa[9] => cmpchain:cmp_end.dataa[9]
+dataa[10] => cmpchain:cmp_end.dataa[10]
+dataa[11] => cmpchain:cmp_end.dataa[11]
+dataa[12] => cmpchain:cmp_end.dataa[12]
+dataa[13] => cmpchain:cmp_end.dataa[13]
+dataa[14] => cmpchain:cmp_end.dataa[14]
+dataa[15] => cmpchain:cmp_end.dataa[15]
+dataa[16] => cmpchain:cmp_end.dataa[16]
+dataa[17] => cmpchain:cmp_end.dataa[17]
+dataa[18] => cmpchain:cmp_end.dataa[18]
+dataa[19] => cmpchain:cmp_end.dataa[19]
+dataa[20] => cmpchain:cmp_end.dataa[20]
+dataa[21] => cmpchain:cmp_end.dataa[21]
+dataa[22] => cmpchain:cmp_end.dataa[22]
+dataa[23] => cmpchain:cmp_end.dataa[23]
+dataa[24] => cmpchain:cmp_end.dataa[24]
+dataa[25] => cmpchain:cmp_end.dataa[25]
+dataa[26] => cmpchain:cmp_end.dataa[26]
+dataa[27] => cmpchain:cmp_end.dataa[27]
+dataa[28] => cmpchain:cmp_end.dataa[28]
+dataa[29] => cmpchain:cmp_end.dataa[29]
+dataa[30] => cmpchain:cmp_end.dataa[30]
+dataa[31] => cmpchain:cmp_end.dataa[31]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+datab[4] => cmpchain:cmp_end.datab[4]
+datab[5] => cmpchain:cmp_end.datab[5]
+datab[6] => cmpchain:cmp_end.datab[6]
+datab[7] => cmpchain:cmp_end.datab[7]
+datab[8] => cmpchain:cmp_end.datab[8]
+datab[9] => cmpchain:cmp_end.datab[9]
+datab[10] => cmpchain:cmp_end.datab[10]
+datab[11] => cmpchain:cmp_end.datab[11]
+datab[12] => cmpchain:cmp_end.datab[12]
+datab[13] => cmpchain:cmp_end.datab[13]
+datab[14] => cmpchain:cmp_end.datab[14]
+datab[15] => cmpchain:cmp_end.datab[15]
+datab[16] => cmpchain:cmp_end.datab[16]
+datab[17] => cmpchain:cmp_end.datab[17]
+datab[18] => cmpchain:cmp_end.datab[18]
+datab[19] => cmpchain:cmp_end.datab[19]
+datab[20] => cmpchain:cmp_end.datab[20]
+datab[21] => cmpchain:cmp_end.datab[21]
+datab[22] => cmpchain:cmp_end.datab[22]
+datab[23] => cmpchain:cmp_end.datab[23]
+datab[24] => cmpchain:cmp_end.datab[24]
+datab[25] => cmpchain:cmp_end.datab[25]
+datab[26] => cmpchain:cmp_end.datab[26]
+datab[27] => cmpchain:cmp_end.datab[27]
+datab[28] => cmpchain:cmp_end.datab[28]
+datab[29] => cmpchain:cmp_end.datab[29]
+datab[30] => cmpchain:cmp_end.datab[30]
+datab[31] => cmpchain:cmp_end.datab[31]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end
+dataa[0] => comptree:comp.dataa[0]
+dataa[1] => comptree:comp.dataa[1]
+dataa[2] => comptree:comp.dataa[2]
+dataa[3] => comptree:comp.dataa[3]
+dataa[4] => comptree:comp.dataa[4]
+dataa[5] => comptree:comp.dataa[5]
+dataa[6] => comptree:comp.dataa[6]
+dataa[7] => comptree:comp.dataa[7]
+dataa[8] => comptree:comp.dataa[8]
+dataa[9] => comptree:comp.dataa[9]
+dataa[10] => comptree:comp.dataa[10]
+dataa[11] => comptree:comp.dataa[11]
+dataa[12] => comptree:comp.dataa[12]
+dataa[13] => comptree:comp.dataa[13]
+dataa[14] => comptree:comp.dataa[14]
+dataa[15] => comptree:comp.dataa[15]
+dataa[16] => comptree:comp.dataa[16]
+dataa[17] => comptree:comp.dataa[17]
+dataa[18] => comptree:comp.dataa[18]
+dataa[19] => comptree:comp.dataa[19]
+dataa[20] => comptree:comp.dataa[20]
+dataa[21] => comptree:comp.dataa[21]
+dataa[22] => comptree:comp.dataa[22]
+dataa[23] => comptree:comp.dataa[23]
+dataa[24] => comptree:comp.dataa[24]
+dataa[25] => comptree:comp.dataa[25]
+dataa[26] => comptree:comp.dataa[26]
+dataa[27] => comptree:comp.dataa[27]
+dataa[28] => comptree:comp.dataa[28]
+dataa[29] => comptree:comp.dataa[29]
+dataa[30] => comptree:comp.dataa[30]
+dataa[31] => comptree:comp.dataa[31]
+datab[0] => comptree:comp.datab[0]
+datab[1] => comptree:comp.datab[1]
+datab[2] => comptree:comp.datab[2]
+datab[3] => comptree:comp.datab[3]
+datab[4] => comptree:comp.datab[4]
+datab[5] => comptree:comp.datab[5]
+datab[6] => comptree:comp.datab[6]
+datab[7] => comptree:comp.datab[7]
+datab[8] => comptree:comp.datab[8]
+datab[9] => comptree:comp.datab[9]
+datab[10] => comptree:comp.datab[10]
+datab[11] => comptree:comp.datab[11]
+datab[12] => comptree:comp.datab[12]
+datab[13] => comptree:comp.datab[13]
+datab[14] => comptree:comp.datab[14]
+datab[15] => comptree:comp.datab[15]
+datab[16] => comptree:comp.datab[16]
+datab[17] => comptree:comp.datab[17]
+datab[18] => comptree:comp.datab[18]
+datab[19] => comptree:comp.datab[19]
+datab[20] => comptree:comp.datab[20]
+datab[21] => comptree:comp.datab[21]
+datab[22] => comptree:comp.datab[22]
+datab[23] => comptree:comp.datab[23]
+datab[24] => comptree:comp.datab[24]
+datab[25] => comptree:comp.datab[25]
+datab[26] => comptree:comp.datab[26]
+datab[27] => comptree:comp.datab[27]
+datab[28] => comptree:comp.datab[28]
+datab[29] => comptree:comp.datab[29]
+datab[30] => comptree:comp.datab[30]
+datab[31] => comptree:comp.datab[31]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+dataa[8] => cmpchain:cmp[2].dataa[0]
+dataa[9] => cmpchain:cmp[2].dataa[1]
+dataa[10] => cmpchain:cmp[2].dataa[2]
+dataa[11] => cmpchain:cmp[2].dataa[3]
+dataa[12] => cmpchain:cmp[3].dataa[0]
+dataa[13] => cmpchain:cmp[3].dataa[1]
+dataa[14] => cmpchain:cmp[3].dataa[2]
+dataa[15] => cmpchain:cmp[3].dataa[3]
+dataa[16] => cmpchain:cmp[4].dataa[0]
+dataa[17] => cmpchain:cmp[4].dataa[1]
+dataa[18] => cmpchain:cmp[4].dataa[2]
+dataa[19] => cmpchain:cmp[4].dataa[3]
+dataa[20] => cmpchain:cmp[5].dataa[0]
+dataa[21] => cmpchain:cmp[5].dataa[1]
+dataa[22] => cmpchain:cmp[5].dataa[2]
+dataa[23] => cmpchain:cmp[5].dataa[3]
+dataa[24] => cmpchain:cmp[6].dataa[0]
+dataa[25] => cmpchain:cmp[6].dataa[1]
+dataa[26] => cmpchain:cmp[6].dataa[2]
+dataa[27] => cmpchain:cmp[6].dataa[3]
+dataa[28] => cmpchain:cmp[7].dataa[0]
+dataa[29] => cmpchain:cmp[7].dataa[1]
+dataa[30] => cmpchain:cmp[7].dataa[2]
+dataa[31] => cmpchain:cmp[7].dataa[3]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+datab[8] => cmpchain:cmp[2].datab[0]
+datab[9] => cmpchain:cmp[2].datab[1]
+datab[10] => cmpchain:cmp[2].datab[2]
+datab[11] => cmpchain:cmp[2].datab[3]
+datab[12] => cmpchain:cmp[3].datab[0]
+datab[13] => cmpchain:cmp[3].datab[1]
+datab[14] => cmpchain:cmp[3].datab[2]
+datab[15] => cmpchain:cmp[3].datab[3]
+datab[16] => cmpchain:cmp[4].datab[0]
+datab[17] => cmpchain:cmp[4].datab[1]
+datab[18] => cmpchain:cmp[4].datab[2]
+datab[19] => cmpchain:cmp[4].datab[3]
+datab[20] => cmpchain:cmp[5].datab[0]
+datab[21] => cmpchain:cmp[5].datab[1]
+datab[22] => cmpchain:cmp[5].datab[2]
+datab[23] => cmpchain:cmp[5].datab[3]
+datab[24] => cmpchain:cmp[6].datab[0]
+datab[25] => cmpchain:cmp[6].datab[1]
+datab[26] => cmpchain:cmp[6].datab[2]
+datab[27] => cmpchain:cmp[6].datab[3]
+datab[28] => cmpchain:cmp[7].datab[0]
+datab[29] => cmpchain:cmp[7].datab[1]
+datab[30] => cmpchain:cmp[7].datab[2]
+datab[31] => cmpchain:cmp[7].datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst235|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst6
+result[0] <= lpm_constant_sp4:ag.result[0]
+result[1] <= lpm_constant_sp4:ag.result[1]
+result[2] <= lpm_constant_sp4:ag.result[2]
+result[3] <= lpm_constant_sp4:ag.result[3]
+result[4] <= lpm_constant_sp4:ag.result[4]
+result[5] <= lpm_constant_sp4:ag.result[5]
+result[6] <= lpm_constant_sp4:ag.result[6]
+result[7] <= lpm_constant_sp4:ag.result[7]
+result[8] <= lpm_constant_sp4:ag.result[8]
+result[9] <= lpm_constant_sp4:ag.result[9]
+result[10] <= lpm_constant_sp4:ag.result[10]
+result[11] <= lpm_constant_sp4:ag.result[11]
+result[12] <= lpm_constant_sp4:ag.result[12]
+result[13] <= lpm_constant_sp4:ag.result[13]
+result[14] <= lpm_constant_sp4:ag.result[14]
+result[15] <= lpm_constant_sp4:ag.result[15]
+result[16] <= lpm_constant_sp4:ag.result[16]
+result[17] <= lpm_constant_sp4:ag.result[17]
+result[18] <= lpm_constant_sp4:ag.result[18]
+result[19] <= lpm_constant_sp4:ag.result[19]
+result[20] <= lpm_constant_sp4:ag.result[20]
+result[21] <= lpm_constant_sp4:ag.result[21]
+result[22] <= lpm_constant_sp4:ag.result[22]
+result[23] <= lpm_constant_sp4:ag.result[23]
+result[24] <= lpm_constant_sp4:ag.result[24]
+result[25] <= lpm_constant_sp4:ag.result[25]
+result[26] <= lpm_constant_sp4:ag.result[26]
+result[27] <= lpm_constant_sp4:ag.result[27]
+result[28] <= lpm_constant_sp4:ag.result[28]
+result[29] <= lpm_constant_sp4:ag.result[29]
+result[30] <= lpm_constant_sp4:ag.result[30]
+result[31] <= lpm_constant_sp4:ag.result[31]
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst6|lpm_constant_sp4:ag
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <VCC>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <VCC>
+result[7] <= <VCC>
+result[8] <= <VCC>
+result[9] <= <VCC>
+result[10] <= <GND>
+result[11] <= <VCC>
+result[12] <= <VCC>
+result[13] <= <VCC>
+result[14] <= <GND>
+result[15] <= <GND>
+result[16] <= <VCC>
+result[17] <= <VCC>
+result[18] <= <VCC>
+result[19] <= <VCC>
+result[20] <= <VCC>
+result[21] <= <VCC>
+result[22] <= <GND>
+result[23] <= <VCC>
+result[24] <= <GND>
+result[25] <= <GND>
+result[26] <= <GND>
+result[27] <= <GND>
+result[28] <= <GND>
+result[29] <= <GND>
+result[30] <= <GND>
+result[31] <= <VCC>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+dataa[4] => comptree:comparator.dataa[4]
+dataa[5] => comptree:comparator.dataa[5]
+dataa[6] => comptree:comparator.dataa[6]
+dataa[7] => comptree:comparator.dataa[7]
+dataa[8] => comptree:comparator.dataa[8]
+dataa[9] => comptree:comparator.dataa[9]
+dataa[10] => comptree:comparator.dataa[10]
+dataa[11] => comptree:comparator.dataa[11]
+dataa[12] => comptree:comparator.dataa[12]
+dataa[13] => comptree:comparator.dataa[13]
+dataa[14] => comptree:comparator.dataa[14]
+dataa[15] => comptree:comparator.dataa[15]
+dataa[16] => comptree:comparator.dataa[16]
+dataa[17] => comptree:comparator.dataa[17]
+dataa[18] => comptree:comparator.dataa[18]
+dataa[19] => comptree:comparator.dataa[19]
+dataa[20] => comptree:comparator.dataa[20]
+dataa[21] => comptree:comparator.dataa[21]
+dataa[22] => comptree:comparator.dataa[22]
+dataa[23] => comptree:comparator.dataa[23]
+dataa[24] => comptree:comparator.dataa[24]
+dataa[25] => comptree:comparator.dataa[25]
+dataa[26] => comptree:comparator.dataa[26]
+dataa[27] => comptree:comparator.dataa[27]
+dataa[28] => comptree:comparator.dataa[28]
+dataa[29] => comptree:comparator.dataa[29]
+dataa[30] => comptree:comparator.dataa[30]
+dataa[31] => comptree:comparator.dataa[31]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+datab[4] => comptree:comparator.datab[4]
+datab[5] => comptree:comparator.datab[5]
+datab[6] => comptree:comparator.datab[6]
+datab[7] => comptree:comparator.datab[7]
+datab[8] => comptree:comparator.datab[8]
+datab[9] => comptree:comparator.datab[9]
+datab[10] => comptree:comparator.datab[10]
+datab[11] => comptree:comparator.datab[11]
+datab[12] => comptree:comparator.datab[12]
+datab[13] => comptree:comparator.datab[13]
+datab[14] => comptree:comparator.datab[14]
+datab[15] => comptree:comparator.datab[15]
+datab[16] => comptree:comparator.datab[16]
+datab[17] => comptree:comparator.datab[17]
+datab[18] => comptree:comparator.datab[18]
+datab[19] => comptree:comparator.datab[19]
+datab[20] => comptree:comparator.datab[20]
+datab[21] => comptree:comparator.datab[21]
+datab[22] => comptree:comparator.datab[22]
+datab[23] => comptree:comparator.datab[23]
+datab[24] => comptree:comparator.datab[24]
+datab[25] => comptree:comparator.datab[25]
+datab[26] => comptree:comparator.datab[26]
+datab[27] => comptree:comparator.datab[27]
+datab[28] => comptree:comparator.datab[28]
+datab[29] => comptree:comparator.datab[29]
+datab[30] => comptree:comparator.datab[30]
+datab[31] => comptree:comparator.datab[31]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= alb~1.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb~1.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb~1.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+dataa[4] => cmpchain:cmp_end.dataa[4]
+dataa[5] => cmpchain:cmp_end.dataa[5]
+dataa[6] => cmpchain:cmp_end.dataa[6]
+dataa[7] => cmpchain:cmp_end.dataa[7]
+dataa[8] => cmpchain:cmp_end.dataa[8]
+dataa[9] => cmpchain:cmp_end.dataa[9]
+dataa[10] => cmpchain:cmp_end.dataa[10]
+dataa[11] => cmpchain:cmp_end.dataa[11]
+dataa[12] => cmpchain:cmp_end.dataa[12]
+dataa[13] => cmpchain:cmp_end.dataa[13]
+dataa[14] => cmpchain:cmp_end.dataa[14]
+dataa[15] => cmpchain:cmp_end.dataa[15]
+dataa[16] => cmpchain:cmp_end.dataa[16]
+dataa[17] => cmpchain:cmp_end.dataa[17]
+dataa[18] => cmpchain:cmp_end.dataa[18]
+dataa[19] => cmpchain:cmp_end.dataa[19]
+dataa[20] => cmpchain:cmp_end.dataa[20]
+dataa[21] => cmpchain:cmp_end.dataa[21]
+dataa[22] => cmpchain:cmp_end.dataa[22]
+dataa[23] => cmpchain:cmp_end.dataa[23]
+dataa[24] => cmpchain:cmp_end.dataa[24]
+dataa[25] => cmpchain:cmp_end.dataa[25]
+dataa[26] => cmpchain:cmp_end.dataa[26]
+dataa[27] => cmpchain:cmp_end.dataa[27]
+dataa[28] => cmpchain:cmp_end.dataa[28]
+dataa[29] => cmpchain:cmp_end.dataa[29]
+dataa[30] => cmpchain:cmp_end.dataa[30]
+dataa[31] => cmpchain:cmp_end.dataa[31]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+datab[4] => cmpchain:cmp_end.datab[4]
+datab[5] => cmpchain:cmp_end.datab[5]
+datab[6] => cmpchain:cmp_end.datab[6]
+datab[7] => cmpchain:cmp_end.datab[7]
+datab[8] => cmpchain:cmp_end.datab[8]
+datab[9] => cmpchain:cmp_end.datab[9]
+datab[10] => cmpchain:cmp_end.datab[10]
+datab[11] => cmpchain:cmp_end.datab[11]
+datab[12] => cmpchain:cmp_end.datab[12]
+datab[13] => cmpchain:cmp_end.datab[13]
+datab[14] => cmpchain:cmp_end.datab[14]
+datab[15] => cmpchain:cmp_end.datab[15]
+datab[16] => cmpchain:cmp_end.datab[16]
+datab[17] => cmpchain:cmp_end.datab[17]
+datab[18] => cmpchain:cmp_end.datab[18]
+datab[19] => cmpchain:cmp_end.datab[19]
+datab[20] => cmpchain:cmp_end.datab[20]
+datab[21] => cmpchain:cmp_end.datab[21]
+datab[22] => cmpchain:cmp_end.datab[22]
+datab[23] => cmpchain:cmp_end.datab[23]
+datab[24] => cmpchain:cmp_end.datab[24]
+datab[25] => cmpchain:cmp_end.datab[25]
+datab[26] => cmpchain:cmp_end.datab[26]
+datab[27] => cmpchain:cmp_end.datab[27]
+datab[28] => cmpchain:cmp_end.datab[28]
+datab[29] => cmpchain:cmp_end.datab[29]
+datab[30] => cmpchain:cmp_end.datab[30]
+datab[31] => cmpchain:cmp_end.datab[31]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end
+dataa[0] => comptree:comp.dataa[0]
+dataa[1] => comptree:comp.dataa[1]
+dataa[2] => comptree:comp.dataa[2]
+dataa[3] => comptree:comp.dataa[3]
+dataa[4] => comptree:comp.dataa[4]
+dataa[5] => comptree:comp.dataa[5]
+dataa[6] => comptree:comp.dataa[6]
+dataa[7] => comptree:comp.dataa[7]
+dataa[8] => comptree:comp.dataa[8]
+dataa[9] => comptree:comp.dataa[9]
+dataa[10] => comptree:comp.dataa[10]
+dataa[11] => comptree:comp.dataa[11]
+dataa[12] => comptree:comp.dataa[12]
+dataa[13] => comptree:comp.dataa[13]
+dataa[14] => comptree:comp.dataa[14]
+dataa[15] => comptree:comp.dataa[15]
+dataa[16] => comptree:comp.dataa[16]
+dataa[17] => comptree:comp.dataa[17]
+dataa[18] => comptree:comp.dataa[18]
+dataa[19] => comptree:comp.dataa[19]
+dataa[20] => comptree:comp.dataa[20]
+dataa[21] => comptree:comp.dataa[21]
+dataa[22] => comptree:comp.dataa[22]
+dataa[23] => comptree:comp.dataa[23]
+dataa[24] => comptree:comp.dataa[24]
+dataa[25] => comptree:comp.dataa[25]
+dataa[26] => comptree:comp.dataa[26]
+dataa[27] => comptree:comp.dataa[27]
+dataa[28] => comptree:comp.dataa[28]
+dataa[29] => comptree:comp.dataa[29]
+dataa[30] => comptree:comp.dataa[30]
+dataa[31] => comptree:comp.dataa[31]
+datab[0] => comptree:comp.datab[0]
+datab[1] => comptree:comp.datab[1]
+datab[2] => comptree:comp.datab[2]
+datab[3] => comptree:comp.datab[3]
+datab[4] => comptree:comp.datab[4]
+datab[5] => comptree:comp.datab[5]
+datab[6] => comptree:comp.datab[6]
+datab[7] => comptree:comp.datab[7]
+datab[8] => comptree:comp.datab[8]
+datab[9] => comptree:comp.datab[9]
+datab[10] => comptree:comp.datab[10]
+datab[11] => comptree:comp.datab[11]
+datab[12] => comptree:comp.datab[12]
+datab[13] => comptree:comp.datab[13]
+datab[14] => comptree:comp.datab[14]
+datab[15] => comptree:comp.datab[15]
+datab[16] => comptree:comp.datab[16]
+datab[17] => comptree:comp.datab[17]
+datab[18] => comptree:comp.datab[18]
+datab[19] => comptree:comp.datab[19]
+datab[20] => comptree:comp.datab[20]
+datab[21] => comptree:comp.datab[21]
+datab[22] => comptree:comp.datab[22]
+datab[23] => comptree:comp.datab[23]
+datab[24] => comptree:comp.datab[24]
+datab[25] => comptree:comp.datab[25]
+datab[26] => comptree:comp.datab[26]
+datab[27] => comptree:comp.datab[27]
+datab[28] => comptree:comp.datab[28]
+datab[29] => comptree:comp.datab[29]
+datab[30] => comptree:comp.datab[30]
+datab[31] => comptree:comp.datab[31]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+dataa[8] => cmpchain:cmp[2].dataa[0]
+dataa[9] => cmpchain:cmp[2].dataa[1]
+dataa[10] => cmpchain:cmp[2].dataa[2]
+dataa[11] => cmpchain:cmp[2].dataa[3]
+dataa[12] => cmpchain:cmp[3].dataa[0]
+dataa[13] => cmpchain:cmp[3].dataa[1]
+dataa[14] => cmpchain:cmp[3].dataa[2]
+dataa[15] => cmpchain:cmp[3].dataa[3]
+dataa[16] => cmpchain:cmp[4].dataa[0]
+dataa[17] => cmpchain:cmp[4].dataa[1]
+dataa[18] => cmpchain:cmp[4].dataa[2]
+dataa[19] => cmpchain:cmp[4].dataa[3]
+dataa[20] => cmpchain:cmp[5].dataa[0]
+dataa[21] => cmpchain:cmp[5].dataa[1]
+dataa[22] => cmpchain:cmp[5].dataa[2]
+dataa[23] => cmpchain:cmp[5].dataa[3]
+dataa[24] => cmpchain:cmp[6].dataa[0]
+dataa[25] => cmpchain:cmp[6].dataa[1]
+dataa[26] => cmpchain:cmp[6].dataa[2]
+dataa[27] => cmpchain:cmp[6].dataa[3]
+dataa[28] => cmpchain:cmp[7].dataa[0]
+dataa[29] => cmpchain:cmp[7].dataa[1]
+dataa[30] => cmpchain:cmp[7].dataa[2]
+dataa[31] => cmpchain:cmp[7].dataa[3]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+datab[8] => cmpchain:cmp[2].datab[0]
+datab[9] => cmpchain:cmp[2].datab[1]
+datab[10] => cmpchain:cmp[2].datab[2]
+datab[11] => cmpchain:cmp[2].datab[3]
+datab[12] => cmpchain:cmp[3].datab[0]
+datab[13] => cmpchain:cmp[3].datab[1]
+datab[14] => cmpchain:cmp[3].datab[2]
+datab[15] => cmpchain:cmp[3].datab[3]
+datab[16] => cmpchain:cmp[4].datab[0]
+datab[17] => cmpchain:cmp[4].datab[1]
+datab[18] => cmpchain:cmp[4].datab[2]
+datab[19] => cmpchain:cmp[4].datab[3]
+datab[20] => cmpchain:cmp[5].datab[0]
+datab[21] => cmpchain:cmp[5].datab[1]
+datab[22] => cmpchain:cmp[5].datab[2]
+datab[23] => cmpchain:cmp[5].datab[3]
+datab[24] => cmpchain:cmp[6].datab[0]
+datab[25] => cmpchain:cmp[6].datab[1]
+datab[26] => cmpchain:cmp[6].datab[2]
+datab[27] => cmpchain:cmp[6].datab[3]
+datab[28] => cmpchain:cmp[7].datab[0]
+datab[29] => cmpchain:cmp[7].datab[1]
+datab[30] => cmpchain:cmp[7].datab[2]
+datab[31] => cmpchain:cmp[7].datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst211|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst236
+result[0] <= lpm_constant_lo4:ag.result[0]
+result[1] <= lpm_constant_lo4:ag.result[1]
+result[2] <= lpm_constant_lo4:ag.result[2]
+result[3] <= lpm_constant_lo4:ag.result[3]
+result[4] <= lpm_constant_lo4:ag.result[4]
+result[5] <= lpm_constant_lo4:ag.result[5]
+result[6] <= lpm_constant_lo4:ag.result[6]
+result[7] <= lpm_constant_lo4:ag.result[7]
+result[8] <= lpm_constant_lo4:ag.result[8]
+result[9] <= lpm_constant_lo4:ag.result[9]
+result[10] <= lpm_constant_lo4:ag.result[10]
+result[11] <= lpm_constant_lo4:ag.result[11]
+result[12] <= lpm_constant_lo4:ag.result[12]
+result[13] <= lpm_constant_lo4:ag.result[13]
+result[14] <= lpm_constant_lo4:ag.result[14]
+result[15] <= lpm_constant_lo4:ag.result[15]
+result[16] <= lpm_constant_lo4:ag.result[16]
+result[17] <= lpm_constant_lo4:ag.result[17]
+result[18] <= lpm_constant_lo4:ag.result[18]
+result[19] <= lpm_constant_lo4:ag.result[19]
+result[20] <= lpm_constant_lo4:ag.result[20]
+result[21] <= lpm_constant_lo4:ag.result[21]
+result[22] <= lpm_constant_lo4:ag.result[22]
+result[23] <= lpm_constant_lo4:ag.result[23]
+result[24] <= lpm_constant_lo4:ag.result[24]
+result[25] <= lpm_constant_lo4:ag.result[25]
+result[26] <= lpm_constant_lo4:ag.result[26]
+result[27] <= lpm_constant_lo4:ag.result[27]
+result[28] <= lpm_constant_lo4:ag.result[28]
+result[29] <= lpm_constant_lo4:ag.result[29]
+result[30] <= lpm_constant_lo4:ag.result[30]
+result[31] <= lpm_constant_lo4:ag.result[31]
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst236|lpm_constant_lo4:ag
+result[0] <= <GND>
+result[1] <= <VCC>
+result[2] <= <VCC>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <VCC>
+result[7] <= <VCC>
+result[8] <= <VCC>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <VCC>
+result[12] <= <VCC>
+result[13] <= <VCC>
+result[14] <= <GND>
+result[15] <= <GND>
+result[16] <= <VCC>
+result[17] <= <VCC>
+result[18] <= <VCC>
+result[19] <= <VCC>
+result[20] <= <VCC>
+result[21] <= <VCC>
+result[22] <= <GND>
+result[23] <= <VCC>
+result[24] <= <GND>
+result[25] <= <GND>
+result[26] <= <GND>
+result[27] <= <GND>
+result[28] <= <GND>
+result[29] <= <GND>
+result[30] <= <GND>
+result[31] <= <VCC>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+dataa[4] => comptree:comparator.dataa[4]
+dataa[5] => comptree:comparator.dataa[5]
+dataa[6] => comptree:comparator.dataa[6]
+dataa[7] => comptree:comparator.dataa[7]
+dataa[8] => comptree:comparator.dataa[8]
+dataa[9] => comptree:comparator.dataa[9]
+dataa[10] => comptree:comparator.dataa[10]
+dataa[11] => comptree:comparator.dataa[11]
+dataa[12] => comptree:comparator.dataa[12]
+dataa[13] => comptree:comparator.dataa[13]
+dataa[14] => comptree:comparator.dataa[14]
+dataa[15] => comptree:comparator.dataa[15]
+dataa[16] => comptree:comparator.dataa[16]
+dataa[17] => comptree:comparator.dataa[17]
+dataa[18] => comptree:comparator.dataa[18]
+dataa[19] => comptree:comparator.dataa[19]
+dataa[20] => comptree:comparator.dataa[20]
+dataa[21] => comptree:comparator.dataa[21]
+dataa[22] => comptree:comparator.dataa[22]
+dataa[23] => comptree:comparator.dataa[23]
+dataa[24] => comptree:comparator.dataa[24]
+dataa[25] => comptree:comparator.dataa[25]
+dataa[26] => comptree:comparator.dataa[26]
+dataa[27] => comptree:comparator.dataa[27]
+dataa[28] => comptree:comparator.dataa[28]
+dataa[29] => comptree:comparator.dataa[29]
+dataa[30] => comptree:comparator.dataa[30]
+dataa[31] => comptree:comparator.dataa[31]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+datab[4] => comptree:comparator.datab[4]
+datab[5] => comptree:comparator.datab[5]
+datab[6] => comptree:comparator.datab[6]
+datab[7] => comptree:comparator.datab[7]
+datab[8] => comptree:comparator.datab[8]
+datab[9] => comptree:comparator.datab[9]
+datab[10] => comptree:comparator.datab[10]
+datab[11] => comptree:comparator.datab[11]
+datab[12] => comptree:comparator.datab[12]
+datab[13] => comptree:comparator.datab[13]
+datab[14] => comptree:comparator.datab[14]
+datab[15] => comptree:comparator.datab[15]
+datab[16] => comptree:comparator.datab[16]
+datab[17] => comptree:comparator.datab[17]
+datab[18] => comptree:comparator.datab[18]
+datab[19] => comptree:comparator.datab[19]
+datab[20] => comptree:comparator.datab[20]
+datab[21] => comptree:comparator.datab[21]
+datab[22] => comptree:comparator.datab[22]
+datab[23] => comptree:comparator.datab[23]
+datab[24] => comptree:comparator.datab[24]
+datab[25] => comptree:comparator.datab[25]
+datab[26] => comptree:comparator.datab[26]
+datab[27] => comptree:comparator.datab[27]
+datab[28] => comptree:comparator.datab[28]
+datab[29] => comptree:comparator.datab[29]
+datab[30] => comptree:comparator.datab[30]
+datab[31] => comptree:comparator.datab[31]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= alb~1.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb~1.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb~1.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+dataa[4] => cmpchain:cmp_end.dataa[4]
+dataa[5] => cmpchain:cmp_end.dataa[5]
+dataa[6] => cmpchain:cmp_end.dataa[6]
+dataa[7] => cmpchain:cmp_end.dataa[7]
+dataa[8] => cmpchain:cmp_end.dataa[8]
+dataa[9] => cmpchain:cmp_end.dataa[9]
+dataa[10] => cmpchain:cmp_end.dataa[10]
+dataa[11] => cmpchain:cmp_end.dataa[11]
+dataa[12] => cmpchain:cmp_end.dataa[12]
+dataa[13] => cmpchain:cmp_end.dataa[13]
+dataa[14] => cmpchain:cmp_end.dataa[14]
+dataa[15] => cmpchain:cmp_end.dataa[15]
+dataa[16] => cmpchain:cmp_end.dataa[16]
+dataa[17] => cmpchain:cmp_end.dataa[17]
+dataa[18] => cmpchain:cmp_end.dataa[18]
+dataa[19] => cmpchain:cmp_end.dataa[19]
+dataa[20] => cmpchain:cmp_end.dataa[20]
+dataa[21] => cmpchain:cmp_end.dataa[21]
+dataa[22] => cmpchain:cmp_end.dataa[22]
+dataa[23] => cmpchain:cmp_end.dataa[23]
+dataa[24] => cmpchain:cmp_end.dataa[24]
+dataa[25] => cmpchain:cmp_end.dataa[25]
+dataa[26] => cmpchain:cmp_end.dataa[26]
+dataa[27] => cmpchain:cmp_end.dataa[27]
+dataa[28] => cmpchain:cmp_end.dataa[28]
+dataa[29] => cmpchain:cmp_end.dataa[29]
+dataa[30] => cmpchain:cmp_end.dataa[30]
+dataa[31] => cmpchain:cmp_end.dataa[31]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+datab[4] => cmpchain:cmp_end.datab[4]
+datab[5] => cmpchain:cmp_end.datab[5]
+datab[6] => cmpchain:cmp_end.datab[6]
+datab[7] => cmpchain:cmp_end.datab[7]
+datab[8] => cmpchain:cmp_end.datab[8]
+datab[9] => cmpchain:cmp_end.datab[9]
+datab[10] => cmpchain:cmp_end.datab[10]
+datab[11] => cmpchain:cmp_end.datab[11]
+datab[12] => cmpchain:cmp_end.datab[12]
+datab[13] => cmpchain:cmp_end.datab[13]
+datab[14] => cmpchain:cmp_end.datab[14]
+datab[15] => cmpchain:cmp_end.datab[15]
+datab[16] => cmpchain:cmp_end.datab[16]
+datab[17] => cmpchain:cmp_end.datab[17]
+datab[18] => cmpchain:cmp_end.datab[18]
+datab[19] => cmpchain:cmp_end.datab[19]
+datab[20] => cmpchain:cmp_end.datab[20]
+datab[21] => cmpchain:cmp_end.datab[21]
+datab[22] => cmpchain:cmp_end.datab[22]
+datab[23] => cmpchain:cmp_end.datab[23]
+datab[24] => cmpchain:cmp_end.datab[24]
+datab[25] => cmpchain:cmp_end.datab[25]
+datab[26] => cmpchain:cmp_end.datab[26]
+datab[27] => cmpchain:cmp_end.datab[27]
+datab[28] => cmpchain:cmp_end.datab[28]
+datab[29] => cmpchain:cmp_end.datab[29]
+datab[30] => cmpchain:cmp_end.datab[30]
+datab[31] => cmpchain:cmp_end.datab[31]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end
+dataa[0] => comptree:comp.dataa[0]
+dataa[1] => comptree:comp.dataa[1]
+dataa[2] => comptree:comp.dataa[2]
+dataa[3] => comptree:comp.dataa[3]
+dataa[4] => comptree:comp.dataa[4]
+dataa[5] => comptree:comp.dataa[5]
+dataa[6] => comptree:comp.dataa[6]
+dataa[7] => comptree:comp.dataa[7]
+dataa[8] => comptree:comp.dataa[8]
+dataa[9] => comptree:comp.dataa[9]
+dataa[10] => comptree:comp.dataa[10]
+dataa[11] => comptree:comp.dataa[11]
+dataa[12] => comptree:comp.dataa[12]
+dataa[13] => comptree:comp.dataa[13]
+dataa[14] => comptree:comp.dataa[14]
+dataa[15] => comptree:comp.dataa[15]
+dataa[16] => comptree:comp.dataa[16]
+dataa[17] => comptree:comp.dataa[17]
+dataa[18] => comptree:comp.dataa[18]
+dataa[19] => comptree:comp.dataa[19]
+dataa[20] => comptree:comp.dataa[20]
+dataa[21] => comptree:comp.dataa[21]
+dataa[22] => comptree:comp.dataa[22]
+dataa[23] => comptree:comp.dataa[23]
+dataa[24] => comptree:comp.dataa[24]
+dataa[25] => comptree:comp.dataa[25]
+dataa[26] => comptree:comp.dataa[26]
+dataa[27] => comptree:comp.dataa[27]
+dataa[28] => comptree:comp.dataa[28]
+dataa[29] => comptree:comp.dataa[29]
+dataa[30] => comptree:comp.dataa[30]
+dataa[31] => comptree:comp.dataa[31]
+datab[0] => comptree:comp.datab[0]
+datab[1] => comptree:comp.datab[1]
+datab[2] => comptree:comp.datab[2]
+datab[3] => comptree:comp.datab[3]
+datab[4] => comptree:comp.datab[4]
+datab[5] => comptree:comp.datab[5]
+datab[6] => comptree:comp.datab[6]
+datab[7] => comptree:comp.datab[7]
+datab[8] => comptree:comp.datab[8]
+datab[9] => comptree:comp.datab[9]
+datab[10] => comptree:comp.datab[10]
+datab[11] => comptree:comp.datab[11]
+datab[12] => comptree:comp.datab[12]
+datab[13] => comptree:comp.datab[13]
+datab[14] => comptree:comp.datab[14]
+datab[15] => comptree:comp.datab[15]
+datab[16] => comptree:comp.datab[16]
+datab[17] => comptree:comp.datab[17]
+datab[18] => comptree:comp.datab[18]
+datab[19] => comptree:comp.datab[19]
+datab[20] => comptree:comp.datab[20]
+datab[21] => comptree:comp.datab[21]
+datab[22] => comptree:comp.datab[22]
+datab[23] => comptree:comp.datab[23]
+datab[24] => comptree:comp.datab[24]
+datab[25] => comptree:comp.datab[25]
+datab[26] => comptree:comp.datab[26]
+datab[27] => comptree:comp.datab[27]
+datab[28] => comptree:comp.datab[28]
+datab[29] => comptree:comp.datab[29]
+datab[30] => comptree:comp.datab[30]
+datab[31] => comptree:comp.datab[31]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+dataa[8] => cmpchain:cmp[2].dataa[0]
+dataa[9] => cmpchain:cmp[2].dataa[1]
+dataa[10] => cmpchain:cmp[2].dataa[2]
+dataa[11] => cmpchain:cmp[2].dataa[3]
+dataa[12] => cmpchain:cmp[3].dataa[0]
+dataa[13] => cmpchain:cmp[3].dataa[1]
+dataa[14] => cmpchain:cmp[3].dataa[2]
+dataa[15] => cmpchain:cmp[3].dataa[3]
+dataa[16] => cmpchain:cmp[4].dataa[0]
+dataa[17] => cmpchain:cmp[4].dataa[1]
+dataa[18] => cmpchain:cmp[4].dataa[2]
+dataa[19] => cmpchain:cmp[4].dataa[3]
+dataa[20] => cmpchain:cmp[5].dataa[0]
+dataa[21] => cmpchain:cmp[5].dataa[1]
+dataa[22] => cmpchain:cmp[5].dataa[2]
+dataa[23] => cmpchain:cmp[5].dataa[3]
+dataa[24] => cmpchain:cmp[6].dataa[0]
+dataa[25] => cmpchain:cmp[6].dataa[1]
+dataa[26] => cmpchain:cmp[6].dataa[2]
+dataa[27] => cmpchain:cmp[6].dataa[3]
+dataa[28] => cmpchain:cmp[7].dataa[0]
+dataa[29] => cmpchain:cmp[7].dataa[1]
+dataa[30] => cmpchain:cmp[7].dataa[2]
+dataa[31] => cmpchain:cmp[7].dataa[3]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+datab[8] => cmpchain:cmp[2].datab[0]
+datab[9] => cmpchain:cmp[2].datab[1]
+datab[10] => cmpchain:cmp[2].datab[2]
+datab[11] => cmpchain:cmp[2].datab[3]
+datab[12] => cmpchain:cmp[3].datab[0]
+datab[13] => cmpchain:cmp[3].datab[1]
+datab[14] => cmpchain:cmp[3].datab[2]
+datab[15] => cmpchain:cmp[3].datab[3]
+datab[16] => cmpchain:cmp[4].datab[0]
+datab[17] => cmpchain:cmp[4].datab[1]
+datab[18] => cmpchain:cmp[4].datab[2]
+datab[19] => cmpchain:cmp[4].datab[3]
+datab[20] => cmpchain:cmp[5].datab[0]
+datab[21] => cmpchain:cmp[5].datab[1]
+datab[22] => cmpchain:cmp[5].datab[2]
+datab[23] => cmpchain:cmp[5].datab[3]
+datab[24] => cmpchain:cmp[6].datab[0]
+datab[25] => cmpchain:cmp[6].datab[1]
+datab[26] => cmpchain:cmp[6].datab[2]
+datab[27] => cmpchain:cmp[6].datab[3]
+datab[28] => cmpchain:cmp[7].datab[0]
+datab[29] => cmpchain:cmp[7].datab[1]
+datab[30] => cmpchain:cmp[7].datab[2]
+datab[31] => cmpchain:cmp[7].datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst227|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst4
+result[0] <= lpm_constant_mo4:ag.result[0]
+result[1] <= lpm_constant_mo4:ag.result[1]
+result[2] <= lpm_constant_mo4:ag.result[2]
+result[3] <= lpm_constant_mo4:ag.result[3]
+result[4] <= lpm_constant_mo4:ag.result[4]
+result[5] <= lpm_constant_mo4:ag.result[5]
+result[6] <= lpm_constant_mo4:ag.result[6]
+result[7] <= lpm_constant_mo4:ag.result[7]
+result[8] <= lpm_constant_mo4:ag.result[8]
+result[9] <= lpm_constant_mo4:ag.result[9]
+result[10] <= lpm_constant_mo4:ag.result[10]
+result[11] <= lpm_constant_mo4:ag.result[11]
+result[12] <= lpm_constant_mo4:ag.result[12]
+result[13] <= lpm_constant_mo4:ag.result[13]
+result[14] <= lpm_constant_mo4:ag.result[14]
+result[15] <= lpm_constant_mo4:ag.result[15]
+result[16] <= lpm_constant_mo4:ag.result[16]
+result[17] <= lpm_constant_mo4:ag.result[17]
+result[18] <= lpm_constant_mo4:ag.result[18]
+result[19] <= lpm_constant_mo4:ag.result[19]
+result[20] <= lpm_constant_mo4:ag.result[20]
+result[21] <= lpm_constant_mo4:ag.result[21]
+result[22] <= lpm_constant_mo4:ag.result[22]
+result[23] <= lpm_constant_mo4:ag.result[23]
+result[24] <= lpm_constant_mo4:ag.result[24]
+result[25] <= lpm_constant_mo4:ag.result[25]
+result[26] <= lpm_constant_mo4:ag.result[26]
+result[27] <= lpm_constant_mo4:ag.result[27]
+result[28] <= lpm_constant_mo4:ag.result[28]
+result[29] <= lpm_constant_mo4:ag.result[29]
+result[30] <= lpm_constant_mo4:ag.result[30]
+result[31] <= lpm_constant_mo4:ag.result[31]
+
+
+|sss_ir_receiver|LPM_CONSTANT:inst4|lpm_constant_mo4:ag
+result[0] <= <GND>
+result[1] <= <VCC>
+result[2] <= <VCC>
+result[3] <= <GND>
+result[4] <= <VCC>
+result[5] <= <VCC>
+result[6] <= <GND>
+result[7] <= <VCC>
+result[8] <= <VCC>
+result[9] <= <GND>
+result[10] <= <GND>
+result[11] <= <VCC>
+result[12] <= <GND>
+result[13] <= <GND>
+result[14] <= <VCC>
+result[15] <= <GND>
+result[16] <= <VCC>
+result[17] <= <VCC>
+result[18] <= <VCC>
+result[19] <= <VCC>
+result[20] <= <VCC>
+result[21] <= <VCC>
+result[22] <= <GND>
+result[23] <= <VCC>
+result[24] <= <GND>
+result[25] <= <GND>
+result[26] <= <GND>
+result[27] <= <GND>
+result[28] <= <GND>
+result[29] <= <GND>
+result[30] <= <GND>
+result[31] <= <VCC>
+
+
+|sss_ir_receiver|LPM_MUX:inst177
+data[0][0] => muxlut:$00010.data[0]
+data[0][1] => muxlut:$00012.data[0]
+data[0][2] => muxlut:$00014.data[0]
+data[0][3] => muxlut:$00016.data[0]
+data[1][0] => muxlut:$00010.data[1]
+data[1][1] => muxlut:$00012.data[1]
+data[1][2] => muxlut:$00014.data[1]
+data[1][3] => muxlut:$00016.data[1]
+data[2][0] => muxlut:$00010.data[2]
+data[2][1] => muxlut:$00012.data[2]
+data[2][2] => muxlut:$00014.data[2]
+data[2][3] => muxlut:$00016.data[2]
+data[3][0] => muxlut:$00010.data[3]
+data[3][1] => muxlut:$00012.data[3]
+data[3][2] => muxlut:$00014.data[3]
+data[3][3] => muxlut:$00016.data[3]
+data[4][0] => muxlut:$00010.data[4]
+data[4][1] => muxlut:$00012.data[4]
+data[4][2] => muxlut:$00014.data[4]
+data[4][3] => muxlut:$00016.data[4]
+data[5][0] => muxlut:$00010.data[5]
+data[5][1] => muxlut:$00012.data[5]
+data[5][2] => muxlut:$00014.data[5]
+data[5][3] => muxlut:$00016.data[5]
+data[6][0] => muxlut:$00010.data[6]
+data[6][1] => muxlut:$00012.data[6]
+data[6][2] => muxlut:$00014.data[6]
+data[6][3] => muxlut:$00016.data[6]
+data[7][0] => muxlut:$00010.data[7]
+data[7][1] => muxlut:$00012.data[7]
+data[7][2] => muxlut:$00014.data[7]
+data[7][3] => muxlut:$00016.data[7]
+sel[0] => bypassff:sel_latency_ff[0].d[0]
+sel[0] => muxlut:$00016.select[0]
+sel[0] => muxlut:$00014.select[0]
+sel[0] => muxlut:$00012.select[0]
+sel[0] => muxlut:$00010.select[0]
+sel[1] => bypassff:sel_latency_ff[0].d[1]
+sel[1] => muxlut:$00016.select[1]
+sel[1] => muxlut:$00014.select[1]
+sel[1] => muxlut:$00012.select[1]
+sel[1] => muxlut:$00010.select[1]
+sel[2] => bypassff:sel_latency_ff[0].d[2]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= altshift:external_latency_ffs.result[0]
+result[1] <= altshift:external_latency_ffs.result[1]
+result[2] <= altshift:external_latency_ffs.result[2]
+result[3] <= altshift:external_latency_ffs.result[3]
+
+
+|sss_ir_receiver|LPM_MUX:inst177|bypassff:sel_latency_ff[0]
+d[0] => q[0].DATAIN
+d[1] => q[1].DATAIN
+d[2] => q[2].DATAIN
+clk => ~NO_FANOUT~
+clrn => ~NO_FANOUT~
+ena => ~NO_FANOUT~
+q[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|altshift:external_latency_ffs
+data[0] => result[0].DATAIN
+data[1] => result[1].DATAIN
+data[2] => result[2].DATAIN
+data[3] => result[3].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= data[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= data[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= data[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00010
+data[0] => muxlut:$00012.data[0]
+data[1] => muxlut:$00012.data[1]
+data[2] => muxlut:$00012.data[2]
+data[3] => muxlut:$00012.data[3]
+data[4] => muxlut:$00014.data[0]
+data[5] => muxlut:$00014.data[1]
+data[6] => muxlut:$00014.data[2]
+data[7] => muxlut:$00014.data[3]
+select[0] => muxlut:$00014.select[0]
+select[0] => muxlut:$00012.select[0]
+select[1] => muxlut:$00014.select[1]
+select[1] => muxlut:$00012.select[1]
+select[2] => muxlut:$00016.select[0]
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00010|muxlut:$00012
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00010|muxlut:$00014
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00010|muxlut:$00016
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00012
+data[0] => muxlut:$00012.data[0]
+data[1] => muxlut:$00012.data[1]
+data[2] => muxlut:$00012.data[2]
+data[3] => muxlut:$00012.data[3]
+data[4] => muxlut:$00014.data[0]
+data[5] => muxlut:$00014.data[1]
+data[6] => muxlut:$00014.data[2]
+data[7] => muxlut:$00014.data[3]
+select[0] => muxlut:$00014.select[0]
+select[0] => muxlut:$00012.select[0]
+select[1] => muxlut:$00014.select[1]
+select[1] => muxlut:$00012.select[1]
+select[2] => muxlut:$00016.select[0]
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00012|muxlut:$00012
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00012|muxlut:$00014
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00012|muxlut:$00016
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00014
+data[0] => muxlut:$00012.data[0]
+data[1] => muxlut:$00012.data[1]
+data[2] => muxlut:$00012.data[2]
+data[3] => muxlut:$00012.data[3]
+data[4] => muxlut:$00014.data[0]
+data[5] => muxlut:$00014.data[1]
+data[6] => muxlut:$00014.data[2]
+data[7] => muxlut:$00014.data[3]
+select[0] => muxlut:$00014.select[0]
+select[0] => muxlut:$00012.select[0]
+select[1] => muxlut:$00014.select[1]
+select[1] => muxlut:$00012.select[1]
+select[2] => muxlut:$00016.select[0]
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00014|muxlut:$00012
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00014|muxlut:$00014
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00014|muxlut:$00016
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00016
+data[0] => muxlut:$00012.data[0]
+data[1] => muxlut:$00012.data[1]
+data[2] => muxlut:$00012.data[2]
+data[3] => muxlut:$00012.data[3]
+data[4] => muxlut:$00014.data[0]
+data[5] => muxlut:$00014.data[1]
+data[6] => muxlut:$00014.data[2]
+data[7] => muxlut:$00014.data[3]
+select[0] => muxlut:$00014.select[0]
+select[0] => muxlut:$00012.select[0]
+select[1] => muxlut:$00014.select[1]
+select[1] => muxlut:$00012.select[1]
+select[2] => muxlut:$00016.select[0]
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00016|muxlut:$00012
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00016|muxlut:$00014
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_MUX:inst177|muxlut:$00016|muxlut:$00016
+clock => clock_out.DATAIN
+aclr => aclr_out.DATAIN
+clken => clken_out.DATAIN
+result <= result_node.DB_MAX_OUTPUT_PORT_TYPE
+clock_out <= clock.DB_MAX_OUTPUT_PORT_TYPE
+aclr_out <= aclr.DB_MAX_OUTPUT_PORT_TYPE
+clken_out <= clken.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst198
+clock => alt_counter_f10ke:wysi_counter.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => alt_counter_f10ke:wysi_counter.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= alt_counter_f10ke:wysi_counter.q[0]
+q[1] <= alt_counter_f10ke:wysi_counter.q[1]
+q[2] <= alt_counter_f10ke:wysi_counter.q[2]
+cout <= cout~0.DB_MAX_OUTPUT_PORT_TYPE
+eq[0] <= eq[0]~15.DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= eq[1]~14.DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= eq[2]~13.DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= eq[3]~12.DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= eq[4]~11.DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= eq[5]~10.DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= eq[6]~9.DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= eq[7]~8.DB_MAX_OUTPUT_PORT_TYPE
+eq[8] <= eq[8]~7.DB_MAX_OUTPUT_PORT_TYPE
+eq[9] <= eq[9]~6.DB_MAX_OUTPUT_PORT_TYPE
+eq[10] <= eq[10]~5.DB_MAX_OUTPUT_PORT_TYPE
+eq[11] <= eq[11]~4.DB_MAX_OUTPUT_PORT_TYPE
+eq[12] <= eq[12]~3.DB_MAX_OUTPUT_PORT_TYPE
+eq[13] <= eq[13]~2.DB_MAX_OUTPUT_PORT_TYPE
+eq[14] <= eq[14]~1.DB_MAX_OUTPUT_PORT_TYPE
+eq[15] <= eq[15]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst198|alt_counter_f10ke:wysi_counter
+data[0] => data_path[0].IN1
+data[1] => data_path[1].IN1
+data[2] => data_path[2].IN1
+clock => counter_cell[2].CLK
+clock => counter_cell[1].CLK
+clock => counter_cell[0].CLK
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aclr => counter_cell[2].ACLR
+aclr => counter_cell[1].ACLR
+aclr => counter_cell[0].ACLR
+q[0] <= counter_cell[0].REGOUT
+q[1] <= counter_cell[1].REGOUT
+q[2] <= counter_cell[2].REGOUT
+cout <= cout_bit.COMBOUT
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18
+clock => alt_counter_f10ke:wysi_counter.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+data[8] => ~NO_FANOUT~
+data[9] => ~NO_FANOUT~
+data[10] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= q[0]~10.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~9.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~8.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~7.DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= q[4]~6.DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= q[5]~5.DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= q[6]~4.DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= q[7]~3.DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= q[8]~2.DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= q[9]~1.DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= q[10]~0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~0.DB_MAX_OUTPUT_PORT_TYPE
+eq[0] <= eq[0]~15.DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= eq[1]~14.DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= eq[2]~13.DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= eq[3]~12.DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= eq[4]~11.DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= eq[5]~10.DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= eq[6]~9.DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= eq[7]~8.DB_MAX_OUTPUT_PORT_TYPE
+eq[8] <= eq[8]~7.DB_MAX_OUTPUT_PORT_TYPE
+eq[9] <= eq[9]~6.DB_MAX_OUTPUT_PORT_TYPE
+eq[10] <= eq[10]~5.DB_MAX_OUTPUT_PORT_TYPE
+eq[11] <= eq[11]~4.DB_MAX_OUTPUT_PORT_TYPE
+eq[12] <= eq[12]~3.DB_MAX_OUTPUT_PORT_TYPE
+eq[13] <= eq[13]~2.DB_MAX_OUTPUT_PORT_TYPE
+eq[14] <= eq[14]~1.DB_MAX_OUTPUT_PORT_TYPE
+eq[15] <= eq[15]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter
+data[0] => data_path[0].IN1
+data[1] => data_path[1].IN1
+data[2] => data_path[2].IN1
+data[3] => data_path[3].IN1
+data[4] => data_path[4].IN1
+data[5] => data_path[5].IN1
+data[6] => data_path[6].IN1
+data[7] => data_path[7].IN1
+data[8] => data_path[8].IN1
+data[9] => data_path[9].IN1
+data[10] => data_path[10].IN1
+clock => counter_cell[10].CLK
+clock => counter_cell[9].CLK
+clock => counter_cell[8].CLK
+clock => counter_cell[7].CLK
+clock => counter_cell[6].CLK
+clock => counter_cell[5].CLK
+clock => counter_cell[4].CLK
+clock => counter_cell[3].CLK
+clock => counter_cell[2].CLK
+clock => counter_cell[1].CLK
+clock => counter_cell[0].CLK
+clk_en => ~NO_FANOUT~
+updown => cout_bit.DATAA
+cin => ~NO_FANOUT~
+sclr => sclr_node.IN0
+sconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+q[0] <= counter_cell[0].REGOUT
+q[1] <= counter_cell[1].REGOUT
+q[2] <= counter_cell[2].REGOUT
+q[3] <= counter_cell[3].REGOUT
+q[4] <= counter_cell[4].REGOUT
+q[5] <= counter_cell[5].REGOUT
+q[6] <= counter_cell[6].REGOUT
+q[7] <= counter_cell[7].REGOUT
+q[8] <= counter_cell[8].REGOUT
+q[9] <= counter_cell[9].REGOUT
+q[10] <= counter_cell[10].REGOUT
+cout <= cout_bit.COMBOUT
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_CONSTANT:$00016
+result[0] <= <VCC>
+result[1] <= <VCC>
+result[2] <= <GND>
+result[3] <= <VCC>
+result[4] <= <GND>
+result[5] <= <VCC>
+result[6] <= <GND>
+result[7] <= <GND>
+result[8] <= <VCC>
+result[9] <= <GND>
+result[10] <= <VCC>
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+dataa[4] => comptree:comparator.dataa[4]
+dataa[5] => comptree:comparator.dataa[5]
+dataa[6] => comptree:comparator.dataa[6]
+dataa[7] => comptree:comparator.dataa[7]
+dataa[8] => comptree:comparator.dataa[8]
+dataa[9] => comptree:comparator.dataa[9]
+dataa[10] => comptree:comparator.dataa[10]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+datab[4] => comptree:comparator.datab[4]
+datab[5] => comptree:comparator.datab[5]
+datab[6] => comptree:comparator.datab[6]
+datab[7] => comptree:comparator.datab[7]
+datab[8] => comptree:comparator.datab[8]
+datab[9] => comptree:comparator.datab[9]
+datab[10] => comptree:comparator.datab[10]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= alb~1.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb_xnode.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb~1.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb~1.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+dataa[4] => cmpchain:cmp_end.dataa[4]
+dataa[5] => cmpchain:cmp_end.dataa[5]
+dataa[6] => cmpchain:cmp_end.dataa[6]
+dataa[7] => cmpchain:cmp_end.dataa[7]
+dataa[8] => cmpchain:cmp_end.dataa[8]
+dataa[9] => cmpchain:cmp_end.dataa[9]
+dataa[10] => cmpchain:cmp_end.dataa[10]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+datab[4] => cmpchain:cmp_end.datab[4]
+datab[5] => cmpchain:cmp_end.datab[5]
+datab[6] => cmpchain:cmp_end.datab[6]
+datab[7] => cmpchain:cmp_end.datab[7]
+datab[8] => cmpchain:cmp_end.datab[8]
+datab[9] => cmpchain:cmp_end.datab[9]
+datab[10] => cmpchain:cmp_end.datab[10]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|comptree:comparator|cmpchain:cmp_end
+dataa[0] => comptree:comp.dataa[0]
+dataa[1] => comptree:comp.dataa[1]
+dataa[2] => comptree:comp.dataa[2]
+dataa[3] => comptree:comp.dataa[3]
+dataa[4] => comptree:comp.dataa[4]
+dataa[5] => comptree:comp.dataa[5]
+dataa[6] => comptree:comp.dataa[6]
+dataa[7] => comptree:comp.dataa[7]
+dataa[8] => comptree:comp.dataa[8]
+dataa[9] => comptree:comp.dataa[9]
+dataa[10] => comptree:comp.dataa[10]
+datab[0] => comptree:comp.datab[0]
+datab[1] => comptree:comp.datab[1]
+datab[2] => comptree:comp.datab[2]
+datab[3] => comptree:comp.datab[3]
+datab[4] => comptree:comp.datab[4]
+datab[5] => comptree:comp.datab[5]
+datab[6] => comptree:comp.datab[6]
+datab[7] => comptree:comp.datab[7]
+datab[8] => comptree:comp.datab[8]
+datab[9] => comptree:comp.datab[9]
+datab[10] => comptree:comp.datab[10]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp
+dataa[0] => cmpchain:cmp[0].dataa[0]
+dataa[1] => cmpchain:cmp[0].dataa[1]
+dataa[2] => cmpchain:cmp[0].dataa[2]
+dataa[3] => cmpchain:cmp[0].dataa[3]
+dataa[4] => cmpchain:cmp[1].dataa[0]
+dataa[5] => cmpchain:cmp[1].dataa[1]
+dataa[6] => cmpchain:cmp[1].dataa[2]
+dataa[7] => cmpchain:cmp[1].dataa[3]
+dataa[8] => cmpchain:cmp_end.dataa[0]
+dataa[9] => cmpchain:cmp_end.dataa[1]
+dataa[10] => cmpchain:cmp_end.dataa[2]
+datab[0] => cmpchain:cmp[0].datab[0]
+datab[1] => cmpchain:cmp[0].datab[1]
+datab[2] => cmpchain:cmp[0].datab[2]
+datab[3] => cmpchain:cmp[0].datab[3]
+datab[4] => cmpchain:cmp[1].datab[0]
+datab[5] => cmpchain:cmp[1].datab[1]
+datab[6] => cmpchain:cmp[1].datab[2]
+datab[7] => cmpchain:cmp[1].datab[3]
+datab[8] => cmpchain:cmp_end.datab[0]
+datab[9] => cmpchain:cmp_end.datab[1]
+datab[10] => cmpchain:cmp_end.datab[2]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_node.DB_MAX_OUTPUT_PORT_TYPE
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= cmpchain:cmp_end.aeb
+agb <= <GND>
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb_out.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst18|alt_counter_f10ke:wysi_counter|LPM_COMPARE:$00018|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst182
+clock => alt_counter_f10ke:wysi_counter.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => alt_counter_f10ke:wysi_counter.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= alt_counter_f10ke:wysi_counter.q[0]
+q[1] <= alt_counter_f10ke:wysi_counter.q[1]
+q[2] <= alt_counter_f10ke:wysi_counter.q[2]
+q[3] <= alt_counter_f10ke:wysi_counter.q[3]
+cout <= cout~0.DB_MAX_OUTPUT_PORT_TYPE
+eq[0] <= eq[0]~15.DB_MAX_OUTPUT_PORT_TYPE
+eq[1] <= eq[1]~14.DB_MAX_OUTPUT_PORT_TYPE
+eq[2] <= eq[2]~13.DB_MAX_OUTPUT_PORT_TYPE
+eq[3] <= eq[3]~12.DB_MAX_OUTPUT_PORT_TYPE
+eq[4] <= eq[4]~11.DB_MAX_OUTPUT_PORT_TYPE
+eq[5] <= eq[5]~10.DB_MAX_OUTPUT_PORT_TYPE
+eq[6] <= eq[6]~9.DB_MAX_OUTPUT_PORT_TYPE
+eq[7] <= eq[7]~8.DB_MAX_OUTPUT_PORT_TYPE
+eq[8] <= eq[8]~7.DB_MAX_OUTPUT_PORT_TYPE
+eq[9] <= eq[9]~6.DB_MAX_OUTPUT_PORT_TYPE
+eq[10] <= eq[10]~5.DB_MAX_OUTPUT_PORT_TYPE
+eq[11] <= eq[11]~4.DB_MAX_OUTPUT_PORT_TYPE
+eq[12] <= eq[12]~3.DB_MAX_OUTPUT_PORT_TYPE
+eq[13] <= eq[13]~2.DB_MAX_OUTPUT_PORT_TYPE
+eq[14] <= eq[14]~1.DB_MAX_OUTPUT_PORT_TYPE
+eq[15] <= eq[15]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COUNTER:inst182|alt_counter_f10ke:wysi_counter
+data[0] => data_path[0].IN1
+data[1] => data_path[1].IN1
+data[2] => data_path[2].IN1
+data[3] => data_path[3].IN1
+clock => counter_cell[3].CLK
+clock => counter_cell[2].CLK
+clock => counter_cell[1].CLK
+clock => counter_cell[0].CLK
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aclr => counter_cell[3].ACLR
+aclr => counter_cell[2].ACLR
+aclr => counter_cell[1].ACLR
+aclr => counter_cell[0].ACLR
+q[0] <= counter_cell[0].REGOUT
+q[1] <= counter_cell[1].REGOUT
+q[2] <= counter_cell[2].REGOUT
+q[3] <= counter_cell[3].REGOUT
+cout <= cout_bit.COMBOUT
+
+
+|sss_ir_receiver|LPM_COMPARE:inst197
+dataa[0] => comptree:comparator.dataa[0]
+dataa[1] => comptree:comparator.dataa[1]
+dataa[2] => comptree:comparator.dataa[2]
+dataa[3] => comptree:comparator.dataa[3]
+datab[0] => comptree:comparator.datab[0]
+datab[1] => comptree:comparator.datab[1]
+datab[2] => comptree:comparator.datab[2]
+datab[3] => comptree:comparator.datab[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= alb~1.DB_MAX_OUTPUT_PORT_TYPE
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb~0.DB_MAX_OUTPUT_PORT_TYPE
+aleb <= aleb~1.DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb~1.DB_MAX_OUTPUT_PORT_TYPE
+ageb <= ageb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst197|comptree:comparator
+dataa[0] => cmpchain:cmp_end.dataa[0]
+dataa[1] => cmpchain:cmp_end.dataa[1]
+dataa[2] => cmpchain:cmp_end.dataa[2]
+dataa[3] => cmpchain:cmp_end.dataa[3]
+datab[0] => cmpchain:cmp_end.datab[0]
+datab[1] => cmpchain:cmp_end.datab[1]
+datab[2] => cmpchain:cmp_end.datab[2]
+datab[3] => cmpchain:cmp_end.datab[3]
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= cmpchain:cmp_end.agb
+
+
+|sss_ir_receiver|LPM_COMPARE:inst197|comptree:comparator|cmpchain:cmp_end
+clk => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+aeb <= aeb~0.DB_MAX_OUTPUT_PORT_TYPE
+agb <= agb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst197|altshift:aeb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|sss_ir_receiver|LPM_COMPARE:inst197|altshift:agb_ext_lat_ffs
+data[0] => result[0].DATAIN
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

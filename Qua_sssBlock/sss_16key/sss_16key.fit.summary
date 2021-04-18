@@ -1,0 +1,10 @@
+Fitter Status : Successful - Fri Jul 29 19:40:18 2016
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : sss_16key
+Top-level Entity Name : sss_16key
+Family : FLEX10K
+Device : EPF10K10LC84-4
+Timing Models : Final
+Total logic elements : 53 / 576 ( 9 % )
+Total pins : 19 / 59 ( 32 % )
+Total memory bits : 0 / 6,144 ( 0 % )

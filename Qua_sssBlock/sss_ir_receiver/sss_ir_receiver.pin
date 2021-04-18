@@ -1,0 +1,127 @@
+ -- Copyright (C) 1991-2008 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ------------------------------------------------------------------------------
+
+
+
+ ------------------------------------------------------------------------------
+ -- NC         : No Connect. This pin has no internal connection to the device.
+ -- VCC_INT    : Dedicated power pin, which MUST be connected to VCC  (5.0V).
+ -- VCC_IO     : Dedicated power pin, which MUST be connected to VCC  (Refer to
+ --              the table below for voltage).
+ -- GND        : Dedicated ground pin, which MUST be connected to GND.
+ -- GND+       : Unused input. This pin should be connected to GND. It may also
+ --              be connected  to a  valid signal  on the board  (low, high, or
+ --              toggling)  if that signal is required for a different revision
+ --              of the design.
+ -- GND*       : Unused  I/O  pin.   This pin can either be left unconnected or
+ --              connected to GND.  Connecting this pin to GND will improve the
+ --              device's immunity to noise.
+ ------------------------------------------------------------------------------
+
+
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+CHIP  "sss_ir_receiver"  ASSIGNED TO AN: EPF10K10LC84-4
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND+                         : 1         :        :                   :         :           :                
+ir_input                     : 2         : input  : TTL               :         :           : N              
+ir_save_data[23]             : 3         : output : TTL               :         :           : N              
+VCC_INT                      : 4         : power  :                   : 5.0V    :           :                
+GND*                         : 5         :        :                   :         :           :                
+ir_save_data[14]             : 6         : output : TTL               :         :           : N              
+ir_save_data[13]             : 7         : output : TTL               :         :           : N              
+ir_save_data[12]             : 8         : output : TTL               :         :           : N              
+GND*                         : 9         :        :                   :         :           :                
+GND*                         : 10        :        :                   :         :           :                
+GND*                         : 11        :        :                   :         :           :                
+DATA0                        : 12        : input  :                   :         :           :                
+DCLK                         : 13        : bidir  :                   :         :           :                
+nCE                          : 14        : input  :                   :         :           :                
+TDI                          : 15        : input  :                   :         :           :                
+GND*                         : 16        :        :                   :         :           :                
+GND*                         : 17        :        :                   :         :           :                
+GND*                         : 18        :        :                   :         :           :                
+ir_but_start/stop            : 19        : output : TTL               :         :           : N              
+VCC_INT                      : 20        : power  :                   : 5.0V    :           :                
+ir_save_data[31]             : 21        : output : TTL               :         :           : N              
+ir_save_data[17]             : 22        : output : TTL               :         :           : N              
+ir_save_data[20]             : 23        : output : TTL               :         :           : N              
+ir_save_data[3]              : 24        : output : TTL               :         :           : N              
+GND*                         : 25        :        :                   :         :           :                
+GND_INT                      : 26        : gnd    :                   :         :           :                
+ir_save_data[15]             : 27        : output : TTL               :         :           : N              
+ir_save_data[22]             : 28        : output : TTL               :         :           : N              
+ir_save_data[7]              : 29        : output : TTL               :         :           : N              
+ir_save_data[6]              : 30        : output : TTL               :         :           : N              
+MSEL0                        : 31        : input  :                   :         :           :                
+MSEL1                        : 32        : input  :                   :         :           :                
+VCC_INT                      : 33        : power  :                   : 5.0V    :           :                
+nCONFIG                      : 34        : input  :                   :         :           :                
+GND*                         : 35        :        :                   :         :           :                
+GND*                         : 36        :        :                   :         :           :                
+ir_save_data[5]              : 37        : output : TTL               :         :           : N              
+ir_save_data[4]              : 38        : output : TTL               :         :           : N              
+ir_save_data[21]             : 39        : output : TTL               :         :           : N              
+VCC_INT                      : 40        : power  :                   : 5.0V    :           :                
+GND_INT                      : 41        : gnd    :                   :         :           :                
+GND+                         : 42        :        :                   :         :           :                
+ir_clk                       : 43        : input  : TTL               :         :           : N              
+GND+                         : 44        :        :                   :         :           :                
+VCC_INT                      : 45        : power  :                   : 5.0V    :           :                
+GND_INT                      : 46        : gnd    :                   :         :           :                
+GND*                         : 47        :        :                   :         :           :                
+GND*                         : 48        :        :                   :         :           :                
+GND*                         : 49        :        :                   :         :           :                
+GND*                         : 50        :        :                   :         :           :                
+ir_save_data[28]             : 51        : output : TTL               :         :           : N              
+ir_save_data[29]             : 52        : output : TTL               :         :           : N              
+ir_but_1                     : 53        : output : TTL               :         :           : N              
+ir_save_data[25]             : 54        : output : TTL               :         :           : N              
+nSTATUS                      : 55        : bidir  :                   :         :           :                
+TRST                         : 56        : input  :                   :         :           :                
+TMS                          : 57        : input  :                   :         :           :                
+ir_save_data[10]             : 58        : output : TTL               :         :           : N              
+ir_but_mute                  : 59        : output : TTL               :         :           : N              
+ir_save_data[2]              : 60        : output : TTL               :         :           : N              
+ir_save_data[18]             : 61        : output : TTL               :         :           : N              
+ir_save_data[27]             : 62        : output : TTL               :         :           : N              
+VCC_INT                      : 63        : power  :                   : 5.0V    :           :                
+ir_save_data[30]             : 64        : output : TTL               :         :           : N              
+ir_save_data[26]             : 65        : output : TTL               :         :           : N              
+ir_save_data[9]              : 66        : output : TTL               :         :           : N              
+GND*                         : 67        :        :                   :         :           :                
+GND_INT                      : 68        : gnd    :                   :         :           :                
+GND*                         : 69        :        :                   :         :           :                
+ir_save_data[16]             : 70        : output : TTL               :         :           : N              
+ir_save_data[24]             : 71        : output : TTL               :         :           : N              
+ir_save_data[1]              : 72        : output : TTL               :         :           : N              
+GND*                         : 73        :        :                   :         :           :                
+TDO                          : 74        : output :                   :         :           :                
+nCEO                         : 75        : output :                   :         :           :                
+CONF_DONE                    : 76        : bidir  :                   :         :           :                
+TCK                          : 77        : input  :                   :         :           :                
+ir_save_data[11]             : 78        : output : TTL               :         :           : N              
+ir_save_data[8]              : 79        : output : TTL               :         :           : N              
+ir_save_data[0]              : 80        : output : TTL               :         :           : N              
+ir_save_data[19]             : 81        : output : TTL               :         :           : N              
+GND_INT                      : 82        : gnd    :                   :         :           :                
+GND*                         : 83        :        :                   :         :           :                
+GND+                         : 84        :        :                   :         :           :                

@@ -1,0 +1,120 @@
+# Copyright (C) 1991-2008 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		BRDepf10k10l_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "MAX II"
+set_global_assignment -name DEVICE Auto
+set_global_assignment -name TOP_LEVEL_ENTITY BRDepf10k10l
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:40:15  MAY 13, 2015"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name BDF_FILE BRDepf10k10l.bdf
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name FLEX10K_DEVICE_IO_STANDARD TTL
+set_global_assignment -name DISABLE_NCS_AND_OE_PULLUPS_ON_CONFIG_DEVICE ON
+set_global_assignment -name FLEX10K_ENABLE_LOW_VOLTAGE_MODE_ON_CONFIG_DEVICE OFF
+set_global_assignment -name MISC_FILE "D:/Speian_Worcs/YandexDisk/Altera/BRDepf10k10l/BRDepf10k10l.dpf"
+set_global_assignment -name FLEX10K_CONFIGURATION_DEVICE EPC2
+set_global_assignment -name ON_CHIP_BITSTREAM_DECOMPRESSION OFF
+set_global_assignment -name QIP_FILE lpm_rom0.qip
+set_global_assignment -name MIF_FILE lpm_rom0.mif
+set_global_assignment -name AUTO_RAM_RECOGNITION ON
+set_global_assignment -name AUTO_ROM_RECOGNITION ON
+set_global_assignment -name HEX_FILE lpm_rom0.hex
+set_global_assignment -name BDF_FILE "BRDepf10k10l(15.05.15).bdf"
+set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
+set_global_assignment -name FITTER_EFFORT "FAST FIT"
+set_global_assignment -name VECTOR_WAVEFORM_FILE 7Segment.vwf
+set_global_assignment -name MISC_FILE "d:/Speian_Worcs/YandexDisk/Altera/BRDepf10k10l/BRDepf10k10l.dpf"
+set_global_assignment -name QIP_FILE lpm_shiftreg0.qip
+set_location_assignment EC7_A -to "lpm_rom:inst69|altrom:srom|q[4]"
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name MIF_FILE lpm_rom1.mif
+set_global_assignment -name VECTOR_WAVEFORM_FILE SPI.vwf
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name MISC_FILE "D:/sssHomWork/Altera/BRDepf10k10l/BRDepf10k10l.dpf"
+set_global_assignment -name MIF_FILE lpm_rom2.mif
+set_global_assignment -name VECTOR_WAVEFORM_FILE DAC.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE SPI.vwf
+
+set_location_assignment PIN_71 -to led1
+set_location_assignment PIN_72 -to led2
+set_location_assignment PIN_69 -to led3
+set_location_assignment PIN_70 -to led4
+set_location_assignment PIN_73 -to led5
+set_location_assignment PIN_65 -to sb1
+set_location_assignment PIN_66 -to sb2
+set_location_assignment PIN_67 -to sb3
+set_location_assignment PIN_64 -to sb4
+set_location_assignment PIN_62 -to phase_a
+set_location_assignment PIN_60 -to phase_b
+set_location_assignment PIN_61 -to phase_c
+set_location_assignment PIN_58 -to phase_d
+set_location_assignment PIN_11 -to seg_a
+set_location_assignment PIN_10 -to seg_b
+set_location_assignment PIN_9 -to seg_c
+set_location_assignment PIN_8 -to seg_d
+set_location_assignment PIN_3 -to seg_dp
+set_location_assignment PIN_7 -to seg_e
+set_location_assignment PIN_6 -to seg_f
+set_location_assignment PIN_5 -to seg_g
+set_location_assignment PIN_83 -to dig_0
+set_location_assignment PIN_81 -to dig_1
+set_location_assignment PIN_79 -to dig_2
+set_location_assignment PIN_80 -to dig_3
+set_location_assignment PIN_78 -to dig_4
+set_location_assignment PIN_37 -to xp5_25
+set_location_assignment PIN_42 -to xp5_21
+set_location_assignment PIN_44 -to xp5_19
+set_location_assignment PIN_39 -to xp5_23
+set_location_assignment PIN_48 -to xp5_15
+set_location_assignment PIN_47 -to xp5_17
+set_location_assignment PIN_49 -to xp5_13
+set_location_assignment PIN_50 -to xp5_11
+set_location_assignment PIN_51 -to xp5_9
+set_location_assignment PIN_54 -to xp5_3
+set_location_assignment PIN_59 -to xp5_5
+set_location_assignment PIN_52 -to xp5_7
+set_location_assignment PIN_38 -to xp5_27
+set_location_assignment PIN_35 -to xp5_29
+set_location_assignment PIN_36 -to xp5_31
+set_location_assignment PIN_2 -to xp6_17
+set_location_assignment PIN_1 -to xp6_19
+
+set_location_assignment PIN_30 -to xp2_5
+set_location_assignment PIN_29 -to xp2_7
+set_location_assignment PIN_28 -to xp2_9
+set_global_assignment -name VECTOR_WAVEFORM_FILE 16key.vwf
+set_location_assignment PIN_16 -to ir_input
+set_location_assignment PIN_43 -to glob_clk
+set_global_assignment -name QIP_FILE lpm_mux0.qip
+set_global_assignment -name MISC_FILE "D:/Speian_Worcs/SSSWorkHome/Altera/BRDepf10k10l/BRDepf10k10l.dpf"
+set_global_assignment -name VERILOG_FILE sssVerologTest.v
+set_location_assignment PIN_27 -to xp2_11
+set_location_assignment PIN_25 -to xp2_13
+set_location_assignment PIN_24 -to xp2_15

@@ -1,0 +1,29 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup '12'
+Slack : -4.568
+TNS   : -88.693
+
+Type  : Setup 'lpm_counter:inst|cntr_jhf:auto_generated|safe_q[22]'
+Slack : -3.391
+TNS   : -10.755
+
+Type  : Hold '12'
+Slack : -1.676
+TNS   : -1.676
+
+Type  : Hold 'lpm_counter:inst|cntr_jhf:auto_generated|safe_q[22]'
+Slack : 1.817
+TNS   : 0.000
+
+Type  : Minimum Pulse Width '12'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'lpm_counter:inst|cntr_jhf:auto_generated|safe_q[22]'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

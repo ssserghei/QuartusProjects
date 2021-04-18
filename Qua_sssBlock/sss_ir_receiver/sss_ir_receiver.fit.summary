@@ -1,0 +1,10 @@
+Fitter Status : Successful - Thu Jul 28 22:00:33 2016
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : sss_ir_receiver
+Top-level Entity Name : sss_ir_receiver
+Family : FLEX10K
+Device : EPF10K10LC84-4
+Timing Models : Final
+Total logic elements : 129 / 576 ( 22 % )
+Total pins : 37 / 59 ( 63 % )
+Total memory bits : 0 / 6,144 ( 0 % )

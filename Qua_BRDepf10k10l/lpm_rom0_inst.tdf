@@ -1,0 +1,8 @@
+(
+	q_sig[]
+) = lpm_rom0	(
+	.address[] = address_sig[]
+)
+RETURNS (
+	.q[]
+);

@@ -1,0 +1,10 @@
+Fitter Status : Successful - Fri Feb 14 14:37:01 2020
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : BRDepf10k10l
+Top-level Entity Name : BRDepf10k10l
+Family : FLEX10K
+Device : EPF10K10LC84-4
+Timing Models : Final
+Total logic elements : 279 / 576 ( 48 % )
+Total pins : 59 / 59 ( 100 % )
+Total memory bits : 0 / 6,144 ( 0 % )

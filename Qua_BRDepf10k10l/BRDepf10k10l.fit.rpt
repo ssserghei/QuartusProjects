@@ -1,0 +1,818 @@
+Fitter report for BRDepf10k10l
+Fri Feb 14 14:37:01 2020
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Fitter Device Options
+  5. Input Pins
+  6. Output Pins
+  7. All Package Pins
+  8. Control Signals
+  9. Global & Other Fast Signals
+ 10. Carry Chains
+ 11. Cascade Chains
+ 12. Non-Global High Fan-Out Signals
+ 13. LAB
+ 14. Local Routing Interconnect
+ 15. LAB External Interconnect
+ 16. Row Interconnect
+ 17. LAB Column Interconnect
+ 18. LAB Column Interconnect
+ 19. Fitter Resource Usage Summary
+ 20. Fitter Resource Utilization by Entity
+ 21. Delay Chain Summary
+ 22. Pin-Out File
+ 23. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------+
+; Fitter Summary                                                   ;
++-----------------------+------------------------------------------+
+; Fitter Status         ; Successful - Fri Feb 14 14:37:01 2020    ;
+; Quartus II Version    ; 8.1 Build 163 10/28/2008 SJ Full Version ;
+; Revision Name         ; BRDepf10k10l                             ;
+; Top-level Entity Name ; BRDepf10k10l                             ;
+; Family                ; FLEX10K                                  ;
+; Device                ; EPF10K10LC84-4                           ;
+; Timing Models         ; Final                                    ;
+; Total logic elements  ; 279 / 576 ( 48 % )                       ;
+; Total pins            ; 59 / 59 ( 100 % )                        ;
+; Total memory bits     ; 0 / 6,144 ( 0 % )                        ;
++-----------------------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                      ;
++------------------------------------------------------------+--------------------+--------------------+
+; Option                                                     ; Setting            ; Default Value      ;
++------------------------------------------------------------+--------------------+--------------------+
+; Device                                                     ; EPF10K10LC84-4     ;                    ;
+; Fitter Effort                                              ; Fast Fit           ; Auto Fit           ;
+; Use smart compilation                                      ; Off                ; Off                ;
+; Use TimeQuest Timing Analyzer                              ; Off                ; Off                ;
+; Router Timing Optimization Level                           ; Normal             ; Normal             ;
+; Placement Effort Multiplier                                ; 1.0                ; 1.0                ;
+; Router Effort Multiplier                                   ; 1.0                ; 1.0                ;
+; Optimize Timing                                            ; Normal compilation ; Normal compilation ;
+; Optimize Timing for ECOs                                   ; Off                ; Off                ;
+; Regenerate full fit report during ECO compiles             ; Off                ; Off                ;
+; Optimize IOC Register Placement for Timing                 ; On                 ; On                 ;
+; Limit to One Fitting Attempt                               ; Off                ; Off                ;
+; Final Placement Optimizations                              ; Automatically      ; Automatically      ;
+; Fitter Aggressive Routability Optimizations                ; Automatically      ; Automatically      ;
+; Fitter Initial Placement Seed                              ; 1                  ; 1                  ;
+; Slow Slew Rate                                             ; Off                ; Off                ;
+; Auto Global Memory Control Signals                         ; Off                ; Off                ;
+; Logic Cell Insertion - Individual Logic Cells              ; On                 ; On                 ;
+; Logic Cell Insertion - I/Os Fed By Carry or Cascade Chains ; On                 ; On                 ;
+; Auto Global Clock                                          ; On                 ; On                 ;
+; Auto Global Output Enable                                  ; On                 ; On                 ;
+; Auto Global Register Control Signals                       ; On                 ; On                 ;
++------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------+
+; Fitter Device Options                                              ;
++----------------------------------------------+---------------------+
+; Option                                       ; Setting             ;
++----------------------------------------------+---------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                 ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                 ;
+; Enable device-wide output enable (DEV_OE)    ; Off                 ;
+; Enable INIT_DONE output                      ; Off                 ;
+; Configuration scheme                         ; Passive Serial      ;
+; nWS, nRS, nCS, CS                            ; Unreserved          ;
+; RDYnBUSY                                     ; Unreserved          ;
+; Data[7..1]                                   ; Unreserved          ;
+; Reserve all unused pins                      ; As input tri-stated ;
+; Base pin-out file on sameframe device        ; Off                 ;
++----------------------------------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                               ;
++----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
+; Name     ; Pin # ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; Single-Pin CE ; I/O Standard ;
++----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
+; xp6_19   ; 1     ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; sb1      ; 65    ;  B  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; sb2      ; 66    ;  B  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; glob_clk ; 43    ; --  ; --   ; 37      ; yes    ; no           ; no                      ; no            ; no            ; TTL          ;
+; sb4      ; 64    ;  B  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; sb3      ; 67    ;  B  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; ir_input ; 16    ;  A  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; xp2_9    ; 28    ;  C  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; xp6_23   ; 84    ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; xp5_19   ; 44    ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; xp5_7    ; 52    ; --  ; 19   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; xp5_21   ; 42    ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
+; xp6_17   ; 2     ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no            ; TTL          ;
++----------+-------+-----+------+---------+--------+--------------+-------------------------+---------------+---------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                         ;
++---------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
+; Name    ; Pin # ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
++---------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
+; led1    ; 71    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; led2    ; 72    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; led3    ; 69    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; led4    ; 70    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; led5    ; 73    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; phase_a ; 62    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; phase_b ; 60    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; phase_c ; 61    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; phase_d ; 58    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; dig_1   ; 81    ; --  ; 22   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; dig_0   ; 83    ; --  ; 13   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; dig_2   ; 79    ; --  ; 24   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; dig_3   ; 80    ; --  ; 23   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; dig_4   ; 78    ; --  ; 24   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_9   ; 51    ; --  ; 18   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_3   ; 54    ; --  ; 21   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_27  ; 38    ; --  ; 10   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_29  ; 35    ; --  ; 6    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_5   ; 30    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_7   ; 29    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_11  ; 27    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_13  ; 25    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_15  ; 24    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; seg_a   ; 11    ; --  ; 1    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; seg_b   ; 10    ; --  ; 1    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; seg_c   ; 9     ; --  ; 2    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; seg_d   ; 8     ; --  ; 3    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; seg_e   ; 7     ; --  ; 3    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; seg_f   ; 6     ; --  ; 4    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; seg_g   ; 5     ; --  ; 5    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; seg_dp  ; 3     ; --  ; 12   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_11  ; 50    ; --  ; 17   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_13  ; 49    ; --  ; 16   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_15  ; 48    ; --  ; 15   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_23  ; 39    ; --  ; 11   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_25  ; 37    ; --  ; 9    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_17  ; 47    ; --  ; 14   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_5   ; 59    ;  C  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_31  ; 36    ; --  ; 7    ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_17  ; 17    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_19  ; 23    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_21  ; 18    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_23  ; 22    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_29  ; 53    ; --  ; 20   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp2_25  ; 21    ;  B  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
+; xp5_33  ; 19    ;  A  ; --   ; no           ; no                       ; no            ; no             ; no            ; no            ; no         ; no            ; TTL          ;
++---------+-------+-----+------+--------------+--------------------------+---------------+----------------+---------------+---------------+------------+---------------+--------------+
+
+
++-----------------------------------+
+; All Package Pins                  ;
++-------+------------+--------------+
+; Pin # ; Usage      ; I/O Standard ;
++-------+------------+--------------+
+; 1     ; xp6_19     ; TTL          ;
+; 2     ; xp6_17     ; TTL          ;
+; 3     ; seg_dp     ; TTL          ;
+; 4     ; VCC_INT    ;              ;
+; 5     ; seg_g      ; TTL          ;
+; 6     ; seg_f      ; TTL          ;
+; 7     ; seg_e      ; TTL          ;
+; 8     ; seg_d      ; TTL          ;
+; 9     ; seg_c      ; TTL          ;
+; 10    ; seg_b      ; TTL          ;
+; 11    ; seg_a      ; TTL          ;
+; 12    ; ^DATA0     ;              ;
+; 13    ; ^DCLK      ;              ;
+; 14    ; ^nCE       ;              ;
+; 15    ; #TDI       ;              ;
+; 16    ; ir_input   ; TTL          ;
+; 17    ; xp2_17     ; TTL          ;
+; 18    ; xp2_21     ; TTL          ;
+; 19    ; xp5_33     ; TTL          ;
+; 20    ; VCC_INT    ;              ;
+; 21    ; xp2_25     ; TTL          ;
+; 22    ; xp2_23     ; TTL          ;
+; 23    ; xp2_19     ; TTL          ;
+; 24    ; xp2_15     ; TTL          ;
+; 25    ; xp2_13     ; TTL          ;
+; 26    ; GND_INT    ;              ;
+; 27    ; xp2_11     ; TTL          ;
+; 28    ; xp2_9      ; TTL          ;
+; 29    ; xp2_7      ; TTL          ;
+; 30    ; xp2_5      ; TTL          ;
+; 31    ; ^MSEL0     ;              ;
+; 32    ; ^MSEL1     ;              ;
+; 33    ; VCC_INT    ;              ;
+; 34    ; ^nCONFIG   ;              ;
+; 35    ; xp5_29     ; TTL          ;
+; 36    ; xp5_31     ; TTL          ;
+; 37    ; xp5_25     ; TTL          ;
+; 38    ; xp5_27     ; TTL          ;
+; 39    ; xp5_23     ; TTL          ;
+; 40    ; VCC_INT    ;              ;
+; 41    ; GND_INT    ;              ;
+; 42    ; xp5_21     ; TTL          ;
+; 43    ; glob_clk   ; TTL          ;
+; 44    ; xp5_19     ; TTL          ;
+; 45    ; VCC_INT    ;              ;
+; 46    ; GND_INT    ;              ;
+; 47    ; xp5_17     ; TTL          ;
+; 48    ; xp5_15     ; TTL          ;
+; 49    ; xp5_13     ; TTL          ;
+; 50    ; xp5_11     ; TTL          ;
+; 51    ; xp5_9      ; TTL          ;
+; 52    ; xp5_7      ; TTL          ;
+; 53    ; xp2_29     ; TTL          ;
+; 54    ; xp5_3      ; TTL          ;
+; 55    ; ^nSTATUS   ;              ;
+; 56    ; #TRST      ;              ;
+; 57    ; #TMS       ;              ;
+; 58    ; phase_d    ; TTL          ;
+; 59    ; xp5_5      ; TTL          ;
+; 60    ; phase_b    ; TTL          ;
+; 61    ; phase_c    ; TTL          ;
+; 62    ; phase_a    ; TTL          ;
+; 63    ; VCC_INT    ;              ;
+; 64    ; sb4        ; TTL          ;
+; 65    ; sb1        ; TTL          ;
+; 66    ; sb2        ; TTL          ;
+; 67    ; sb3        ; TTL          ;
+; 68    ; GND_INT    ;              ;
+; 69    ; led3       ; TTL          ;
+; 70    ; led4       ; TTL          ;
+; 71    ; led1       ; TTL          ;
+; 72    ; led2       ; TTL          ;
+; 73    ; led5       ; TTL          ;
+; 74    ; #TDO       ;              ;
+; 75    ; ^nCEO      ;              ;
+; 76    ; ^CONF_DONE ;              ;
+; 77    ; #TCK       ;              ;
+; 78    ; dig_4      ; TTL          ;
+; 79    ; dig_2      ; TTL          ;
+; 80    ; dig_3      ; TTL          ;
+; 81    ; dig_1      ; TTL          ;
+; 82    ; GND_INT    ;              ;
+; 83    ; dig_0      ; TTL          ;
+; 84    ; xp6_23     ; TTL          ;
++-------+------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                          ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+--------------+--------------+
+; Name                                                                                                                                                                   ; Pin #   ; Fan-Out ; Usage        ; Global Usage ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+--------------+--------------+
+; glob_clk                                                                                                                                                               ; 43      ; 37      ; Clock        ; Pin          ;
+; lpm_counter:inst178|alt_counter_f10ke:wysi_counter|q[21]                                                                                                               ; LC5_B7  ; 5       ; Clock        ; Non-global   ;
+; lpm_counter:inst178|alt_counter_f10ke:wysi_counter|q[17]                                                                                                               ; LC1_B7  ; 3       ; Clock        ; Non-global   ;
+; lpm_counter:inst178|alt_counter_f10ke:wysi_counter|q[12]                                                                                                               ; LC4_B5  ; 27      ; Clock        ; Non-global   ;
+; lpm_counter:inst178|alt_counter_f10ke:wysi_counter|q[13]                                                                                                               ; LC5_B5  ; 16      ; Clock        ; Non-global   ;
+; inst50                                                                                                                                                                 ; LC3_A13 ; 2       ; Clock        ; Non-global   ;
+; inst167                                                                                                                                                                ; LC4_B1  ; 77      ; Clock        ; Non-global   ;
+; sss_ir_receiver:inst18|inst151                                                                                                                                         ; LC1_C8  ; 32      ; Clock enable ; Non-global   ;
+; inst9                                                                                                                                                                  ; LC2_A13 ; 4       ; Async. clear ; Non-global   ;
+; sss_ir_receiver:inst18|inst92                                                                                                                                          ; LC1_C21 ; 1       ; Clock        ; Non-global   ;
+; sss_step_mot:inst35|lpm_counter:inst185|alt_counter_f10ke:wysi_counter|cout~_wirecell                                                                                  ; LC2_A22 ; 15      ; Sync. load   ; Non-global   ;
+; sss_step_mot:inst35|inst188                                                                                                                                            ; LC5_A22 ; 4       ; Clock        ; Non-global   ;
+; max2:inst3|inst52                                                                                                                                                      ; LC8_B16 ; 7       ; Clock enable ; Non-global   ;
+; max2:inst3|inst19                                                                                                                                                      ; LC8_B19 ; 1       ; Clock enable ; Non-global   ;
+; max2:inst3|inst68                                                                                                                                                      ; LC2_B19 ; 1       ; Clock enable ; Non-global   ;
+; lpm_counter:inst27|alt_counter_f10ke:wysi_counter|cout                                                                                                                 ; LC6_B20 ; 1       ; Clock        ; Non-global   ;
+; lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out ; LC1_B18 ; 12      ; Sync. load   ; Non-global   ;
+; sss_7seg:inst|lpm_counter:inst28|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end|aeb_out                                        ; LC4_B21 ; 3       ; Sync. load   ; Non-global   ;
+; max2:inst3|inst15~4                                                                                                                                                    ; LC6_B19 ; 1       ; Clock enable ; Non-global   ;
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+---------+--------------+--------------+
+
+
++-------------------------------------+
+; Global & Other Fast Signals         ;
++----------+-------+---------+--------+
+; Name     ; Pin # ; Fan-Out ; Global ;
++----------+-------+---------+--------+
+; xp6_19   ; 1     ; 1       ; no     ;
+; glob_clk ; 43    ; 37      ; yes    ;
++----------+-------+---------+--------+
+
+
++---------------------------------------------+
+; Carry Chains                                ;
++--------------------+------------------------+
+; Carry Chain Length ; Number of Carry Chains ;
++--------------------+------------------------+
+; 0 - 1              ; 0                      ;
+; 2 - 3              ; 1                      ;
+; 4 - 5              ; 3                      ;
+; 6 - 7              ; 1                      ;
+; 8 - 9              ; 1                      ;
+; 10 - 11            ; 1                      ;
+; 12 - 13            ; 1                      ;
+; 14 - 15            ; 0                      ;
+; 16 - 17            ; 1                      ;
+; 18 - 19            ; 0                      ;
+; 20 - 21            ; 0                      ;
+; 22 - 23            ; 0                      ;
+; 24 - 25            ; 0                      ;
+; 26 - 27            ; 1                      ;
++--------------------+------------------------+
+
+
++----------------+
+; Cascade Chains ;
++--------+-------+
+; Length ; Count ;
++--------+-------+
+; 2      ; 1     ;
++--------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                                                                                                                     ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Name                                                                                                                                                                      ; Fan-Out ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; inst167~2                                                                                                                                                                 ; 77      ;
+; sss_ir_receiver:inst18|lpm_counter:inst155|alt_counter_f10ke:wysi_counter|cout~0                                                                                          ; 41      ;
+; sss_ir_receiver:inst18|inst149~7                                                                                                                                          ; 40      ;
+; ~GND~0                                                                                                                                                                    ; 37      ;
+; sss_ir_receiver:inst18|inst151~12                                                                                                                                         ; 32      ;
+; lpm_counter:inst178|alt_counter_f10ke:wysi_counter|counter_cell[12]~COUT                                                                                                  ; 28      ;
+; lpm_counter:inst178|alt_counter_f10ke:wysi_counter|counter_cell[13]~COUT                                                                                                  ; 17      ;
+; sss_step_mot:inst35|lpm_counter:inst185|alt_counter_f10ke:wysi_counter|cout~_wirecell                                                                                     ; 15      ;
+; lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end|aeb_out~22 ; 12      ;
+; max2:inst3|inst52~9                                                                                                                                                       ; 7       ;
+; max2:inst3|inst69~9                                                                                                                                                       ; 6       ;
+; max2:inst3|inst73~39                                                                                                                                                      ; 6       ;
+; max2:inst3|lpm_counter:inst23|alt_counter_f10ke:wysi_counter|cout~0                                                                                                       ; 6       ;
+; lpm_counter:inst178|alt_counter_f10ke:wysi_counter|counter_cell[21]~COUT                                                                                                  ; 6       ;
+; sss_7seg:inst|lpm_counter:inst28|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT                                                                                      ; 6       ;
+; sss_7seg:inst|lpm_counter:inst28|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT                                                                                      ; 6       ;
+; max2:inst3|lpm_counter:inst58|alt_counter_f10ke:wysi_counter|cout~0                                                                                                       ; 5       ;
+; max2:inst3|lpm_counter:inst16|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT                                                                                         ; 5       ;
+; max2:inst3|inst2~75                                                                                                                                                       ; 5       ;
+; sss_7seg:inst|lpm_counter:inst28|alt_counter_f10ke:wysi_counter|q[2]~0                                                                                                    ; 5       ;
+; inst12~2                                                                                                                                                                  ; 5       ;
+; max2:inst3|lpm_counter:inst48|alt_counter_f10ke:wysi_counter|sclr_node~8                                                                                                  ; 4       ;
+; max2:inst3|inst59~9                                                                                                                                                       ; 4       ;
+; max2:inst3|inst57~9                                                                                                                                                       ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[22]~95                                                                                                                    ; 4       ;
+; max2:inst3|lpm_counter:inst16|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT                                                                                         ; 4       ;
+; max2:inst3|lpm_counter:inst16|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT                                                                                         ; 4       ;
+; max2:inst3|lpm_counter:inst16|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT                                                                                         ; 4       ;
+; max2:inst3|lpm_counter:inst16|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT                                                                                         ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[23]~93                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[21]~94                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[16]~91                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[20]~92                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[18]~89                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[17]~90                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[0]~75                                                                                                                     ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[19]~88                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[27]~84                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[1]~72                                                                                                                     ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[2]~73                                                                                                                     ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[3]~74                                                                                                                     ; 4       ;
+; sss_step_mot:inst35|inst188~1                                                                                                                                             ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[26]~85                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[25]~86                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[24]~87                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[31]~80                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[30]~81                                                                                                                    ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[6]~79                                                                                                                     ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[4]~78                                                                                                                     ; 4       ;
+; sss_ir_receiver:inst18|lpm_shiftreg:inst27|dffs[5]~76                                                                                                                     ; 4       ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------+
+; LAB                                       ;
++--------------------------+----------------+
+; Number of Logic Elements ; Number of LABs ;
++--------------------------+----------------+
+; 0                        ; 28             ;
+; 1                        ; 5              ;
+; 2                        ; 1              ;
+; 3                        ; 2              ;
+; 4                        ; 0              ;
+; 5                        ; 3              ;
+; 6                        ; 4              ;
+; 7                        ; 5              ;
+; 8                        ; 24             ;
++--------------------------+----------------+
+
+
++----------------------------------------------+
+; Local Routing Interconnect                   ;
++-----------------------------+----------------+
+; Local Routing Interconnects ; Number of LABs ;
++-----------------------------+----------------+
+; 0                           ; 39             ;
+; 1                           ; 4              ;
+; 2                           ; 1              ;
+; 3                           ; 3              ;
+; 4                           ; 12             ;
+; 5                           ; 5              ;
+; 6                           ; 5              ;
+; 7                           ; 3              ;
++-----------------------------+----------------+
+
+
++---------------------------------------------+
+; LAB External Interconnect                   ;
++----------------------------+----------------+
+; LAB External Interconnects ; Number of LABs ;
++----------------------------+----------------+
+; 0                          ; 32             ;
+; 1                          ; 9              ;
+; 2                          ; 1              ;
+; 3                          ; 5              ;
+; 4                          ; 5              ;
+; 5                          ; 13             ;
+; 6                          ; 2              ;
+; 7                          ; 2              ;
+; 8                          ; 0              ;
+; 9                          ; 0              ;
+; 10                         ; 1              ;
+; 11                         ; 0              ;
+; 12                         ; 0              ;
+; 13                         ; 1              ;
+; 14                         ; 0              ;
+; 15                         ; 0              ;
+; 16                         ; 1              ;
++----------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Row Interconnect                                                                        ;
++-------+--------------------+-----------------------------+------------------------------+
+; Row   ; Interconnect Used  ; Left Half Interconnect Used ; Right Half Interconnect Used ;
++-------+--------------------+-----------------------------+------------------------------+
+;  A    ;  6 / 96 ( 6 % )    ;  0 / 48 ( 0 % )             ;  11 / 48 ( 23 % )            ;
+;  B    ;  11 / 96 ( 11 % )  ;  5 / 48 ( 10 % )            ;  25 / 48 ( 52 % )            ;
+;  C    ;  47 / 96 ( 49 % )  ;  11 / 48 ( 23 % )           ;  30 / 48 ( 63 % )            ;
+; Total ;  64 / 288 ( 22 % ) ;  16 / 144 ( 11 % )          ;  66 / 144 ( 46 % )           ;
++-------+--------------------+-----------------------------+------------------------------+
+
+
++---------------------------+
+; LAB Column Interconnect   ;
++-------+-------------------+
+; Col.  ; Interconnect Used ;
++-------+-------------------+
+; 1     ;  1 / 24 ( 4 % )   ;
+; 2     ;  0 / 24 ( 0 % )   ;
+; 3     ;  0 / 24 ( 0 % )   ;
+; 4     ;  0 / 24 ( 0 % )   ;
+; 5     ;  2 / 24 ( 8 % )   ;
+; 6     ;  1 / 24 ( 4 % )   ;
+; 7     ;  1 / 24 ( 4 % )   ;
+; 8     ;  0 / 24 ( 0 % )   ;
+; 9     ;  2 / 24 ( 8 % )   ;
+; 10    ;  1 / 24 ( 4 % )   ;
+; 11    ;  1 / 24 ( 4 % )   ;
+; 12    ;  0 / 24 ( 0 % )   ;
+; 13    ;  3 / 24 ( 13 % )  ;
+; 14    ;  1 / 24 ( 4 % )   ;
+; 15    ;  0 / 24 ( 0 % )   ;
+; 16    ;  0 / 24 ( 0 % )   ;
+; 17    ;  0 / 24 ( 0 % )   ;
+; 18    ;  2 / 24 ( 8 % )   ;
+; 19    ;  0 / 24 ( 0 % )   ;
+; 20    ;  1 / 24 ( 4 % )   ;
+; 21    ;  3 / 24 ( 13 % )  ;
+; 22    ;  5 / 24 ( 21 % )  ;
+; 23    ;  2 / 24 ( 8 % )   ;
+; 24    ;  3 / 24 ( 13 % )  ;
+; Total ;  29 / 576 ( 5 % ) ;
++-------+-------------------+
+
+
++---------------------------+
+; LAB Column Interconnect   ;
++-------+-------------------+
+; Col.  ; Interconnect Used ;
++-------+-------------------+
+; 1     ;  0 / 24 ( 0 % )   ;
+; Total ;  0 / 24 ( 0 % )   ;
++-------+-------------------+
+
+
++--------------------------------------------------------+
+; Fitter Resource Usage Summary                          ;
++-----------------------------------+--------------------+
+; Resource                          ; Usage              ;
++-----------------------------------+--------------------+
+; Total logic elements              ; 279 / 576 ( 48 % ) ;
+; Registers                         ; 170 / 576 ( 30 % ) ;
+; Logic elements in carry chains    ; 97                 ;
+; User inserted logic elements      ; 0                  ;
+; I/O pins                          ; 59 / 59 ( 100 % )  ;
+;     -- Clock pins                 ; 4                  ;
+;     -- Dedicated input pins       ; 9 / 4 ( 225 % )    ;
+; Global signals                    ; 1                  ;
+; EABs                              ; 0 / 3 ( 0 % )      ;
+; Total memory bits                 ; 0 / 6,144 ( 0 % )  ;
+; Total RAM block bits              ; 0 / 6,144 ( 0 % )  ;
+; Maximum fan-out node              ; inst167            ;
+; Maximum fan-out                   ; 77                 ;
+; Highest non-global fan-out signal ; inst167            ;
+; Highest non-global fan-out        ; 77                 ;
+; Total fan-out                     ; 878                ;
+; Average fan-out                   ; 2.60               ;
++-----------------------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                             ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                                                                          ; Library Name ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |BRDepf10k10l                                ; 279 (19)    ; 170          ; 0           ; 59   ; 109 (13)     ; 38 (0)            ; 132 (6)          ; 97 (0)          ; 0 (0)      ; |BRDepf10k10l                                                                                                                                                                ; work         ;
+;    |lpm_counter:inst178|                     ; 26 (0)      ; 26           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 26 (0)           ; 26 (0)          ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst178                                                                                                                                            ; work         ;
+;       |alt_counter_f10ke:wysi_counter|       ; 26 (26)     ; 26           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 26 (26)          ; 26 (26)         ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst178|alt_counter_f10ke:wysi_counter                                                                                                             ; work         ;
+;    |lpm_counter:inst27|                      ; 16 (0)      ; 11           ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 11 (0)           ; 12 (0)          ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27                                                                                                                                             ; work         ;
+;       |alt_counter_f10ke:wysi_counter|       ; 16 (12)     ; 11           ; 0           ; 0    ; 5 (1)        ; 0 (0)             ; 11 (11)          ; 12 (12)         ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter                                                                                                              ; work         ;
+;          |lpm_compare:$00018|                ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018                                                                                           ; work         ;
+;             |comptree:comparator|            ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator                                                                       ; work         ;
+;                |cmpchain:cmp_end|            ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end                                                      ; work         ;
+;                   |comptree:comp|            ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp                                        ; work         ;
+;                      |cmpchain:cmp[0]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                        ; work         ;
+;                      |cmpchain:cmp[1]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                        ; work         ;
+;                      |cmpchain:cmp_end|      ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp_end                       ; work         ;
+;                      |comptree:sub_comptree| ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                  ; work         ;
+;                         |cmpchain:cmp_end|   ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|lpm_counter:inst27|alt_counter_f10ke:wysi_counter|lpm_compare:$00018|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end ; work         ;
+;    |max2:inst3|                              ; 59 (14)     ; 27           ; 0           ; 0    ; 32 (10)      ; 1 (1)             ; 26 (3)           ; 27 (0)          ; 0 (0)      ; |BRDepf10k10l|max2:inst3                                                                                                                                                     ; work         ;
+;       |c64x8:inst5|                          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|c64x8:inst5                                                                                                                                         ; work         ;
+;       |lpm_compare:inst51|                   ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51                                                                                                                                  ; work         ;
+;          |comptree:comparator|               ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator                                                                                                              ; work         ;
+;             |cmpchain:cmp_end|               ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator|cmpchain:cmp_end                                                                                             ; work         ;
+;                |comptree:comp|               ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator|cmpchain:cmp_end|comptree:comp                                                                               ; work         ;
+;                   |cmpchain:cmp[0]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                                                               ; work         ;
+;                   |cmpchain:cmp[1]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                                                               ; work         ;
+;                   |cmpchain:cmp[2]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]                                                               ; work         ;
+;                   |cmpchain:cmp[3]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]                                                               ; work         ;
+;                   |comptree:sub_comptree|    ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                                                         ; work         ;
+;                      |cmpchain:cmp_end|      ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst51|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end                                        ; work         ;
+;       |lpm_compare:inst61|                   ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61                                                                                                                                  ; work         ;
+;          |comptree:comparator|               ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator                                                                                                              ; work         ;
+;             |cmpchain:cmp_end|               ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator|cmpchain:cmp_end                                                                                             ; work         ;
+;                |comptree:comp|               ; 5 (0)       ; 0            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator|cmpchain:cmp_end|comptree:comp                                                                               ; work         ;
+;                   |cmpchain:cmp[0]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                                                               ; work         ;
+;                   |cmpchain:cmp[1]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                                                               ; work         ;
+;                   |cmpchain:cmp[2]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]                                                               ; work         ;
+;                   |cmpchain:cmp[3]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]                                                               ; work         ;
+;                   |comptree:sub_comptree|    ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                                                         ; work         ;
+;                      |cmpchain:cmp_end|      ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_compare:inst61|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp_end                                        ; work         ;
+;       |lpm_counter:inst16|                   ; 7 (0)       ; 6            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 6 (0)            ; 7 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst16                                                                                                                                  ; work         ;
+;          |alt_counter_f10ke:wysi_counter|    ; 7 (7)       ; 6            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 6 (6)            ; 7 (7)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst16|alt_counter_f10ke:wysi_counter                                                                                                   ; work         ;
+;       |lpm_counter:inst23|                   ; 10 (0)      ; 9            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 9 (0)            ; 10 (0)          ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst23                                                                                                                                  ; work         ;
+;          |alt_counter_f10ke:wysi_counter|    ; 10 (10)     ; 9            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 9 (9)            ; 10 (10)         ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst23|alt_counter_f10ke:wysi_counter                                                                                                   ; work         ;
+;       |lpm_counter:inst48|                   ; 7 (0)       ; 4            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst48                                                                                                                                  ; work         ;
+;          |alt_counter_f10ke:wysi_counter|    ; 7 (6)       ; 4            ; 0           ; 0    ; 3 (2)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst48|alt_counter_f10ke:wysi_counter                                                                                                   ; work         ;
+;             |lpm_compare:$00011|             ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst48|alt_counter_f10ke:wysi_counter|lpm_compare:$00011                                                                                ; work         ;
+;                |comptree:comparator|         ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst48|alt_counter_f10ke:wysi_counter|lpm_compare:$00011|comptree:comparator                                                            ; work         ;
+;                   |cmpchain:cmp_end|         ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst48|alt_counter_f10ke:wysi_counter|lpm_compare:$00011|comptree:comparator|cmpchain:cmp_end                                           ; work         ;
+;       |lpm_counter:inst58|                   ; 5 (0)       ; 4            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst58                                                                                                                                  ; work         ;
+;          |alt_counter_f10ke:wysi_counter|    ; 5 (5)       ; 4            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_counter:inst58|alt_counter_f10ke:wysi_counter                                                                                                   ; work         ;
+;       |lpm_mux:inst24|                       ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_mux:inst24                                                                                                                                      ; work         ;
+;          |muxlut:$00017|                     ; 3 (3)       ; 0            ; 0           ; 0    ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_mux:inst24|muxlut:$00017                                                                                                                        ; work         ;
+;       |lpm_mux:inst26|                       ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_mux:inst26                                                                                                                                      ; work         ;
+;          |muxlut:$00018|                     ; 2 (0)       ; 0            ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_mux:inst26|muxlut:$00018                                                                                                                        ; work         ;
+;             |muxlut:$00012|                  ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_mux:inst26|muxlut:$00018|muxlut:$00012                                                                                                          ; work         ;
+;                |muxlut:$00020|               ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_mux:inst26|muxlut:$00018|muxlut:$00012|muxlut:$00020                                                                                            ; work         ;
+;             |muxlut:$00020|                  ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|max2:inst3|lpm_mux:inst26|muxlut:$00018|muxlut:$00020                                                                                                          ; work         ;
+;    |sss_7seg:inst|                           ; 8 (0)       ; 3            ; 0           ; 0    ; 5 (0)        ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst                                                                                                                                                  ; work         ;
+;       |lpm_counter:inst28|                   ; 4 (0)       ; 3            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 3 (0)            ; 3 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_counter:inst28                                                                                                                               ; work         ;
+;          |alt_counter_f10ke:wysi_counter|    ; 4 (3)       ; 3            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 3 (3)            ; 3 (3)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_counter:inst28|alt_counter_f10ke:wysi_counter                                                                                                ; work         ;
+;             |lpm_compare:$00010|             ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_counter:inst28|alt_counter_f10ke:wysi_counter|lpm_compare:$00010                                                                             ; work         ;
+;                |comptree:comparator|         ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_counter:inst28|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator                                                         ; work         ;
+;                   |cmpchain:cmp_end|         ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_counter:inst28|alt_counter_f10ke:wysi_counter|lpm_compare:$00010|comptree:comparator|cmpchain:cmp_end                                        ; work         ;
+;       |lpm_decode:inst73|                    ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_decode:inst73                                                                                                                                ; work         ;
+;          |decode_hre:auto_generated|         ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_decode:inst73|decode_hre:auto_generated                                                                                                      ; work         ;
+;             |cmpr_ulc:cmpr2|                 ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_decode:inst73|decode_hre:auto_generated|cmpr_ulc:cmpr2                                                                                       ; work         ;
+;             |cmpr_ulc:cmpr3|                 ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_decode:inst73|decode_hre:auto_generated|cmpr_ulc:cmpr3                                                                                       ; work         ;
+;             |cmpr_ulc:cmpr4|                 ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_decode:inst73|decode_hre:auto_generated|cmpr_ulc:cmpr4                                                                                       ; work         ;
+;             |cmpr_ulc:cmpr5|                 ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_7seg:inst|lpm_decode:inst73|decode_hre:auto_generated|cmpr_ulc:cmpr5                                                                                       ; work         ;
+;    |sss_ir_receiver:inst18|                  ; 129 (8)     ; 77           ; 0           ; 0    ; 52 (3)       ; 36 (4)            ; 41 (1)           ; 13 (0)          ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18                                                                                                                                         ; work         ;
+;       |lpm_compare:inst156|                  ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst156                                                                                                                     ; work         ;
+;          |comptree:comparator|               ; 4 (0)       ; 0            ; 0           ; 0    ; 4 (0)        ; 0 (0)             ; 0 (0)            ; 4 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst156|comptree:comparator                                                                                                 ; work         ;
+;             |cmpchain:cmp_end|               ; 4 (4)       ; 0            ; 0           ; 0    ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 4 (4)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst156|comptree:comparator|cmpchain:cmp_end                                                                                ; work         ;
+;       |lpm_compare:inst209|                  ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209                                                                                                                     ; work         ;
+;          |comptree:comparator|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator                                                                                                 ; work         ;
+;             |cmpchain:cmp_end|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end                                                                                ; work         ;
+;                |comptree:comp|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp                                                                  ; work         ;
+;                   |cmpchain:cmp[0]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                                                  ; work         ;
+;                   |cmpchain:cmp[1]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                                                  ; work         ;
+;                   |cmpchain:cmp[2]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]                                                  ; work         ;
+;                   |cmpchain:cmp[3]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]                                                  ; work         ;
+;                   |cmpchain:cmp[4]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]                                                  ; work         ;
+;                   |cmpchain:cmp[5]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]                                                  ; work         ;
+;                   |cmpchain:cmp[6]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]                                                  ; work         ;
+;                   |cmpchain:cmp[7]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]                                                  ; work         ;
+;                   |comptree:sub_comptree|    ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                                            ; work         ;
+;                      |cmpchain:cmp[0]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]                            ; work         ;
+;                      |cmpchain:cmp[1]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]                            ; work         ;
+;                      |comptree:sub_comptree| ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree                      ; work         ;
+;                         |cmpchain:cmp_end|   ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end     ; work         ;
+;       |lpm_compare:inst211|                  ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211                                                                                                                     ; work         ;
+;          |comptree:comparator|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator                                                                                                 ; work         ;
+;             |cmpchain:cmp_end|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end                                                                                ; work         ;
+;                |comptree:comp|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp                                                                  ; work         ;
+;                   |cmpchain:cmp[0]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                                                  ; work         ;
+;                   |cmpchain:cmp[1]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                                                  ; work         ;
+;                   |cmpchain:cmp[2]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]                                                  ; work         ;
+;                   |cmpchain:cmp[3]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]                                                  ; work         ;
+;                   |cmpchain:cmp[4]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]                                                  ; work         ;
+;                   |cmpchain:cmp[5]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]                                                  ; work         ;
+;                   |cmpchain:cmp[6]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]                                                  ; work         ;
+;                   |cmpchain:cmp[7]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]                                                  ; work         ;
+;                   |comptree:sub_comptree|    ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                                            ; work         ;
+;                      |cmpchain:cmp[0]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]                            ; work         ;
+;                      |cmpchain:cmp[1]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]                            ; work         ;
+;                      |comptree:sub_comptree| ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree                      ; work         ;
+;                         |cmpchain:cmp_end|   ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst211|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end     ; work         ;
+;       |lpm_compare:inst227|                  ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227                                                                                                                     ; work         ;
+;          |comptree:comparator|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator                                                                                                 ; work         ;
+;             |cmpchain:cmp_end|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end                                                                                ; work         ;
+;                |comptree:comp|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp                                                                  ; work         ;
+;                   |cmpchain:cmp[0]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                                                  ; work         ;
+;                   |cmpchain:cmp[1]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                                                  ; work         ;
+;                   |cmpchain:cmp[2]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]                                                  ; work         ;
+;                   |cmpchain:cmp[3]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]                                                  ; work         ;
+;                   |cmpchain:cmp[4]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]                                                  ; work         ;
+;                   |cmpchain:cmp[5]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]                                                  ; work         ;
+;                   |cmpchain:cmp[6]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]                                                  ; work         ;
+;                   |cmpchain:cmp[7]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]                                                  ; work         ;
+;                   |comptree:sub_comptree|    ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                                            ; work         ;
+;                      |cmpchain:cmp[0]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]                            ; work         ;
+;                      |cmpchain:cmp[1]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]                            ; work         ;
+;                      |comptree:sub_comptree| ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree                      ; work         ;
+;                         |cmpchain:cmp_end|   ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst227|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end     ; work         ;
+;       |lpm_compare:inst235|                  ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235                                                                                                                     ; work         ;
+;          |comptree:comparator|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator                                                                                                 ; work         ;
+;             |cmpchain:cmp_end|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end                                                                                ; work         ;
+;                |comptree:comp|               ; 11 (0)      ; 0            ; 0           ; 0    ; 11 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp                                                                  ; work         ;
+;                   |cmpchain:cmp[0]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]                                                  ; work         ;
+;                   |cmpchain:cmp[1]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]                                                  ; work         ;
+;                   |cmpchain:cmp[2]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]                                                  ; work         ;
+;                   |cmpchain:cmp[3]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]                                                  ; work         ;
+;                   |cmpchain:cmp[4]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]                                                  ; work         ;
+;                   |cmpchain:cmp[5]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]                                                  ; work         ;
+;                   |cmpchain:cmp[6]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]                                                  ; work         ;
+;                   |cmpchain:cmp[7]|          ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]                                                  ; work         ;
+;                   |comptree:sub_comptree|    ; 3 (0)       ; 0            ; 0           ; 0    ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree                                            ; work         ;
+;                      |cmpchain:cmp[0]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]                            ; work         ;
+;                      |cmpchain:cmp[1]|       ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]                            ; work         ;
+;                      |comptree:sub_comptree| ; 1 (0)       ; 0            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree                      ; work         ;
+;                         |cmpchain:cmp_end|   ; 1 (1)       ; 0            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end     ; work         ;
+;       |lpm_counter:inst155|                  ; 9 (0)       ; 8            ; 0           ; 0    ; 1 (0)        ; 0 (0)             ; 8 (0)            ; 9 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_counter:inst155                                                                                                                     ; work         ;
+;          |alt_counter_f10ke:wysi_counter|    ; 9 (9)       ; 8            ; 0           ; 0    ; 1 (1)        ; 0 (0)             ; 8 (8)            ; 9 (9)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_counter:inst155|alt_counter_f10ke:wysi_counter                                                                                      ; work         ;
+;       |lpm_shiftreg:inst162|                 ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 32 (32)          ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_shiftreg:inst162                                                                                                                    ; work         ;
+;       |lpm_shiftreg:inst27|                  ; 32 (32)     ; 32           ; 0           ; 0    ; 0 (0)        ; 32 (32)           ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |BRDepf10k10l|sss_ir_receiver:inst18|lpm_shiftreg:inst27                                                                                                                     ; work         ;
+;    |sss_step_mot:inst35|                     ; 22 (5)      ; 20           ; 0           ; 0    ; 2 (0)        ; 1 (1)             ; 19 (4)           ; 16 (0)          ; 0 (0)      ; |BRDepf10k10l|sss_step_mot:inst35                                                                                                                                            ; work         ;
+;       |lpm_counter:inst185|                  ; 17 (0)      ; 15           ; 0           ; 0    ; 2 (0)        ; 0 (0)             ; 15 (0)           ; 16 (0)          ; 0 (0)      ; |BRDepf10k10l|sss_step_mot:inst35|lpm_counter:inst185                                                                                                                        ; work         ;
+;          |alt_counter_f10ke:wysi_counter|    ; 17 (17)     ; 15           ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 15 (15)          ; 16 (16)         ; 0 (0)      ; |BRDepf10k10l|sss_step_mot:inst35|lpm_counter:inst185|alt_counter_f10ke:wysi_counter                                                                                         ; work         ;
++----------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------+
+; Delay Chain Summary               ;
++----------+----------+-------------+
+; Name     ; Pin Type ; Pad to Core ;
++----------+----------+-------------+
+; xp2_9    ; Input    ; OFF         ;
+; xp6_23   ; Input    ; OFF         ;
+; xp5_19   ; Input    ; OFF         ;
+; xp5_7    ; Input    ; OFF         ;
+; xp5_21   ; Input    ; OFF         ;
+; xp6_17   ; Input    ; OFF         ;
+; xp6_19   ; Input    ; OFF         ;
+; sb1      ; Input    ; OFF         ;
+; sb2      ; Input    ; OFF         ;
+; glob_clk ; Input    ; OFF         ;
+; sb4      ; Input    ; OFF         ;
+; sb3      ; Input    ; OFF         ;
+; ir_input ; Input    ; OFF         ;
+; led1     ; Output   ; OFF         ;
+; led2     ; Output   ; OFF         ;
+; led3     ; Output   ; OFF         ;
+; led4     ; Output   ; OFF         ;
+; led5     ; Output   ; OFF         ;
+; phase_a  ; Output   ; OFF         ;
+; phase_b  ; Output   ; OFF         ;
+; phase_c  ; Output   ; OFF         ;
+; phase_d  ; Output   ; OFF         ;
+; seg_a    ; Output   ; OFF         ;
+; seg_b    ; Output   ; OFF         ;
+; seg_c    ; Output   ; OFF         ;
+; seg_d    ; Output   ; OFF         ;
+; seg_e    ; Output   ; OFF         ;
+; seg_f    ; Output   ; OFF         ;
+; seg_g    ; Output   ; OFF         ;
+; seg_dp   ; Output   ; OFF         ;
+; dig_1    ; Output   ; OFF         ;
+; dig_0    ; Output   ; OFF         ;
+; dig_2    ; Output   ; OFF         ;
+; dig_3    ; Output   ; OFF         ;
+; dig_4    ; Output   ; OFF         ;
+; xp5_11   ; Output   ; OFF         ;
+; xp5_13   ; Output   ; OFF         ;
+; xp5_15   ; Output   ; OFF         ;
+; xp5_23   ; Output   ; OFF         ;
+; xp5_25   ; Output   ; OFF         ;
+; xp5_17   ; Output   ; OFF         ;
+; xp5_9    ; Output   ; OFF         ;
+; xp5_3    ; Output   ; OFF         ;
+; xp5_5    ; Output   ; OFF         ;
+; xp5_27   ; Output   ; OFF         ;
+; xp5_29   ; Output   ; OFF         ;
+; xp5_31   ; Output   ; OFF         ;
+; xp2_5    ; Output   ; OFF         ;
+; xp2_7    ; Output   ; OFF         ;
+; xp2_11   ; Output   ; OFF         ;
+; xp2_13   ; Output   ; OFF         ;
+; xp2_15   ; Output   ; OFF         ;
+; xp2_17   ; Output   ; OFF         ;
+; xp2_19   ; Output   ; OFF         ;
+; xp2_21   ; Output   ; OFF         ;
+; xp2_23   ; Output   ; OFF         ;
+; xp2_29   ; Output   ; OFF         ;
+; xp2_25   ; Output   ; OFF         ;
+; xp5_33   ; Output   ; OFF         ;
++----------+----------+-------------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in D:/GitHub/Quartus/BRDepf10k10l/BRDepf10k10l.pin.
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Fri Feb 14 14:36:59 2020
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off BRDepf10k10l -c BRDepf10k10l
+Info: Parallel compilation is enabled and will use 4 of the 6 processors detected
+Info: Selected device EPF10K10LC84-4 for design "BRDepf10k10l"
+Info: Compiling with the fast fit feature
+Warning: Ignored Global Signal assignment for logic cell "lpm_counter:inst178|alt_counter_f10ke:wysi_counter|q[13]" because there are not enough global signals available in the device
+Info: Fitter is using the Classic Timing Analyzer
+Info: Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info: Assuming a global fmax requirement of 1000 MHz
+    Info: Not setting a global tsu requirement
+    Info: Not setting a global tco requirement
+    Info: Not setting a global tpd requirement
+Info: Inserted 6 logic cells in first fitting attempt
+Warning: Ignored locations or region assignments to the following nodes
+    Warning: Node "lpm_rom:inst69|altrom:srom|q[4]" is assigned to location or region, but does not exist in design
+Info: Started fitting attempt 1 on Fri Feb 14 2020 at 14:37:00
+Info: Fitter placement preparation operations beginning
+Info: Inserted logic cell to avoid no fit
+Info: Inserted logic cell to avoid no fit
+Info: Inserted logic cell to avoid no fit
+Info: Inserted logic cell to avoid no fit
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Started fitting attempt 2 on Fri Feb 14 2020 at 14:37:00
+Info: Fitter placement preparation operations beginning
+Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info: Fitter placement operations beginning
+Info: Fitter placement operations ending: elapsed time is 00:00:00
+Info: Fitter routing operations beginning
+Info: Fitter routing operations ending: elapsed time is 00:00:00
+Info: Parallel compilation was enabled but no parallel operations were performed
+Info: Quartus II Fitter was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 260 megabytes
+    Info: Processing ended: Fri Feb 14 14:37:01 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

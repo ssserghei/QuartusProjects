@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sss_spi16_termo">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_spi16_termo|LPM_COUNTER:inst8" CBX_FILE_NAME="cntr_c1h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_spi16_termo|LPM_DECODE:inst7" CBX_FILE_NAME="decode_p0f.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

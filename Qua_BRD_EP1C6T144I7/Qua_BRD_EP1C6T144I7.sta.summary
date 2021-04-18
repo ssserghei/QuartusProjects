@@ -1,0 +1,73 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'lpm_counter:inst3|cntr_8nf:auto_generated|safe_q[5]'
+Slack : -6.288
+TNS   : -385.804
+
+Type  : Setup 'inst|altpll_component|pll|clk[0]'
+Slack : -2.001
+TNS   : -31.023
+
+Type  : Setup 'lpm_counter:inst3|cntr_8nf:auto_generated|safe_q[22]'
+Slack : -1.363
+TNS   : -3.882
+
+Type  : Setup 'lpm_counter:inst16|cntr_ddh:auto_generated|safe_q[0]'
+Slack : -0.677
+TNS   : -0.677
+
+Type  : Setup 'lpm_counter:inst11|cntr_keh:auto_generated|safe_q[0]'
+Slack : -0.614
+TNS   : -0.614
+
+Type  : Hold 'lpm_counter:inst3|cntr_8nf:auto_generated|safe_q[5]'
+Slack : -3.645
+TNS   : -161.434
+
+Type  : Hold 'lpm_counter:inst16|cntr_ddh:auto_generated|safe_q[0]'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Hold 'lpm_counter:inst11|cntr_keh:auto_generated|safe_q[0]'
+Slack : 0.258
+TNS   : 0.000
+
+Type  : Hold 'inst|altpll_component|pll|clk[0]'
+Slack : 0.315
+TNS   : 0.000
+
+Type  : Hold 'lpm_counter:inst3|cntr_8nf:auto_generated|safe_q[22]'
+Slack : 1.013
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'lpm_counter:inst16|cntr_ddh:auto_generated|safe_q[0]'
+Slack : -1.780
+TNS   : -4.432
+
+Type  : Minimum Pulse Width 'lpm_counter:inst11|cntr_keh:auto_generated|safe_q[0]'
+Slack : -1.717
+TNS   : -4.054
+
+Type  : Minimum Pulse Width 'lpm_counter:inst3|cntr_8nf:auto_generated|safe_q[5]'
+Slack : -1.062
+TNS   : -135.936
+
+Type  : Minimum Pulse Width 'lpm_counter:inst3|cntr_8nf:auto_generated|safe_q[22]'
+Slack : -1.062
+TNS   : -8.496
+
+Type  : Minimum Pulse Width 'lpm_counter:inst3|cntr_8nf:auto_generated|safe_q[20]'
+Slack : -1.062
+TNS   : -2.124
+
+Type  : Minimum Pulse Width '16'
+Slack : 4.545
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'inst|altpll_component|pll|clk[0]'
+Slack : 6.249
+TNS   : 0.000
+
+------------------------------------------------------------

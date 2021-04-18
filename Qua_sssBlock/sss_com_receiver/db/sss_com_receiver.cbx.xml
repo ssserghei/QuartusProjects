@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="sss_com_receiver">
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_com_receiver|LPM_COUNTER:inst179|alt_counter_f10ke:wysi_counter|lpm_compare:$00011" CBX_FILE_NAME="cmpr_cvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_com_receiver|LPM_COUNTER:inst179|alt_counter_f10ke:wysi_counter|lpm_constant:$00009" CBX_FILE_NAME="lpm_constant_774.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_com_receiver|LPM_COUNTER:inst61|alt_counter_f10ke:wysi_counter|lpm_compare:$00011" CBX_FILE_NAME="cmpr_cvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|sss_com_receiver|LPM_COUNTER:inst61|alt_counter_f10ke:wysi_counter|lpm_constant:$00009" CBX_FILE_NAME="lpm_constant_874.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

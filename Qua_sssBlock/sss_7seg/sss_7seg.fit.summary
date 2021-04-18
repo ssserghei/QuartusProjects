@@ -1,0 +1,10 @@
+Fitter Status : Successful - Tue Mar 03 19:33:40 2020
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : sss_7seg
+Top-level Entity Name : sss_7seg
+Family : FLEX10K
+Device : EPF10K10LC84-4
+Timing Models : Final
+Total logic elements : 12 / 576 ( 2 % )
+Total pins : 49 / 59 ( 83 % )
+Total memory bits : 224 / 6,144 ( 4 % )

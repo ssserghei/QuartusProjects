@@ -1,0 +1,127 @@
+ -- Copyright (C) 1991-2008 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ------------------------------------------------------------------------------
+
+
+
+ ------------------------------------------------------------------------------
+ -- NC         : No Connect. This pin has no internal connection to the device.
+ -- VCC_INT    : Dedicated power pin, which MUST be connected to VCC  (5.0V).
+ -- VCC_IO     : Dedicated power pin, which MUST be connected to VCC  (Refer to
+ --              the table below for voltage).
+ -- GND        : Dedicated ground pin, which MUST be connected to GND.
+ -- GND+       : Unused input. This pin should be connected to GND. It may also
+ --              be connected  to a  valid signal  on the board  (low, high, or
+ --              toggling)  if that signal is required for a different revision
+ --              of the design.
+ -- GND*       : Unused  I/O  pin.   This pin can either be left unconnected or
+ --              connected to GND.  Connecting this pin to GND will improve the
+ --              device's immunity to noise.
+ ------------------------------------------------------------------------------
+
+
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+CHIP  "sss_7seg"  ASSIGNED TO AN: EPF10K10LC84-4
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+7seg_dinam_clk               : 1         : input  : TTL               :         :           : N              
+7seg_data_runlet[1]          : 2         : input  : TTL               :         :           : N              
+7seg_sel_dig[1]              : 3         : output : TTL               :         :           : N              
+VCC_INT                      : 4         : power  :                   : 5.0V    :           :                
+GND*                         : 5         :        :                   :         :           :                
+7seg_data_runlet[9]          : 6         : input  : TTL               :         :           : N              
+7seg_data_runlet[14]         : 7         : input  : TTL               :         :           : N              
+7seg_data_runlet[28]         : 8         : input  : TTL               :         :           : N              
+GND*                         : 9         :        :                   :         :           :                
+GND*                         : 10        :        :                   :         :           :                
+7seg_data_runlet[19]         : 11        : input  : TTL               :         :           : N              
+DATA0                        : 12        : input  :                   :         :           :                
+DCLK                         : 13        : bidir  :                   :         :           :                
+nCE                          : 14        : input  :                   :         :           :                
+TDI                          : 15        : input  :                   :         :           :                
+7seg_data_runlet[18]         : 16        : input  : TTL               :         :           : N              
+7seg_b                       : 17        : output : TTL               :         :           : N              
+7seg_e                       : 18        : output : TTL               :         :           : N              
+7seg_d                       : 19        : output : TTL               :         :           : N              
+VCC_INT                      : 20        : power  :                   : 5.0V    :           :                
+GND*                         : 21        :        :                   :         :           :                
+7seg_f                       : 22        : output : TTL               :         :           : N              
+GND*                         : 23        :        :                   :         :           :                
+7seg_sel_dig[0]              : 24        : output : TTL               :         :           : N              
+7seg_data_runlet[12]         : 25        : input  : TTL               :         :           : N              
+GND_INT                      : 26        : gnd    :                   :         :           :                
+GND*                         : 27        :        :                   :         :           :                
+7seg_sel_dig[7]              : 28        : output : TTL               :         :           : N              
+7seg_data_runlet[30]         : 29        : input  : TTL               :         :           : N              
+7seg_sel_dig[3]              : 30        : output : TTL               :         :           : N              
+MSEL0                        : 31        : input  :                   :         :           :                
+MSEL1                        : 32        : input  :                   :         :           :                
+VCC_INT                      : 33        : power  :                   : 5.0V    :           :                
+nCONFIG                      : 34        : input  :                   :         :           :                
+7seg_sel_dig[5]              : 35        : output : TTL               :         :           : N              
+GND*                         : 36        :        :                   :         :           :                
+7seg_data_runlet[15]         : 37        : input  : TTL               :         :           : N              
+GND*                         : 38        :        :                   :         :           :                
+7seg_sel_dig[2]              : 39        : output : TTL               :         :           : N              
+VCC_INT                      : 40        : power  :                   : 5.0V    :           :                
+GND_INT                      : 41        : gnd    :                   :         :           :                
+7seg_data_runlet[3]          : 42        : input  : TTL               :         :           : N              
+7seg_data_runspeed           : 43        : input  : TTL               :         :           : N              
+7seg_data_runlet[2]          : 44        : input  : TTL               :         :           : N              
+VCC_INT                      : 45        : power  :                   : 5.0V    :           :                
+GND_INT                      : 46        : gnd    :                   :         :           :                
+7seg_data_runlet[27]         : 47        : input  : TTL               :         :           : N              
+7seg_data_runlet[10]         : 48        : input  : TTL               :         :           : N              
+7seg_data_runlet[23]         : 49        : input  : TTL               :         :           : N              
+7seg_data_runlet[29]         : 50        : input  : TTL               :         :           : N              
+7seg_data_runlet[31]         : 51        : input  : TTL               :         :           : N              
+7seg_data_runlet[11]         : 52        : input  : TTL               :         :           : N              
+7seg_data_runlet[24]         : 53        : input  : TTL               :         :           : N              
+7seg_data_runlet[25]         : 54        : input  : TTL               :         :           : N              
+nSTATUS                      : 55        : bidir  :                   :         :           :                
+TRST                         : 56        : input  :                   :         :           :                
+TMS                          : 57        : input  :                   :         :           :                
+7seg_data_runlet[5]          : 58        : input  : TTL               :         :           : N              
+7seg_sel_dig[4]              : 59        : output : TTL               :         :           : N              
+7seg_g                       : 60        : output : TTL               :         :           : N              
+7seg_data_runlet[4]          : 61        : input  : TTL               :         :           : N              
+7seg_sel_dig[6]              : 62        : output : TTL               :         :           : N              
+VCC_INT                      : 63        : power  :                   : 5.0V    :           :                
+GND*                         : 64        :        :                   :         :           :                
+GND*                         : 65        :        :                   :         :           :                
+7seg_data_runlet[7]          : 66        : input  : TTL               :         :           : N              
+7seg_data_runlet[22]         : 67        : input  : TTL               :         :           : N              
+GND_INT                      : 68        : gnd    :                   :         :           :                
+7seg_c                       : 69        : output : TTL               :         :           : N              
+7seg_data_runlet[6]          : 70        : input  : TTL               :         :           : N              
+7seg_a                       : 71        : output : TTL               :         :           : N              
+7seg_data_runlet[26]         : 72        : input  : TTL               :         :           : N              
+7seg_data_runlet[17]         : 73        : input  : TTL               :         :           : N              
+TDO                          : 74        : output :                   :         :           :                
+nCEO                         : 75        : output :                   :         :           :                
+CONF_DONE                    : 76        : bidir  :                   :         :           :                
+TCK                          : 77        : input  :                   :         :           :                
+7seg_data_runlet[20]         : 78        : input  : TTL               :         :           : N              
+7seg_data_runlet[16]         : 79        : input  : TTL               :         :           : N              
+7seg_data_runlet[8]          : 80        : input  : TTL               :         :           : N              
+7seg_data_runlet[21]         : 81        : input  : TTL               :         :           : N              
+GND_INT                      : 82        : gnd    :                   :         :           :                
+7seg_data_runlet[13]         : 83        : input  : TTL               :         :           : N              
+7seg_data_runlet[0]          : 84        : input  : TTL               :         :           : N              

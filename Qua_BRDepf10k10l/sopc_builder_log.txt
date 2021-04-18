@@ -1,0 +1,1 @@
+Error: Error creating IP Search Path index file: could not create C:\Documents and Settings\?ý¿ð-ð¡¢ ÿ¢R \.altera.quartus\ip

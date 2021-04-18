@@ -1,0 +1,2 @@
+# Qua_BRD_A-C8FB_EP2C8Q208C8N
+ Quatus 13 64bit progect for board A-C8FB_EP2C8Q208C8N

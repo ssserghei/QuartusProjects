@@ -1,0 +1,544 @@
+Classic Timing Analyzer report for sss_ir_receiver
+Thu Jul 28 22:00:40 2016
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'ir_clk'
+  6. Clock Hold: 'ir_clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                    ;
++------------------------------+------------------------------------------+---------------+----------------------------------+---------------------------------------------------------+------------------------------+------------+----------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From                                                    ; To                           ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+----------------------------------+---------------------------------------------------------+------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 2.800 ns                         ; ir_input                                                ; inst158                      ; --         ; ir_clk   ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 34.100 ns                        ; inst207                                                 ; ir_but_start/stop            ; ir_clk     ; --       ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; 1.300 ns                         ; ir_input                                                ; inst158                      ; --         ; ir_clk   ; 0            ;
+; Clock Setup: 'ir_clk'        ; N/A                                      ; None          ; 57.47 MHz ( period = 17.400 ns ) ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[0] ; ir_clk     ; ir_clk   ; 0            ;
+; Clock Hold: 'ir_clk'         ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; inst207                                                 ; inst207                      ; ir_clk     ; ir_clk   ; 1            ;
+; Total number of failed paths ;                                          ;               ;                                  ;                                                         ;                              ;            ;          ; 1            ;
++------------------------------+------------------------------------------+---------------+----------------------------------+---------------------------------------------------------+------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPF10K10LC84-4     ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; ir_clk          ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'ir_clk'                                                                                                                                                                                                                                                                               ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                                                    ; To                            ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[31] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[30] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[29] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[28] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[27] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[25] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[17] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[16] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[15] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[14] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[13] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[12] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[11] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[10] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[4]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[2]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[1]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 57.47 MHz ( period = 17.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[0]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.800 ns               ;
+; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[22] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.600 ns               ;
+; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[9]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.600 ns               ;
+; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[8]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.600 ns               ;
+; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[7]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.600 ns               ;
+; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[6]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.600 ns               ;
+; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[5]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.600 ns               ;
+; N/A                                     ; 58.14 MHz ( period = 17.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[3]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.600 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[31] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[30] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[29] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[28] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[27] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[25] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[17] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[16] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[15] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[14] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[13] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[12] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[11] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[10] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[4]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[2]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[1]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 58.48 MHz ( period = 17.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[0]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.500 ns               ;
+; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[22] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.300 ns               ;
+; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[9]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.300 ns               ;
+; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[8]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.300 ns               ;
+; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[7]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.300 ns               ;
+; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[6]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.300 ns               ;
+; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[5]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.300 ns               ;
+; N/A                                     ; 59.17 MHz ( period = 16.900 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[1] ; lpm_shiftreg:inst162|dffs[3]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.300 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[31] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[30] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[29] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[28] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[27] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[25] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[17] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[16] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[15] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[14] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[13] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[12] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[11] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[10] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[4]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[2]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[1]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[0]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_shiftreg:inst27|dffs[28]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 59.52 MHz ( period = 16.800 ns )                    ; lpm_shiftreg:inst27|dffs[28]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.200 ns               ;
+; N/A                                     ; 60.24 MHz ( period = 16.600 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[22] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.000 ns               ;
+; N/A                                     ; 60.24 MHz ( period = 16.600 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[9]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.000 ns               ;
+; N/A                                     ; 60.24 MHz ( period = 16.600 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[8]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.000 ns               ;
+; N/A                                     ; 60.24 MHz ( period = 16.600 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[7]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.000 ns               ;
+; N/A                                     ; 60.24 MHz ( period = 16.600 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[6]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.000 ns               ;
+; N/A                                     ; 60.24 MHz ( period = 16.600 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[5]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.000 ns               ;
+; N/A                                     ; 60.24 MHz ( period = 16.600 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[2] ; lpm_shiftreg:inst162|dffs[3]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 13.000 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[31] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[30] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[29] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[28] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[27] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[25] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[17] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[16] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[15] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[14] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[13] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[12] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[11] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[10] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[4]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[2]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[1]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 60.61 MHz ( period = 16.500 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[0]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.900 ns               ;
+; N/A                                     ; 61.35 MHz ( period = 16.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[22] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.700 ns               ;
+; N/A                                     ; 61.35 MHz ( period = 16.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[9]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.700 ns               ;
+; N/A                                     ; 61.35 MHz ( period = 16.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[8]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.700 ns               ;
+; N/A                                     ; 61.35 MHz ( period = 16.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[7]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.700 ns               ;
+; N/A                                     ; 61.35 MHz ( period = 16.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[6]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.700 ns               ;
+; N/A                                     ; 61.35 MHz ( period = 16.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[5]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.700 ns               ;
+; N/A                                     ; 61.35 MHz ( period = 16.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[3] ; lpm_shiftreg:inst162|dffs[3]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.700 ns               ;
+; N/A                                     ; 61.73 MHz ( period = 16.200 ns )                    ; lpm_shiftreg:inst27|dffs[23]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.600 ns               ;
+; N/A                                     ; 61.73 MHz ( period = 16.200 ns )                    ; lpm_shiftreg:inst27|dffs[22]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.600 ns               ;
+; N/A                                     ; 61.73 MHz ( period = 16.200 ns )                    ; lpm_shiftreg:inst27|dffs[21]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.600 ns               ;
+; N/A                                     ; 61.73 MHz ( period = 16.200 ns )                    ; lpm_shiftreg:inst27|dffs[23]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.600 ns               ;
+; N/A                                     ; 61.73 MHz ( period = 16.200 ns )                    ; lpm_shiftreg:inst27|dffs[22]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.600 ns               ;
+; N/A                                     ; 61.73 MHz ( period = 16.200 ns )                    ; lpm_shiftreg:inst27|dffs[21]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.600 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[20]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[18]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[17]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[16]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[6]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[5]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[4]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[20]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[18]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[17]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[16]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[7]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[6]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 63.69 MHz ( period = 15.700 ns )                    ; lpm_shiftreg:inst27|dffs[4]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.100 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[26]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[25]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[24]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[10]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[9]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[8]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[26]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[25]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.10 MHz ( period = 15.600 ns )                    ; lpm_shiftreg:inst27|dffs[24]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 12.000 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[31] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[30] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[29] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[28] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[27] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[25] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[17] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[16] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[15] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[14] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[13] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[12] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[11] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[10] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[4]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[2]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[1]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 64.94 MHz ( period = 15.400 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[0]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.800 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[26] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[24] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[23] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[21] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[20] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[19] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0] ; lpm_shiftreg:inst162|dffs[18] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_shiftreg:inst27|dffs[15]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_shiftreg:inst27|dffs[14]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_shiftreg:inst27|dffs[12]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_shiftreg:inst27|dffs[15]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_shiftreg:inst27|dffs[13]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.36 MHz ( period = 15.300 ns )                    ; lpm_shiftreg:inst27|dffs[12]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.700 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[22] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[9]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[8]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[7]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[6]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[5]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[4] ; lpm_shiftreg:inst162|dffs[3]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[30]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[29]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[19]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[7]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[3]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[2]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[0]                             ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[30]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[29]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[19]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[10]                            ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[9]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[8]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[5]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[3]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[2]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 65.79 MHz ( period = 15.200 ns )                    ; lpm_shiftreg:inst27|dffs[0]                             ; inst226                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.600 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[17] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[16] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[15] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[14] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[13] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[12] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[11] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[10] ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[4]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[2]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[1]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[5] ; lpm_shiftreg:inst162|dffs[0]  ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_shiftreg:inst27|dffs[27]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; N/A                                     ; 66.23 MHz ( period = 15.100 ns )                    ; lpm_shiftreg:inst27|dffs[11]                            ; inst210                       ; ir_clk     ; ir_clk   ; None                        ; None                      ; 11.500 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                                         ;                               ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------------------------------------------+-------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'ir_clk'                                                                                                                                                      ;
++------------------------------------------+---------+---------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From    ; To      ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+---------+---------+------------+----------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; inst207 ; inst207 ; ir_clk     ; ir_clk   ; None                       ; None                       ; 1.800 ns                 ;
++------------------------------------------+---------+---------+------------+----------+----------------------------+----------------------------+--------------------------+
+
+
++-------------------------------------------------------------------+
+; tsu                                                               ;
++-------+--------------+------------+----------+---------+----------+
+; Slack ; Required tsu ; Actual tsu ; From     ; To      ; To Clock ;
++-------+--------------+------------+----------+---------+----------+
+; N/A   ; None         ; 2.800 ns   ; ir_input ; inst158 ; ir_clk   ;
++-------+--------------+------------+----------+---------+----------+
+
+
++---------------------------------------------------------------------------------------------------+
+; tco                                                                                               ;
++-------+--------------+------------+------------------------------+-------------------+------------+
+; Slack ; Required tco ; Actual tco ; From                         ; To                ; From Clock ;
++-------+--------------+------------+------------------------------+-------------------+------------+
+; N/A   ; None         ; 34.100 ns  ; inst207                      ; ir_but_start/stop ; ir_clk     ;
+; N/A   ; None         ; 14.900 ns  ; lpm_shiftreg:inst27|dffs[3]  ; ir_save_data[3]   ; ir_clk     ;
+; N/A   ; None         ; 14.900 ns  ; lpm_shiftreg:inst27|dffs[17] ; ir_save_data[17]  ; ir_clk     ;
+; N/A   ; None         ; 14.900 ns  ; lpm_shiftreg:inst27|dffs[31] ; ir_save_data[31]  ; ir_clk     ;
+; N/A   ; None         ; 14.100 ns  ; lpm_shiftreg:inst27|dffs[1]  ; ir_save_data[1]   ; ir_clk     ;
+; N/A   ; None         ; 14.100 ns  ; lpm_shiftreg:inst27|dffs[16] ; ir_save_data[16]  ; ir_clk     ;
+; N/A   ; None         ; 14.100 ns  ; lpm_shiftreg:inst27|dffs[20] ; ir_save_data[20]  ; ir_clk     ;
+; N/A   ; None         ; 14.100 ns  ; lpm_shiftreg:inst27|dffs[24] ; ir_save_data[24]  ; ir_clk     ;
+; N/A   ; None         ; 14.000 ns  ; lpm_shiftreg:inst27|dffs[9]  ; ir_save_data[9]   ; ir_clk     ;
+; N/A   ; None         ; 14.000 ns  ; lpm_shiftreg:inst27|dffs[26] ; ir_save_data[26]  ; ir_clk     ;
+; N/A   ; None         ; 14.000 ns  ; lpm_shiftreg:inst27|dffs[30] ; ir_save_data[30]  ; ir_clk     ;
+; N/A   ; None         ; 13.900 ns  ; lpm_shiftreg:inst27|dffs[2]  ; ir_save_data[2]   ; ir_clk     ;
+; N/A   ; None         ; 13.900 ns  ; lpm_shiftreg:inst27|dffs[10] ; ir_save_data[10]  ; ir_clk     ;
+; N/A   ; None         ; 13.900 ns  ; lpm_shiftreg:inst27|dffs[18] ; ir_save_data[18]  ; ir_clk     ;
+; N/A   ; None         ; 13.200 ns  ; lpm_shiftreg:inst27|dffs[22] ; ir_save_data[22]  ; ir_clk     ;
+; N/A   ; None         ; 13.100 ns  ; inst210                      ; ir_but_mute       ; ir_clk     ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst27|dffs[6]  ; ir_save_data[6]   ; ir_clk     ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst27|dffs[7]  ; ir_save_data[7]   ; ir_clk     ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst27|dffs[15] ; ir_save_data[15]  ; ir_clk     ;
+; N/A   ; None         ; 13.100 ns  ; lpm_shiftreg:inst27|dffs[27] ; ir_save_data[27]  ; ir_clk     ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst27|dffs[0]  ; ir_save_data[0]   ; ir_clk     ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst27|dffs[8]  ; ir_save_data[8]   ; ir_clk     ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst27|dffs[11] ; ir_save_data[11]  ; ir_clk     ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst27|dffs[12] ; ir_save_data[12]  ; ir_clk     ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst27|dffs[13] ; ir_save_data[13]  ; ir_clk     ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst27|dffs[14] ; ir_save_data[14]  ; ir_clk     ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst27|dffs[19] ; ir_save_data[19]  ; ir_clk     ;
+; N/A   ; None         ; 12.600 ns  ; lpm_shiftreg:inst27|dffs[23] ; ir_save_data[23]  ; ir_clk     ;
+; N/A   ; None         ; 12.400 ns  ; inst226                      ; ir_but_1          ; ir_clk     ;
+; N/A   ; None         ; 12.400 ns  ; lpm_shiftreg:inst27|dffs[4]  ; ir_save_data[4]   ; ir_clk     ;
+; N/A   ; None         ; 12.400 ns  ; lpm_shiftreg:inst27|dffs[5]  ; ir_save_data[5]   ; ir_clk     ;
+; N/A   ; None         ; 12.400 ns  ; lpm_shiftreg:inst27|dffs[21] ; ir_save_data[21]  ; ir_clk     ;
+; N/A   ; None         ; 12.400 ns  ; lpm_shiftreg:inst27|dffs[25] ; ir_save_data[25]  ; ir_clk     ;
+; N/A   ; None         ; 12.400 ns  ; lpm_shiftreg:inst27|dffs[28] ; ir_save_data[28]  ; ir_clk     ;
+; N/A   ; None         ; 12.400 ns  ; lpm_shiftreg:inst27|dffs[29] ; ir_save_data[29]  ; ir_clk     ;
++-------+--------------+------------+------------------------------+-------------------+------------+
+
+
++-------------------------------------------------------------------------+
+; th                                                                      ;
++---------------+-------------+-----------+----------+---------+----------+
+; Minimum Slack ; Required th ; Actual th ; From     ; To      ; To Clock ;
++---------------+-------------+-----------+----------+---------+----------+
+; N/A           ; None        ; 1.300 ns  ; ir_input ; inst158 ; ir_clk   ;
++---------------+-------------+-----------+----------+---------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Thu Jul 28 22:00:39 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off sss_ir_receiver -c sss_ir_receiver
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "ir_clk" is an undefined clock
+Warning: Found 48 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst209|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[7]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[6]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[4]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[2]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[0]|aeb_out" as buffer
+    Info: Detected gated clock "lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[1]|aeb_out" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[0]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[1]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[2]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[3]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[4]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[5]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[6]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[7]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[8]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[9]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[10]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[11]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[12]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[13]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[14]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[15]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[16]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[17]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[18]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[19]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[20]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[21]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[22]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[23]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[24]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[25]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[26]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[27]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[28]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[29]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[30]" as buffer
+    Info: Detected ripple clock "lpm_shiftreg:inst27|dffs[31]" as buffer
+Info: Clock "ir_clk" has Internal fmax of 57.47 MHz between source register "lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0]" and destination register "lpm_shiftreg:inst162|dffs[31]" (period= 17.4 ns)
+    Info: + Longest register to register delay is 13.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC5_C15; Fanout = 3; REG Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0]'
+        Info: 2: + IC(0.000 ns) + CELL(1.200 ns) = 1.200 ns; Loc. = LC5_C15; Fanout = 2; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT'
+        Info: 3: + IC(0.000 ns) + CELL(0.300 ns) = 1.500 ns; Loc. = LC6_C15; Fanout = 2; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT'
+        Info: 4: + IC(0.000 ns) + CELL(0.300 ns) = 1.800 ns; Loc. = LC7_C15; Fanout = 2; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT'
+        Info: 5: + IC(0.000 ns) + CELL(0.300 ns) = 2.100 ns; Loc. = LC8_C15; Fanout = 2; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT'
+        Info: 6: + IC(0.800 ns) + CELL(0.300 ns) = 3.200 ns; Loc. = LC1_C17; Fanout = 2; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT'
+        Info: 7: + IC(0.000 ns) + CELL(0.300 ns) = 3.500 ns; Loc. = LC2_C17; Fanout = 2; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT'
+        Info: 8: + IC(0.000 ns) + CELL(0.300 ns) = 3.800 ns; Loc. = LC3_C17; Fanout = 2; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|counter_cell[6]~COUT'
+        Info: 9: + IC(0.000 ns) + CELL(0.300 ns) = 4.100 ns; Loc. = LC4_C17; Fanout = 1; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|counter_cell[7]~COUT'
+        Info: 10: + IC(0.000 ns) + CELL(1.300 ns) = 5.400 ns; Loc. = LC5_C17; Fanout = 42; COMB Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|cout'
+        Info: 11: + IC(2.700 ns) + CELL(1.800 ns) = 9.900 ns; Loc. = LC1_C13; Fanout = 32; COMB Node = 'inst151'
+        Info: 12: + IC(2.700 ns) + CELL(1.200 ns) = 13.800 ns; Loc. = LC4_C18; Fanout = 1; REG Node = 'lpm_shiftreg:inst162|dffs[31]'
+        Info: Total cell delay = 7.600 ns ( 55.07 % )
+        Info: Total interconnect delay = 6.200 ns ( 44.93 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "ir_clk" to destination register is 5.300 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 76; CLK Node = 'ir_clk'
+            Info: 2: + IC(2.500 ns) + CELL(0.000 ns) = 5.300 ns; Loc. = LC4_C18; Fanout = 1; REG Node = 'lpm_shiftreg:inst162|dffs[31]'
+            Info: Total cell delay = 2.800 ns ( 52.83 % )
+            Info: Total interconnect delay = 2.500 ns ( 47.17 % )
+        Info: - Longest clock path from clock "ir_clk" to source register is 5.300 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 76; CLK Node = 'ir_clk'
+            Info: 2: + IC(2.500 ns) + CELL(0.000 ns) = 5.300 ns; Loc. = LC5_C15; Fanout = 3; REG Node = 'lpm_counter:inst155|alt_counter_f10ke:wysi_counter|q[0]'
+            Info: Total cell delay = 2.800 ns ( 52.83 % )
+            Info: Total interconnect delay = 2.500 ns ( 47.17 % )
+    Info: + Micro clock to output delay of source is 1.100 ns
+    Info: + Micro setup delay of destination is 2.500 ns
+Warning: Circuit may not operate. Detected 1 non-operational path(s) clocked by clock "ir_clk" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "inst207" and destination pin or register "inst207" for clock "ir_clk" (Hold time is 2.7 ns)
+    Info: + Largest clock skew is 4.000 ns
+        Info: + Longest clock path from clock "ir_clk" to destination register is 26.300 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 76; CLK Node = 'ir_clk'
+            Info: 2: + IC(2.500 ns) + CELL(1.100 ns) = 6.400 ns; Loc. = LC7_C12; Fanout = 5; REG Node = 'lpm_shiftreg:inst27|dffs[23]'
+            Info: 3: + IC(0.600 ns) + CELL(2.300 ns) = 9.300 ns; Loc. = LC5_C12; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]|aeb_out'
+            Info: 4: + IC(2.700 ns) + CELL(2.300 ns) = 14.300 ns; Loc. = LC8_C19; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]|aeb_out'
+            Info: 5: + IC(2.700 ns) + CELL(2.300 ns) = 19.300 ns; Loc. = LC2_C9; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end|aeb_out'
+            Info: 6: + IC(0.600 ns) + CELL(1.800 ns) = 21.700 ns; Loc. = LC1_C9; Fanout = 1; COMB Node = 'inst92'
+            Info: 7: + IC(4.600 ns) + CELL(0.000 ns) = 26.300 ns; Loc. = LC7_A8; Fanout = 2; REG Node = 'inst207'
+            Info: Total cell delay = 12.600 ns ( 47.91 % )
+            Info: Total interconnect delay = 13.700 ns ( 52.09 % )
+        Info: - Shortest clock path from clock "ir_clk" to source register is 22.300 ns
+            Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 76; CLK Node = 'ir_clk'
+            Info: 2: + IC(2.500 ns) + CELL(1.100 ns) = 6.400 ns; Loc. = LC5_C4; Fanout = 5; REG Node = 'lpm_shiftreg:inst27|dffs[13]'
+            Info: 3: + IC(0.600 ns) + CELL(1.800 ns) = 8.800 ns; Loc. = LC8_C4; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[3]|aeb_out'
+            Info: 4: + IC(2.300 ns) + CELL(1.800 ns) = 12.900 ns; Loc. = LC4_C9; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[0]|aeb_out'
+            Info: 5: + IC(0.600 ns) + CELL(1.800 ns) = 15.300 ns; Loc. = LC2_C9; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end|aeb_out'
+            Info: 6: + IC(0.600 ns) + CELL(1.800 ns) = 17.700 ns; Loc. = LC1_C9; Fanout = 1; COMB Node = 'inst92'
+            Info: 7: + IC(4.600 ns) + CELL(0.000 ns) = 22.300 ns; Loc. = LC7_A8; Fanout = 2; REG Node = 'inst207'
+            Info: Total cell delay = 11.100 ns ( 49.78 % )
+            Info: Total interconnect delay = 11.200 ns ( 50.22 % )
+    Info: - Micro clock to output delay of source is 1.100 ns
+    Info: - Shortest register to register delay is 1.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC7_A8; Fanout = 2; REG Node = 'inst207'
+        Info: 2: + IC(0.600 ns) + CELL(1.200 ns) = 1.800 ns; Loc. = LC7_A8; Fanout = 2; REG Node = 'inst207'
+        Info: Total cell delay = 1.200 ns ( 66.67 % )
+        Info: Total interconnect delay = 0.600 ns ( 33.33 % )
+    Info: + Micro hold delay of destination is 1.600 ns
+Info: tsu for register "inst158" (data pin = "ir_input", clock pin = "ir_clk") is 2.800 ns
+    Info: + Longest pin to register delay is 5.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_2; Fanout = 1; PIN Node = 'ir_input'
+        Info: 2: + IC(1.600 ns) + CELL(1.200 ns) = 5.600 ns; Loc. = LC5_C11; Fanout = 3; REG Node = 'inst158'
+        Info: Total cell delay = 4.000 ns ( 71.43 % )
+        Info: Total interconnect delay = 1.600 ns ( 28.57 % )
+    Info: + Micro setup delay of destination is 2.500 ns
+    Info: - Shortest clock path from clock "ir_clk" to destination register is 5.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 76; CLK Node = 'ir_clk'
+        Info: 2: + IC(2.500 ns) + CELL(0.000 ns) = 5.300 ns; Loc. = LC5_C11; Fanout = 3; REG Node = 'inst158'
+        Info: Total cell delay = 2.800 ns ( 52.83 % )
+        Info: Total interconnect delay = 2.500 ns ( 47.17 % )
+Info: tco from clock "ir_clk" to destination pin "ir_but_start/stop" through register "inst207" is 34.100 ns
+    Info: + Longest clock path from clock "ir_clk" to source register is 26.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 76; CLK Node = 'ir_clk'
+        Info: 2: + IC(2.500 ns) + CELL(1.100 ns) = 6.400 ns; Loc. = LC7_C12; Fanout = 5; REG Node = 'lpm_shiftreg:inst27|dffs[23]'
+        Info: 3: + IC(0.600 ns) + CELL(2.300 ns) = 9.300 ns; Loc. = LC5_C12; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|cmpchain:cmp[5]|aeb_out'
+        Info: 4: + IC(2.700 ns) + CELL(2.300 ns) = 14.300 ns; Loc. = LC8_C19; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|cmpchain:cmp[1]|aeb_out'
+        Info: 5: + IC(2.700 ns) + CELL(2.300 ns) = 19.300 ns; Loc. = LC2_C9; Fanout = 1; COMB Node = 'lpm_compare:inst235|comptree:comparator|cmpchain:cmp_end|comptree:comp|comptree:sub_comptree|comptree:sub_comptree|cmpchain:cmp_end|aeb_out'
+        Info: 6: + IC(0.600 ns) + CELL(1.800 ns) = 21.700 ns; Loc. = LC1_C9; Fanout = 1; COMB Node = 'inst92'
+        Info: 7: + IC(4.600 ns) + CELL(0.000 ns) = 26.300 ns; Loc. = LC7_A8; Fanout = 2; REG Node = 'inst207'
+        Info: Total cell delay = 12.600 ns ( 47.91 % )
+        Info: Total interconnect delay = 13.700 ns ( 52.09 % )
+    Info: + Micro clock to output delay of source is 1.100 ns
+    Info: + Longest register to pin delay is 6.700 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC7_A8; Fanout = 2; REG Node = 'inst207'
+        Info: 2: + IC(1.600 ns) + CELL(5.100 ns) = 6.700 ns; Loc. = PIN_19; Fanout = 0; PIN Node = 'ir_but_start/stop'
+        Info: Total cell delay = 5.100 ns ( 76.12 % )
+        Info: Total interconnect delay = 1.600 ns ( 23.88 % )
+Info: th for register "inst158" (data pin = "ir_input", clock pin = "ir_clk") is 1.300 ns
+    Info: + Longest clock path from clock "ir_clk" to destination register is 5.300 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_43; Fanout = 76; CLK Node = 'ir_clk'
+        Info: 2: + IC(2.500 ns) + CELL(0.000 ns) = 5.300 ns; Loc. = LC5_C11; Fanout = 3; REG Node = 'inst158'
+        Info: Total cell delay = 2.800 ns ( 52.83 % )
+        Info: Total interconnect delay = 2.500 ns ( 47.17 % )
+    Info: + Micro hold delay of destination is 1.600 ns
+    Info: - Shortest pin to register delay is 5.600 ns
+        Info: 1: + IC(0.000 ns) + CELL(2.800 ns) = 2.800 ns; Loc. = PIN_2; Fanout = 1; PIN Node = 'ir_input'
+        Info: 2: + IC(1.600 ns) + CELL(1.200 ns) = 5.600 ns; Loc. = LC5_C11; Fanout = 3; REG Node = 'inst158'
+        Info: Total cell delay = 4.000 ns ( 71.43 % )
+        Info: Total interconnect delay = 1.600 ns ( 28.57 % )
+Info: Parallel compilation was enabled but no parallel operations were performed
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 161 megabytes
+    Info: Processing ended: Thu Jul 28 22:00:40 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

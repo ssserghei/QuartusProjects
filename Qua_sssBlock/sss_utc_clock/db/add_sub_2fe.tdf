@@ -1,0 +1,59 @@
+--lpm_add_sub CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 DEVICE_FAMILY="MAX II" LPM_REPRESENTATION="UNSIGNED" LPM_WIDTH=5 add_sub dataa datab overflow result
+--VERSION_BEGIN 8.1 cbx_cycloneii 2008:05:19:10:57:37:SJ cbx_lpm_add_sub 2008:05:19:10:49:01:SJ cbx_mgl 2008:08:08:15:16:18:SJ cbx_stratix 2008:08:05:17:10:23:SJ cbx_stratixii 2008:08:07:13:54:47:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2008 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION maxii_lcell (aclr, aload, cin, clk, dataa, datab, datac, datad, ena, inverta, regcascin, sclr, sload)
+WITH ( cin0_used, cin1_used, cin_used, lut_mask, operation_mode, output_mode, power_up, register_cascade_mode, sum_lutc_input, synch_mode, x_on_violation)
+RETURNS ( combout, cout, regout);
+
+--synthesis_resources = lut 6 
+SUBDESIGN add_sub_2fe
+( 
+	add_sub	:	input;
+	dataa[4..0]	:	input;
+	datab[4..0]	:	input;
+	overflow	:	output;
+	result[4..0]	:	output;
+) 
+VARIABLE 
+	add_sub_cella[4..0] : maxii_lcell
+		WITH (
+			cin_used = "true",
+			lut_mask = "96E8",
+			operation_mode = "arithmetic",
+			sum_lutc_input = "cin"
+		);
+	strx_lcell1 : maxii_lcell
+		WITH (
+			cin_used = "false",
+			lut_mask = "00CC",
+			operation_mode = "arithmetic"
+		);
+
+BEGIN 
+	add_sub_cella[].cin = ( add_sub_cella[3..0].cout, strx_lcell1.cout);
+	add_sub_cella[].dataa = datab[];
+	add_sub_cella[].datab = dataa[];
+	add_sub_cella[].inverta = (! add_sub);
+	strx_lcell1.dataa = B"0";
+	strx_lcell1.datab = (! add_sub);
+	strx_lcell1.inverta = (! add_sub);
+	overflow = ((! add_sub) $ add_sub_cella[4].cout);
+	result[] = add_sub_cella[].combout;
+END;
+--VALID FILE
